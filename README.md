@@ -18,9 +18,11 @@ Alla prima esecuzione tutti gli annunci trovati risultano nuovi, quindi la prima
 
 ## Configurazione
 
-### 1. Repository privato
+### 1. Repository pubblico: cosa resta privato
 
-Tieni il repository **privato**: `config/ricerche.json` contiene le tue ricerche. Il piano gratuito di GitHub include 2.000 minuti di Actions al mese per i repository privati. Questo progetto ne usa circa 60-100.
+Il repository è pubblico, quindi tutto ciò che è nei file si vede: le ricerche in `config/ricerche.json` e gli annunci già visti in `data/stato.json`. Per questo **email e canale push non vanno mai nei file**, ma solo nei Secrets (punti 2 e 3), che restano privati anche in un repository pubblico. L'artefatto esporta la configurazione già senza questi dati.
+
+Nei repository pubblici GitHub Actions è gratuito senza limiti di minuti. GitHub sospende i workflow pianificati dopo 60 giorni senza attività nel repository: qui non succede, perché ogni controllo salva un commit con `data/stato.json`.
 
 ### 2. Email (Gmail)
 
@@ -51,6 +53,7 @@ Copia la configurazione dall'artefatto in `config/ricerche.json`. I campi:
 | Campo | Valori |
 |---|---|
 | `orario` | ora del controllo, es. `"11:30"` (vedi sotto per cambiarla) |
+| `notifiche.email`, `notifiche.ntfy_topic` | non usarli in un repository pubblico: al loro posto ci sono i Secrets `EMAIL_TO` e `NTFY_TOPIC` |
 | `notifiche.solo_nuovi` | `true` avvisa solo per annunci mai visti; `false` rimanda ogni giorno tutti quelli trovati |
 | `marca`, `modello` | testo, es. `"Volkswagen"`, `"Golf"` |
 | `carrozzeria` | `utilitaria`, `berlina`, `sw`, `suv`, `monovolume`, `coupe`, `cabrio`, `furgone` |

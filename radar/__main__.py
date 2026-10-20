@@ -123,13 +123,15 @@ def main(argv: list[str] | None = None) -> int:
 
     email = cfg["notifiche"].get("email")
     topic = cfg["notifiche"].get("ntfy_topic")
+    if not email and not topic:
+        print("Nessun avviso configurato: aggiungi i Secrets EMAIL_TO e/o NTFY_TOPIC")
     if n:
         oggetto = f"Radar Auto: {n} {'nuovo annuncio' if n == 1 else 'nuovi annunci'}"
         if email and "@esempio." not in email:
             if os.environ.get("SMTP_USER") and os.environ.get("SMTP_PASSWORD"):
                 testo, html = notifiche.testo_email(risultati, problemi)
                 notifiche.invia_email(email, oggetto, testo, html)
-                print(f"Email inviata a {email}")
+                print("Email inviata")  # niente indirizzo: i log di un repository pubblico sono visibili a tutti
             else:
                 print("Email non inviata: mancano i secrets SMTP_USER e SMTP_PASSWORD")
         if topic:
