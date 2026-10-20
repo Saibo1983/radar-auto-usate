@@ -7,6 +7,27 @@
   },
   "ricerche": [
     {
+      "id": "rmvh389rf",
+      "attiva": true,
+      "nome": "Volkswagen up!",
+      "marca": "Volkswagen",
+      "modello": "up!",
+      "alimentazione": "benzina",
+      "cambio": "automatico",
+      "tipo": "auto",
+      "anno_min": 2018,
+      "km_max": 150000,
+      "fonti": [
+        "autoscout24",
+        "subito",
+        "automobile",
+        "quattroruote",
+        "automoto",
+        "autohero",
+        "spoticar"
+      ]
+    },
+    {
       "id": "es1",
       "attiva": true,
       "nome": "Golf diesel per famiglia",
