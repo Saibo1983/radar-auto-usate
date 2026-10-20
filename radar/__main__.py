@@ -202,20 +202,31 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if n:
         oggetto = f"Radar Auto: {n} {'nuovo annuncio' if n == 1 else 'nuovi annunci'}"
+        testo, html = notifiche.testo_email(risultati, problemi)
+        push, link = notifiche.testo_push(risultati), next(a for _, lista in risultati for a in lista).url
+    elif pagine_ok == 0 and problemi:
+        oggetto = "Radar Auto: nessun sito raggiungibile"
+        push = "Oggi non è stato possibile leggere nessun sito. Controlla il log su GitHub."
+        testo, html = notifiche.testo_nessuno(risultati, problemi, push)
+        link = notifiche.APP
+    elif risultati:
+        # Anche senza novità arriva un avviso, così si sa che il controllo è stato fatto
+        oggetto = "Radar Auto: nessun nuovo annuncio"
+        push = "Oggi nessun nuovo annuncio per " + ", ".join(r["nome"] for r, _ in risultati) + "."
+        testo, html = notifiche.testo_nessuno(risultati, problemi, push)
+        link = notifiche.APP
+    else:
+        oggetto = None
+    if oggetto:
         if email and "@esempio." not in email:
             if os.environ.get("SMTP_USER") and os.environ.get("SMTP_PASSWORD"):
-                testo, html = notifiche.testo_email(risultati, problemi)
                 notifiche.invia_email(email, oggetto, testo, html)
                 print("Email inviata")  # niente indirizzo: i log di un repository pubblico sono visibili a tutti
             else:
                 print("Email non inviata: mancano i secrets SMTP_USER e SMTP_PASSWORD")
         if topic:
-            primo = next(a for _, lista in risultati for a in lista)
-            notifiche.invia_push(topic, oggetto, notifiche.testo_push(risultati), primo.url)
+            notifiche.invia_push(topic, oggetto, push, link)
             print("Notifica push inviata")
-    elif pagine_ok == 0 and problemi and topic:
-        notifiche.invia_push(topic, "Radar Auto: nessun sito raggiungibile",
-                             "Oggi non è stato possibile leggere nessun sito. Controlla il log su GitHub.")
 
     stato.pulisci(oggi, {r.get("id") or r["nome"] for r in cfg.get("ricerche", [])})
     stato.salva(oggi)

@@ -14,6 +14,7 @@ from .modelli import Annuncio
 from .siti import nome_sito
 
 MAX_PER_RICERCA = 30
+APP = "https://saibo1983.github.io/radar-auto-usate/"
 
 
 def _euro(n: int | None) -> str:
@@ -64,6 +65,22 @@ def testo_email(risultati, avvisi_siti: list[str]) -> tuple[str, str]:
                     + "<br>".join(escape(x) for x in avvisi_siti) + "</p>")
     html.append("</div>")
     return "\n".join(righe).strip(), "".join(html)
+
+
+def testo_nessuno(risultati, avvisi_siti: list[str], messaggio: str) -> tuple[str, str]:
+    """Email del controllo senza annunci nuovi: (testo semplice, html)."""
+    righe = [messaggio, "", "Ricerche controllate:"] + [f"- {r['nome']}" for r, _ in risultati]
+    html = ['<div style="font-family:Arial,sans-serif;max-width:680px;color:#16202c">',
+            f'<p style="font-size:16px">{escape(messaggio)}</p>',
+            '<p style="margin-bottom:4px">Ricerche controllate:</p><ul style="margin-top:0">',
+            *(f"<li>{escape(r['nome'])}</li>" for r, _ in risultati), "</ul>"]
+    if avvisi_siti:
+        righe.append("\nProblemi con alcuni siti:\n" + "\n".join(f"- {x}" for x in avvisi_siti))
+        html.append('<p style="font-size:12px;color:#5b6676"><strong>Problemi con alcuni siti</strong><br>'
+                    + "<br>".join(escape(x) for x in avvisi_siti) + "</p>")
+    righe.append(f"\nApri l'app: {APP}")
+    html.append(f'<p><a href="{APP}" style="color:#1d3f9e">Apri l\'app</a></p></div>')
+    return "\n".join(righe), "".join(html)
 
 
 def invia_email(destinatario: str, oggetto: str, testo: str, html: str) -> None:

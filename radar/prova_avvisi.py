@@ -16,7 +16,7 @@ from zoneinfo import ZoneInfo
 from . import notifiche
 from .__main__ import RADICE, carica_config
 
-APP = "https://saibo1983.github.io/radar-auto-usate/"
+APP = notifiche.APP
 
 
 def main() -> int:

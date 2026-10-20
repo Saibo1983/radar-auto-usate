@@ -37,4 +37,7 @@ def test_esecuzione_completa(tmp_path, monkeypatch):
 
     # Il giorno dopo la stessa auto non viene segnalata di nuovo
     assert radar.main(argomenti) == 0
-    assert len(email) == 1 and len(push) == 1
+    # ma arriva comunque un avviso che dice che non ci sono novità
+    assert len(email) == 2 and len(push) == 2
+    assert email[1][1] == push[1][1] == "Radar Auto: nessun nuovo annuncio"
+    assert "Golf" in push[1][2] and "Golf" in email[1][2]

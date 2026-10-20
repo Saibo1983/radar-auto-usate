@@ -35,7 +35,7 @@ I **furgoni** (`"tipo": "furgone"`) si cercano su AutoScout24 e Subito; gli altr
 2. Per ogni ricerca e ogni sito lo script apre la pagina dei risultati ordinata dai più recenti e legge gli annunci dai dati strutturati della pagina (JSON-LD o `__NEXT_DATA__`).
 3. Applica i filtri della ricerca: prezzo, anno, km, alimentazione, cambio, marca e modello.
 4. Confronta i risultati con `data/stato.json`, che contiene gli annunci già segnalati. La stessa auto pubblicata su più siti viene segnalata una volta sola.
-5. Se ci sono annunci nuovi invia l'email e la notifica push, poi salva `data/stato.json` nel repository.
+5. Invia l'email e la notifica push: con gli annunci nuovi, oppure con l'avviso "nessun nuovo annuncio", così si sa che il controllo è stato fatto. Poi salva `data/stato.json` nel repository.
 
 Alla prima esecuzione tutti gli annunci trovati risultano nuovi, quindi la prima email sarà più lunga del solito.
 
