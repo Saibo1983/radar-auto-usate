@@ -1,0 +1,3 @@
+01.html    881278  https://www.autohero.com/it/search/?brand=toyota&model=yaris
+02.html    645854  https://www.autohero.com/it/search/?brand=volkswagen&model=golf
+03.html    532545  https://www.automoto.it/auto-usate/toyota/yaris
