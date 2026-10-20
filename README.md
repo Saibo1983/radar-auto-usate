@@ -17,6 +17,14 @@ Ogni giorno alle 11:30 (ora italiana) cerca auto usate su 9 siti e, se trova ann
 
 Le ricerche si preparano con l'artefatto **Radar Auto Usate** su claude.ai, che genera il file `config/ricerche.json`. Si può anche modificare il file a mano.
 
+## L'app
+
+L'app è su **https://saibo1983.github.io/radar-auto-usate/**. Mostra gli **ultimi risultati** del controllo giornaliero e ha un pulsante **Cerca adesso** che avvia subito una ricerca, per auto o furgoni, e dopo 2-4 minuti mostra i risultati.
+
+Il pulsante la prima volta chiede un codice di GitHub (un *fine-grained personal access token* limitato a questo repository, con permesso **Actions: Read and write**), che resta salvato solo nel browser. La ricerca immediata non invia avvisi e non cambia gli annunci già visti: i risultati vanno in `data/ricerca-adesso.json`.
+
+I **furgoni** (`"tipo": "furgone"`) si cercano su AutoScout24 e Subito; gli altri siti vendono solo auto.
+
 ## Come funziona
 
 1. GitHub Actions avvia `python -m radar` ogni giorno (`.github/workflows/radar.yml`).
@@ -66,6 +74,7 @@ Copia la configurazione dall'artefatto in `config/ricerche.json`. I campi:
 | `orario` | ora del controllo, es. `"11:30"` (vedi sotto per cambiarla) |
 | `notifiche.email`, `notifiche.ntfy_topic` | non usarli in un repository pubblico: al loro posto ci sono i Secrets `EMAIL_TO` e `NTFY_TOPIC` |
 | `notifiche.solo_nuovi` | `true` avvisa solo per annunci mai visti; `false` rimanda ogni giorno tutti quelli trovati |
+| `tipo` | `auto` (predefinito) o `furgone` |
 | `marca`, `modello` | testo, es. `"Volkswagen"`, `"Golf"` |
 | `carrozzeria` | `utilitaria`, `berlina`, `sw`, `suv`, `monovolume`, `coupe`, `cabrio`, `furgone` |
 | `alimentazione` | `benzina`, `diesel`, `ibrida`, `elettrica`, `gpl`, `metano` |
@@ -117,7 +126,9 @@ pytest                                   # test
 ```
 config/ricerche.json        le tue ricerche
 data/stato.json             annunci già segnalati (aggiornato in automatico)
+index.html                  l'app (GitHub Pages)
 radar/__main__.py           esecuzione giornaliera
+radar/adesso.py             ricerca immediata del pulsante "Cerca adesso"
 radar/siti.py               indirizzi di ricerca per ogni sito
 radar/estrai.py             lettura degli annunci dai dati strutturati (JSON-LD, Next.js)
 radar/pagine.py             lettori dedicati: Automoto, Quattroruote, Spoticar, Autohero
@@ -125,6 +136,7 @@ radar/filtri.py             filtri su prezzo, anno, km, motore, modello
 radar/stato.py              memoria degli annunci visti e doppioni
 radar/notifiche.py          email e push
 .github/workflows/radar.yml pianificazione su GitHub Actions
+.github/workflows/cerca-adesso.yml ricerca immediata avviata dall'app
 .github/workflows/diagnosi.yml scarica pagine per capire perché un sito non viene letto
 strumenti/scarica_pagine.py usato dalla diagnosi
 ```

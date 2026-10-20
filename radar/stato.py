@@ -28,21 +28,19 @@ class Stato:
     def _visti(self, id_ricerca: str) -> dict:
         return self.dati["visti"].setdefault(id_ricerca, {"url": {}, "auto": {}})
 
+    @staticmethod
+    def togli_doppioni(annunci: list[Annuncio]) -> list[Annuncio]:
+        """La stessa auto pubblicata su più siti compare una volta sola."""
+        return _filtra(annunci, {"url": {}, "auto": {}})
+
     def nuovi(self, id_ricerca: str, annunci: list[Annuncio], ignora_visti: bool = False) -> list[Annuncio]:
         """Annunci mai visti prima per questa ricerca, senza doppioni tra siti.
 
         Con ignora_visti toglie solo i doppioni e restituisce anche gli annunci già segnalati.
         """
-        visti = {"url": {}, "auto": {}} if ignora_visti else self._visti(id_ricerca)
-        out, chiavi_oggi = [], set()
-        for a in annunci:
-            chiave = a.chiave_auto()
-            if a.url in visti["url"] or (chiave and (chiave in visti["auto"] or chiave in chiavi_oggi)):
-                continue
-            if chiave:
-                chiavi_oggi.add(chiave)
-            out.append(a)
-        return out
+        if ignora_visti:
+            return self.togli_doppioni(annunci)
+        return _filtra(annunci, self._visti(id_ricerca))
 
     def ricorda(self, id_ricerca: str, annunci: list[Annuncio], oggi: date) -> None:
         visti = self._visti(id_ricerca)
@@ -68,3 +66,15 @@ class Stato:
         self.percorso.parent.mkdir(parents=True, exist_ok=True)
         self.percorso.write_text(json.dumps(self.dati, indent=1, ensure_ascii=False, sort_keys=True) + "\n",
                                  encoding="utf-8")
+
+
+def _filtra(annunci: list[Annuncio], visti: dict) -> list[Annuncio]:
+    out, chiavi_oggi = [], set()
+    for a in annunci:
+        chiave = a.chiave_auto()
+        if a.url in visti["url"] or (chiave and (chiave in visti["auto"] or chiave in chiavi_oggi)):
+            continue
+        if chiave:
+            chiavi_oggi.add(chiave)
+        out.append(a)
+    return out

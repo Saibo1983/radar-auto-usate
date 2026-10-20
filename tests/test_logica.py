@@ -82,3 +82,23 @@ def test_carburante_dal_titolo():
     assert corrisponde(auto(carburante="", titolo="Volkswagen Golf 1.6 TDI Business"), golf)
     assert not corrisponde(auto(carburante="", titolo="Volkswagen Golf 1.5 TSI Life"), golf)
     assert not corrisponde(auto(carburante="", titolo="Fiat Panda 1.0 FireFly Hybrid"), {"alimentazione": "benzina"})
+
+
+def test_furgoni():
+    from radar.siti import fonti_per, url_subito
+
+    ducato = {"marca": "Fiat", "modello": "Ducato", "tipo": "furgone", "prezzo_max": 20000}
+    assert fonti_per(ducato) == ["autoscout24", "subito"]
+    assert fonti_per({**ducato, "fonti": ["subito", "spoticar"]}) == ["subito"]
+    assert "atype=X" in url_autoscout24(ducato)
+    assert "/vendita/veicoli-commerciali/" in url_subito(ducato)
+    assert "atype=C" in url_autoscout24(GOLF) and len(fonti_per(GOLF)) == 7
+
+
+def test_ricerca_adesso_accetta_solo_campi_noti():
+    from radar.adesso import pulisci
+
+    r = pulisci({"marca": "Fiat", "prezzo_max": 9000, "anno_min": "2018", "fonti": ["subito", "x"],
+                 "tipo": "astronave", "comando": "rm -rf /"})
+    assert r == {"marca": "Fiat", "prezzo_max": 9000, "fonti": ["subito"], "tipo": "auto", "nome": "Fiat",
+                 "id": "adesso"}

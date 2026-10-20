@@ -29,7 +29,9 @@ def url_autoscout24(r: dict) -> str:
         path += "/" + slug(r["marca"])
         if r.get("modello"):
             path += "/" + slug(r["modello"])
-    p = {"atype": "C", "cy": "I", "damaged_listing": "exclude", "sort": "age", "desc": "1", "ustate": "N,U"}
+    # atype: C = auto, X = veicoli commerciali
+    atype = "X" if r.get("tipo") == "furgone" else "C"
+    p = {"atype": atype, "cy": "I", "damaged_listing": "exclude", "sort": "age", "desc": "1", "ustate": "N,U"}
     if r.get("prezzo_min"):
         p["pricefrom"] = r["prezzo_min"]
     if r.get("prezzo_max"):
@@ -69,7 +71,8 @@ def url_subito(r: dict) -> str:
         p["ys"] = r["anno_min"]
     if r.get("anno_max"):
         p["ye"] = r["anno_max"]
-    return f"https://www.subito.it/annunci-{area}/vendita/auto/?" + urlencode(p)
+    categoria = "veicoli-commerciali" if r.get("tipo") == "furgone" else "auto"
+    return f"https://www.subito.it/annunci-{area}/vendita/{categoria}/?" + urlencode(p)
 
 
 def url_automobile(r: dict) -> str:
@@ -151,6 +154,20 @@ SITI = {
     "autohero": ("Autohero", url_autohero),
     "spoticar": ("Spoticar", url_spoticar),
 }
+
+
+# Tipi di veicolo e siti che li vendono (gli altri siti hanno solo auto)
+TIPI = {
+    "auto": [f for f in SITI if f not in BLOCCATI],
+    "furgone": ["autoscout24", "subito"],
+}
+
+
+def fonti_per(ricerca: dict) -> list[str]:
+    """Siti da controllare per una ricerca: quelli scelti, se adatti al tipo di veicolo."""
+    adatti = TIPI.get(ricerca.get("tipo") or "auto", TIPI["auto"])
+    scelti = ricerca.get("fonti") or adatti
+    return [f for f in scelti if f in SITI and (f in adatti or ricerca.get("tipo", "auto") == "auto")]
 
 
 def nome_sito(fonte: str) -> str:

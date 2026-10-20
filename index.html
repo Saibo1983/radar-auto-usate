@@ -95,7 +95,7 @@ input[type="number"], .mono { font-family: var(--font-mono); font-variant-numeri
 hr { border: 0; border-top: 1px solid var(--line); margin: 0; }
 
 .seg { display: flex; flex-wrap: wrap; gap: 6px; }
-.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg input { position: absolute; opacity: 0; pointer-events: none; width: 1px; height: 1px; }
 .seg label {
   border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; cursor: pointer;
   font-size: .88rem; background: var(--field); user-select: none;
@@ -171,6 +171,8 @@ textarea#export { font-family: var(--font-mono); font-size: .78rem; min-height: 
 
       <fieldset>
         <legend class="eyebrow">Veicolo</legend>
+        <div class="f"><label>Tipo di veicolo</label><div class="seg" id="tipo"></div>
+          <p class="muted" id="tipoNota" style="font-size:.85rem" hidden>I furgoni si cercano su AutoScout24 e Subito: gli altri siti vendono solo auto.</p></div>
         <div class="fields">
           <div class="f"><label for="marca">Marca</label>
             <input id="marca" list="marche" placeholder="es. Volkswagen" autocomplete="off"></div>
@@ -225,6 +227,7 @@ textarea#export { font-family: var(--font-mono); font-size: .78rem; min-height: 
 
       <div class="btns">
         <button type="submit" class="primary" id="saveBtn">Salva e attiva avviso</button>
+        <button type="button" id="cercaAdesso">Cerca adesso</button>
         <button type="button" class="ghost" id="cancelEdit" hidden>Annulla modifica</button>
       </div>
       <div class="f"><span class="eyebrow">Prova la ricerca sui siti</span><div class="btns" id="previewLinks"></div>
@@ -232,6 +235,29 @@ textarea#export { font-family: var(--font-mono); font-size: .78rem; min-height: 
     </form>
 
     <div class="col">
+      <!-- CERCA ADESSO: la ricerca gira su GitHub e i risultati tornano in data/ricerca-adesso.json -->
+      <section class="panel" id="adessoPanel" aria-labelledby="adessoH" hidden>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap">
+          <h2 id="adessoH">Cerca adesso</h2>
+          <span class="muted mono" id="adessoTempo"></span>
+        </div>
+        <p id="adessoStato"></p>
+        <div id="tokenBox" class="card" hidden>
+          <p>Per avviare la ricerca, l'app ha bisogno di un permesso di GitHub. Si fa una volta sola su questo dispositivo.</p>
+          <ol class="steps">
+            <li><p>Apri <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">questa pagina di GitHub ↗</a>.</p></li>
+            <li><p>In <strong>Token name</strong> scrivi <code>Radar auto</code>. In <strong>Expiration</strong> scegli la durata più lunga.</p></li>
+            <li><p>In <strong>Repository access</strong> scegli <strong>Only select repositories</strong> e poi <strong>radar-auto-usate</strong>.</p></li>
+            <li><p>In <strong>Permissions</strong> premi <strong>Add permissions</strong>, scegli <strong>Actions</strong> e imposta <strong>Read and write</strong>.</p></li>
+            <li><p>Premi <strong>Generate token</strong>, copia il codice che inizia con <code>github_pat_</code> e incollalo qui sotto.</p></li>
+          </ol>
+          <div class="f"><label for="token">Codice di GitHub</label>
+            <div style="display:flex;gap:8px"><input id="token" class="mono" autocomplete="off" placeholder="github_pat_…"><button type="button" class="primary" id="tokenSalva">Salva e cerca</button></div>
+            <p class="muted" style="font-size:.85rem">Il codice resta solo in questo browser e serve solo ad avviare le ricerche di questo progetto.</p></div>
+        </div>
+        <div id="adessoRis" class="saved-list"></div>
+      </section>
+
       <!-- ULTIMI RISULTATI (scritti dal controllo giornaliero in data/risultati.json) -->
       <section class="panel" aria-labelledby="risH">
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap">
@@ -317,6 +343,15 @@ const MARCHE = {
   "Volkswagen": ["up!", "Polo", "Golf", "T-Roc", "T-Cross", "Tiguan", "Passat", "ID.3"],
   "Volvo": ["XC40", "XC60", "V40", "V60"]
 };
+const TIPI = [["auto", "Auto"], ["furgone", "Furgone / commerciale"]];
+const SITI_FURGONE = ["autoscout24", "subito"];
+const MARCHE_FURGONI = {
+  "Citroën": ["Jumper", "Jumpy", "Berlingo"], "Fiat": ["Ducato", "Doblò", "Fiorino", "Scudo", "Talento"],
+  "Ford": ["Transit", "Transit Custom", "Transit Connect"], "Iveco": ["Daily"],
+  "Mercedes-Benz": ["Sprinter", "Vito", "Citan"], "Nissan": ["NV200", "Primastar", "Interstar"],
+  "Opel": ["Movano", "Vivaro", "Combo"], "Peugeot": ["Boxer", "Expert", "Partner"],
+  "Renault": ["Master", "Trafic", "Kangoo"], "Toyota": ["Proace"], "Volkswagen": ["Transporter", "Crafter", "Caddy"]
+};
 const CATEGORIE = [["", "Tutte"], ["utilitaria", "Utilitaria"], ["berlina", "Berlina"], ["sw", "Station wagon"], ["suv", "SUV / Fuoristrada"], ["monovolume", "Monovolume"], ["coupe", "Coupé"], ["cabrio", "Cabrio"], ["furgone", "Furgone"]];
 const CARBURANTI = [["", "Tutte"], ["benzina", "Benzina"], ["diesel", "Diesel"], ["ibrida", "Ibrida"], ["elettrica", "Elettrica"], ["gpl", "GPL"], ["metano", "Metano"]];
 const CAMBI = [["", "Tutti"], ["manuale", "Manuale"], ["automatico", "Automatico"]];
@@ -375,6 +410,7 @@ function leggiForm() {
   return {
     nome: $("nome").value.trim() || [marca, modello].filter(Boolean).join(" ") || "Ricerca senza nome",
     marca, modello,
+    tipo: segVal("tipo") || "auto",
     categoria: segVal("categoria"), carburante: segVal("carburante"), cambio: segVal("cambio"),
     prezzoMin: num("prezzoMin"), prezzoMax: num("prezzoMax"), annoMin: num("annoMin"), annoMax: num("annoMax"),
     kmMax: num("kmMax"), cvMin: num("cvMin"),
@@ -385,6 +421,7 @@ function leggiForm() {
 function scriviForm(r) {
   for (const k of ["marca", "modello", "cap", "raggio", "regione", "nome"]) $(k).value = r[k] || "";
   for (const k of ["prezzoMin", "prezzoMax", "annoMin", "annoMax", "kmMax", "cvMin"]) $(k).value = r[k] ?? "";
+  setSeg("tipo", r.tipo || "auto"); aggiornaTipo();
   setSeg("categoria", r.categoria); setSeg("carburante", r.carburante); setSeg("cambio", r.cambio); setSeg("venditore", r.venditore);
   setSegs("fonti", r.fonti || FONTI_TUTTE);
   aggiornaModelli(); aggiornaAnteprima();
@@ -393,7 +430,7 @@ function scriviForm(r) {
 function urlAutoScout(r) {
   let path = "https://www.autoscout24.it/lst";
   if (r.marca) { path += "/" + slug(r.marca); if (r.modello) path += "/" + slug(r.modello); }
-  const p = new URLSearchParams({ atype: "C", cy: "I", damaged_listing: "exclude", sort: "age", desc: "1", ustate: "N,U" });
+  const p = new URLSearchParams({ atype: r.tipo === "furgone" ? "X" : "C", cy: "I", damaged_listing: "exclude", sort: "age", desc: "1", ustate: "N,U" });
   if (r.prezzoMin) p.set("pricefrom", r.prezzoMin);
   if (r.prezzoMax) p.set("priceto", r.prezzoMax);
   if (r.annoMin) p.set("fregfrom", r.annoMin);
@@ -416,7 +453,7 @@ function urlSubito(r) {
   if (r.prezzoMax) p.set("pe", r.prezzoMax);
   if (r.annoMin) p.set("ys", r.annoMin);
   if (r.annoMax) p.set("ye", r.annoMax);
-  return `https://www.subito.it/annunci-${area}/vendita/auto/?` + p.toString();
+  return `https://www.subito.it/annunci-${area}/vendita/${r.tipo === "furgone" ? "veicoli-commerciali" : "auto"}/?` + p.toString();
 }
 
 // Nome della marca come lo scrivono alcuni siti
@@ -480,13 +517,16 @@ const SITI = {
   autohero: { nome: "Autohero", url: urlAutohero, filtri: "marca e modello" },
   spoticar: { nome: "Spoticar", url: urlSpoticar, filtri: "marca e modello" }
 };
+function fontiPer(r) {
+  return r.fonti.filter(f => SITI[f] && (r.tipo !== "furgone" || SITI_FURGONE.includes(f)));
+}
 function linkSiti(r, cls) {
-  return r.fonti.filter(f => SITI[f]).map(f =>
+  return fontiPer(r).map(f =>
     `<a class="btn ${cls}" href="${esc(SITI[f].url(r))}" target="_blank" rel="noopener" title="Filtri nel link: ${esc(SITI[f].filtri)}">${SITI[f].nome} ↗</a>`).join("");
 }
 
 function chips(r) {
-  const c = [];
+  const c = r.tipo === "furgone" ? ["Commerciale"] : [];
   if (r.prezzoMin || r.prezzoMax) c.push(r.prezzoMin && r.prezzoMax ? `€ ${fmt(r.prezzoMin)}–${fmt(r.prezzoMax)}` : r.prezzoMax ? `≤ € ${fmt(r.prezzoMax)}` : `≥ € ${fmt(r.prezzoMin)}`);
   if (r.annoMin || r.annoMax) c.push(r.annoMin && r.annoMax ? `${r.annoMin}–${r.annoMax}` : r.annoMin ? `dal ${r.annoMin}` : `fino al ${r.annoMax}`);
   if (r.kmMax) c.push(`≤ ${fmt(r.kmMax)} km`);
@@ -534,20 +574,26 @@ function renderSaved() {
   renderExport();
 }
 
+// Ricerca nel formato di config/ricerche.json
+function aConfig(r) {
+  return {
+    nome: r.nome, tipo: r.tipo || "auto", marca: r.marca || null, modello: r.modello || null,
+    carrozzeria: r.categoria || null, alimentazione: r.carburante || null, cambio: r.cambio || null,
+    prezzo_min: r.prezzoMin, prezzo_max: r.prezzoMax, anno_min: r.annoMin, anno_max: r.annoMax,
+    km_max: r.kmMax, potenza_min_cv: r.cvMin,
+    cap: r.cap || null, raggio_km: r.raggio ? Number(r.raggio) : null, regione: r.regione || null,
+    venditore: r.venditore || null, fonti: fontiPer(r)
+  };
+}
+
 function renderExport() {
   const cfg = {
     fuso_orario: "Europe/Rome",
     orario: avvisi.orario || "11:30",
     notifiche: { _nota: "Repository pubblico: email e canale push vanno nei Secrets EMAIL_TO e NTFY_TOPIC, non qui.", solo_nuovi: avvisi.soloNuovi },
     ricerche: ricerche.filter(r => r.attiva).map(r => ({
-      id: r.esempio ? r.id : r.id,
-      nome: r.nome, marca: r.marca || null, modello: r.modello || null,
-      carrozzeria: r.categoria || null, alimentazione: r.carburante || null, cambio: r.cambio || null,
-      prezzo_min: r.prezzoMin, prezzo_max: r.prezzoMax, anno_min: r.annoMin, anno_max: r.annoMax,
-      km_max: r.kmMax, potenza_min_cv: r.cvMin,
-      cap: r.cap || null, raggio_km: r.raggio ? Number(r.raggio) : null, regione: r.regione || null,
-      venditore: r.venditore || null, fonti: r.fonti,
-      url: Object.fromEntries(r.fonti.filter(f => SITI[f]).map(f => [f, SITI[f].url(r)]))
+      id: r.id, ...aConfig(r),
+      url: Object.fromEntries(fontiPer(r).map(f => [f, SITI[f].url(r)]))
     }))
   };
   $("export").value = JSON.stringify(cfg, null, 2);
@@ -561,9 +607,17 @@ function toast(msg) {
   clearTimeout(toast._t); toast._t = setTimeout(() => { t.hidden = true; }, 2200);
 }
 
+function marchePerTipo() { return segVal("tipo") === "furgone" ? MARCHE_FURGONI : MARCHE; }
 function aggiornaModelli() {
-  const m = Object.keys(MARCHE).find(k => k.toLowerCase() === $("marca").value.trim().toLowerCase());
-  $("modelli").innerHTML = (m ? MARCHE[m] : []).map(x => `<option value="${esc(x)}">`).join("");
+  const elenco = marchePerTipo();
+  const m = Object.keys(elenco).find(k => k.toLowerCase() === $("marca").value.trim().toLowerCase());
+  $("modelli").innerHTML = (m ? elenco[m] : []).map(x => `<option value="${esc(x)}">`).join("");
+}
+function aggiornaTipo() {
+  const furgone = segVal("tipo") === "furgone";
+  $("tipoNota").hidden = !furgone;
+  $("marche").innerHTML = Object.keys(marchePerTipo()).map(m => `<option value="${esc(m)}">`).join("");
+  aggiornaModelli();
 }
 function aggiornaAnteprima() {
   const r = leggiForm();
@@ -585,6 +639,7 @@ function aggiornaProssimo() {
 }
 
 // Init
+renderSeg("tipo", TIPI); $("tipo").addEventListener("change", aggiornaTipo);
 renderSeg("categoria", CATEGORIE); renderSeg("carburante", CARBURANTI); renderSeg("cambio", CAMBI);
 renderSeg("venditore", VENDITORI); renderSeg("fonti", FONTI, true);
 $("marche").innerHTML = Object.keys(MARCHE).map(m => `<option value="${esc(m)}">`).join("");
@@ -659,6 +714,10 @@ async function caricaRisultati() {
   }
   const quando = new Date(d.data);
   $("risData").textContent = "controllo del " + quando.toLocaleString("it-IT", { dateStyle: "short", timeStyle: "short" });
+  mostraRisultati(el, d);
+}
+
+function mostraRisultati(el, d) {
   const euro = n => n ? "€ " + fmt(n) : "prezzo n.d.";
   el.innerHTML = d.ricerche.map((ric, i) => `
     <details class="ris-group card" ${i === 0 ? "open" : ""}>
@@ -670,6 +729,91 @@ async function caricaRisultati() {
             <div class="meta"><strong>${euro(a.prezzo)}</strong> · ${[a.anno, a.km != null ? fmt(a.km) + " km" : "", a.carburante, a.luogo, a.sito].filter(Boolean).map(esc).join(" · ")}</div></div>
         </div>`).join("") : '<p class="muted">Nessun annuncio corrisponde ai filtri.</p>'}
     </details>`).join("") + (d.problemi.length ? `<p class="muted" style="font-size:.85rem">Problemi: ${d.problemi.map(esc).join("; ")}</p>` : "");
+}
+
+const REPO = "Saibo1983/radar-auto-usate";
+const API = "https://api.github.com/repos/" + REPO;
+let inAttesa = null, timerAdesso = null;
+
+function validaForm(r) {
+  if (!fontiPer(r).length) return "Scegli almeno un sito da controllare";
+  if (r.prezzoMin && r.prezzoMax && r.prezzoMin > r.prezzoMax) return "Il prezzo minimo supera il massimo";
+  if (r.cap && !/^\d{5}$/.test(r.cap)) return "Il CAP deve avere 5 cifre";
+  return "";
+}
+function statoAdesso(testo) { $("adessoStato").textContent = testo; }
+function fineAdesso() { clearInterval(timerAdesso); $("cercaAdesso").disabled = false; $("adessoTempo").textContent = ""; }
+
+$("cercaAdesso").addEventListener("click", () => {
+  const r = leggiForm();
+  const errore = validaForm(r);
+  if (errore) { toast(errore); return; }
+  $("adessoPanel").hidden = false;
+  $("adessoPanel").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+  if (!store.get("ra.token", "")) {
+    inAttesa = r;
+    $("tokenBox").hidden = false;
+    statoAdesso("Serve il collegamento a GitHub (una volta sola).");
+    return;
+  }
+  avviaRicerca(r);
+});
+
+$("tokenSalva").addEventListener("click", () => {
+  const t = $("token").value.trim();
+  if (!/^(github_pat_|ghp_)\w+$/.test(t)) { toast("Il codice deve iniziare con github_pat_"); return; }
+  store.set("ra.token", t);
+  $("token").value = "";
+  $("tokenBox").hidden = true;
+  avviaRicerca(inAttesa || leggiForm());
+});
+
+async function avviaRicerca(r) {
+  const token = store.get("ra.token", "");
+  const richiesta = Date.now().toString(36);
+  $("cercaAdesso").disabled = true;
+  $("adessoRis").innerHTML = "";
+  statoAdesso("Avvio della ricerca…");
+  let res;
+  try {
+    res = await fetch(API + "/actions/workflows/cerca-adesso.yml/dispatches", {
+      method: "POST",
+      headers: { Authorization: "Bearer " + token, Accept: "application/vnd.github+json" },
+      body: JSON.stringify({ ref: "main", inputs: { ricerca: JSON.stringify(aConfig(r)), richiesta } })
+    });
+  } catch {
+    statoAdesso("Non riesco a contattare GitHub. Controlla la connessione e riprova.");
+    fineAdesso(); return;
+  }
+  if (res.status === 401 || res.status === 403 || res.status === 404) {
+    store.set("ra.token", "");
+    inAttesa = r;
+    $("tokenBox").hidden = false;
+    statoAdesso("GitHub non ha accettato il codice: forse è scaduto o manca il permesso Actions. Creane uno nuovo.");
+    fineAdesso(); return;
+  }
+  if (!res.ok) { statoAdesso("GitHub ha risposto con un errore (" + res.status + "). Riprova tra poco."); fineAdesso(); return; }
+
+  const inizio = Date.now();
+  statoAdesso(`Ricerca di "${r.nome || [r.marca, r.modello].filter(Boolean).join(" ") || "tutti i veicoli"}" avviata su ${fontiPer(r).length} siti. I risultati arrivano in 2-4 minuti: puoi lasciare aperta la pagina.`);
+  timerAdesso = setInterval(async () => {
+    const sec = Math.round((Date.now() - inizio) / 1000);
+    $("adessoTempo").textContent = Math.floor(sec / 60) + ":" + String(sec % 60).padStart(2, "0");
+    if (sec % 15 !== 0) return;
+    if (sec > 12 * 60) { statoAdesso("La ricerca sta impiegando troppo. Riprova più tardi."); fineAdesso(); return; }
+    try {
+      const f = await fetch(API + "/contents/data/ricerca-adesso.json?ref=main", {
+        headers: { Authorization: "Bearer " + token, Accept: "application/vnd.github.raw+json" }, cache: "no-store"
+      });
+      if (!f.ok) return;
+      const d = await f.json();
+      if (d.richiesta !== richiesta) return;
+      const n = d.ricerche.reduce((t, x) => t + x.annunci.length, 0);
+      statoAdesso(n ? `Trovati ${n} annunci.` : "Nessun annuncio corrisponde ai filtri. Prova ad allargare la ricerca.");
+      mostraRisultati($("adessoRis"), d);
+      fineAdesso();
+    } catch { /* riprova al giro successivo */ }
+  }, 1000);
 }
 
 scriviForm({});

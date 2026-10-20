@@ -22,7 +22,7 @@ from .estrai import estrai_annunci
 from .filtri import corrisponde
 from .modelli import Annuncio
 from .rete import ErroreRete, pausa, scarica
-from .siti import BLOCCATI, SITI, nome_sito, url_ricerca
+from .siti import SITI, fonti_per, nome_sito, url_ricerca
 from .stato import Stato
 
 RADICE = Path(__file__).resolve().parent.parent
@@ -57,8 +57,8 @@ def cerca(cfg: dict, solo_fonte: str | None) -> tuple[list[tuple[dict, list[Annu
     cerca.righe = []  # una riga per sito, per il rapporto di prova
     for ricerca in cfg.get("ricerche", []):
         trovati: list[Annuncio] = []
-        for fonte in ricerca.get("fonti") or [f for f in SITI if f not in BLOCCATI]:
-            if fonte not in SITI or (solo_fonte and fonte != solo_fonte):
+        for fonte in fonti_per(ricerca):
+            if solo_fonte and fonte != solo_fonte:
                 continue
             url = url_ricerca(fonte, ricerca)
             try:
@@ -102,9 +102,9 @@ def scrivi_rapporto(percorso: Path, adesso: datetime, righe, risultati, problemi
     percorso.write_text("\n".join(out), encoding="utf-8")
 
 
-def scrivi_risultati(cartella: Path, adesso: datetime, righe, elenco, nuovi_url: set[str], problemi) -> None:
-    """Risultati dell'ultimo controllo, leggibili su GitHub e dall'app (data/risultati.json)."""
-    dati = {
+def dati_risultati(adesso: datetime, righe, elenco, nuovi_url: set[str], problemi) -> dict:
+    """Risultati in forma leggibile dall'app."""
+    return {
         "data": adesso.isoformat(timespec="minutes"),
         "siti": [{"ricerca": r, "sito": s, "letti": l, "corrispondono": c} for r, s, l, c, _ in righe],
         "problemi": problemi,
@@ -115,8 +115,16 @@ def scrivi_risultati(cartella: Path, adesso: datetime, righe, elenco, nuovi_url:
                          "sito": nome_sito(a.fonte), "nuovo": a.url in nuovi_url} for a in annunci],
         } for ricerca, annunci in elenco],
     }
-    cartella.mkdir(parents=True, exist_ok=True)
-    (cartella / "risultati.json").write_text(json.dumps(dati, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def scrivi_json(percorso: Path, dati: dict) -> None:
+    percorso.parent.mkdir(parents=True, exist_ok=True)
+    percorso.write_text(json.dumps(dati, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def scrivi_risultati(cartella: Path, adesso: datetime, righe, elenco, nuovi_url: set[str], problemi) -> None:
+    """Risultati dell'ultimo controllo, leggibili su GitHub e dall'app (data/risultati.json)."""
+    scrivi_json(cartella / "risultati.json", dati_risultati(adesso, righe, elenco, nuovi_url, problemi))
     scrivi_rapporto(cartella / "risultati.md", adesso, righe, elenco, problemi)
 
 
