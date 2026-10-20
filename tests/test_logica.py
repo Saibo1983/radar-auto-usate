@@ -74,3 +74,10 @@ def test_orario(tmp_path):
     assert e_ora(cfg, s, datetime(2026, 10, 20, 11, 31, tzinfo=roma))[0]
     s.salva(date(2026, 10, 20))
     assert not e_ora(cfg, s, datetime(2026, 10, 20, 12, 30, tzinfo=roma))[0]
+
+
+def test_carburante_dal_titolo():
+    golf = {"modello": "Golf", "alimentazione": "diesel"}
+    assert corrisponde(auto(carburante="", titolo="Volkswagen Golf 1.6 TDI Business"), golf)
+    assert not corrisponde(auto(carburante="", titolo="Volkswagen Golf 1.5 TSI Life"), golf)
+    assert not corrisponde(auto(carburante="", titolo="Fiat Panda 1.0 FireFly Hybrid"), {"alimentazione": "benzina"})

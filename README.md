@@ -2,7 +2,18 @@
 
 Ogni giorno alle 11:30 (ora italiana) cerca auto usate su 9 siti e, se trova annunci nuovi, ti manda una email e una notifica push sul telefono.
 
-**Siti controllati:** AutoScout24, Subito.it, Automobile.it, mobile.de, AutoUncle, Quattroruote, Automoto.it, Autohero, Spoticar.
+**Siti controllati:** AutoScout24, Subito.it, Automobile.it, Quattroruote, Automoto.it, Autohero, Spoticar.
+
+| Sito | Filtri applicati dal sito | Note |
+|---|---|---|
+| AutoScout24 | tutti | ordinati dai più recenti |
+| Subito.it | marca, modello, prezzo, anno, regione | il resto lo filtra lo script |
+| Automobile.it | marca e modello | il resto lo filtra lo script |
+| Quattroruote | marca, modello, anno | il resto lo filtra lo script |
+| Automoto.it | marca e modello | l'alimentazione si ricava dalla sigla del motore (TDI, TSI…) |
+| Autohero | marca e modello | concessionario online |
+| Spoticar | marca e modello | usato garantito Stellantis |
+| mobile.de, AutoUncle | — | **bloccano le richieste dai server di GitHub (HTTP 403)**: il codice c'è, ma sono esclusi dai siti predefiniti |
 
 Le ricerche si preparano con l'artefatto **Radar Auto Usate** su claude.ai, che genera il file `config/ricerche.json`. Si può anche modificare il file a mano.
 
@@ -63,13 +74,18 @@ Copia la configurazione dall'artefatto in `config/ricerche.json`. I campi:
 | `cap`, `raggio_km` | zona per AutoScout24 |
 | `regione` | es. `lombardia`, per Subito |
 | `venditore` | `privato`, `concessionario` |
-| `fonti` | elenco dei siti: `autoscout24`, `subito`, `automobile`, `mobilede`, `autouncle`, `quattroruote`, `automoto`, `autohero`, `spoticar` |
+| `fonti` | elenco dei siti: `autoscout24`, `subito`, `automobile`, `quattroruote`, `automoto`, `autohero`, `spoticar` (anche `mobilede` e `autouncle`, che però da GitHub sono bloccati) |
 
 Un campo `null` o assente significa "qualsiasi". Il campo `url` generato dall'artefatto serve solo come promemoria: lo script ricostruisce gli indirizzi da solo.
 
 ### 5. Prima prova
 
-In **Actions → Radar Auto → Run workflow** puoi avviare subito un controllo. Il riepilogo della corsa mostra quanti annunci ha letto ogni sito e gli eventuali problemi.
+In **Actions → Radar Auto → Run workflow**:
+
+- con **Solo prova** spuntato legge i siti e scrive i risultati in `data/ultima-prova.md`, senza inviare avvisi né segnare gli annunci come visti;
+- senza **Solo prova** fa un controllo vero, con email e notifica.
+
+Se un sito smette di funzionare, **Actions → Diagnosi siti → Run workflow** scarica le pagine indicate nel ramo `diagnosi`, così si può vedere com'è cambiato il sito.
 
 ## Cambiare orario
 
@@ -92,8 +108,8 @@ pytest                                   # test
 ## Limiti
 
 - **I siti cambiano.** Se un sito modifica le sue pagine, lo script può smettere di leggerlo. Lo segnala nell'email e nel riepilogo di GitHub ("nessun annuncio letto"). Va allora aggiornato `radar/estrai.py` o `radar/siti.py`.
-- **Blocchi anti-bot.** Alcuni siti, mobile.de in particolare, possono bloccare le richieste dai server di GitHub. Lo script usa `curl_cffi` per presentarsi come un normale Chrome, aspetta qualche secondo tra una richiesta e l'altra e fa una sola ricerca al giorno, ma non è garantito che funzioni sempre.
-- **Filtri parziali.** AutoScout24 riceve tutti i filtri nell'indirizzo. Gli altri siti ne ricevono una parte e lo script applica il resto. Su Autohero e Spoticar la ricerca parte dalla pagina generale, quindi vengono letti solo i primi risultati: per ricerche precise vanno adattati gli indirizzi in `radar/siti.py`.
+- **Blocchi anti-bot.** mobile.de e AutoUncle bloccano già le richieste dai server di GitHub; altri potrebbero farlo in futuro. Lo script usa `curl_cffi` per presentarsi come un normale Chrome, aspetta qualche secondo tra una richiesta e l'altra e fa una sola ricerca al giorno, ma non è garantito che funzioni sempre.
+- **Solo la prima pagina.** Per ogni sito si legge la prima pagina di risultati (da 11 a 40 annunci). Con un controllo al giorno basta per i siti ordinati dai più recenti (AutoScout24, Subito). Sugli altri, con ricerche molto ampie, qualche annuncio nuovo può sfuggire: più la ricerca è precisa, meglio funziona.
 - **Condizioni d'uso.** Molti portali limitano la raccolta automatica dei loro contenuti. Questo progetto è pensato per uso personale con un controllo al giorno.
 
 ## Struttura
@@ -103,9 +119,12 @@ config/ricerche.json        le tue ricerche
 data/stato.json             annunci già segnalati (aggiornato in automatico)
 radar/__main__.py           esecuzione giornaliera
 radar/siti.py               indirizzi di ricerca per ogni sito
-radar/estrai.py             lettura degli annunci dalle pagine
+radar/estrai.py             lettura degli annunci dai dati strutturati (JSON-LD, Next.js)
+radar/pagine.py             lettori dedicati: Automoto, Quattroruote, Spoticar, Autohero
 radar/filtri.py             filtri su prezzo, anno, km, motore, modello
 radar/stato.py              memoria degli annunci visti e doppioni
 radar/notifiche.py          email e push
 .github/workflows/radar.yml pianificazione su GitHub Actions
+.github/workflows/diagnosi.yml scarica pagine per capire perché un sito non viene letto
+strumenti/scarica_pagine.py usato dalla diagnosi
 ```

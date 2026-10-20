@@ -17,14 +17,15 @@ from urllib.parse import urljoin
 from .modelli import Annuncio
 
 CHIAVI_URL = ("url", "link", "href", "detailUrl", "detailPageUrl", "permalink", "canonicalUrl", "default")
-CHIAVI_PREZZO = ("price", "prezzo", "priceRaw", "priceValue", "amount", "rawPrice", "grossPrice", "/price", "lowPrice")
+CHIAVI_PREZZO = ("price", "prezzo", "priceRaw", "priceValue", "formattedPrice", "amount", "rawPrice", "grossPrice",
+                 "/price")
 CHIAVI_TITOLO = ("title", "titolo", "subject", "name", "headline")
-CHIAVI_ANNO = ("firstRegistration", "firstRegistrationDate", "registrationDate", "registration",
+CHIAVI_ANNO = ("firstRegistrationYear", "firstRegistration", "firstRegistrationDate", "registrationDate", "registration",
                "year", "anno", "vehicleModelDate", "productionDate", "dateVehicleFirstRegistered", "/year")
-CHIAVI_KM = ("mileage", "mileageInKm", "mileageFromOdometer", "km", "kilometri", "chilometraggio",
+CHIAVI_KM = ("mileage", "mileageInKm", "formattedKm", "distance", "mileageFromOdometer", "km", "kilometri", "chilometraggio",
              "/mileage_scalar", "/mileage", "odometer")
-CHIAVI_CARBURANTE = ("fuel", "fuelType", "fuelCategory", "carburante", "alimentazione", "/fuel")
-CHIAVI_CAMBIO = ("gear", "gearbox", "gearType", "transmission", "vehicleTransmission", "cambio", "/gearbox")
+CHIAVI_CARBURANTE = ("fuel", "fuelEmissions", "fuelType", "fuelCategory", "carburante", "alimentazione", "/fuel")
+CHIAVI_CAMBIO = ("gear", "shift", "gearbox", "gearType", "transmission", "vehicleTransmission", "cambio", "/gearbox")
 CHIAVI_LUOGO = ("city", "town", "location", "addressLocality", "citta", "geo", "town_name")
 CHIAVI_IMMAGINE = ("image", "images", "thumbnail", "imageUrl", "picture")
 CHIAVI_MARCA = ("make", "brand", "marca", "manufacturer")
@@ -112,12 +113,15 @@ def _anno(valore: Any) -> int | None:
     return int(m.group(1)) if m else None
 
 
-def _testo(valore: Any) -> str:
+def _testo(valore: Any, profondita: int = 3) -> str:
+    if profondita < 0:
+        return ""
     if isinstance(valore, dict):
-        valore = _cerca(valore, ("name", "value", "label", "formatted", "city", "town", "addressLocality", "key"), 2)
+        # "town" prima di "label": Subito ha geo = {"label": "Comune", "town": {"value": "Firenze"}}
+        valore = _cerca(valore, ("name", "value", "formatted", "town", "city", "addressLocality", "label", "key"), 0)
+        return _testo(valore, profondita - 1)
     if isinstance(valore, list):
-        valore = valore[0] if valore else ""
-        return _testo(valore)
+        return _testo(valore[0], profondita - 1) if valore else ""
     return str(valore).strip() if valore not in (None, "") else ""
 
 
@@ -135,8 +139,15 @@ def _url(obj: dict, base: str) -> str:
     return urljoin(base, valore)
 
 
+TIPI_PAGINA = {"WebPage", "WebSite", "CollectionPage", "SearchResultsPage", "ItemList", "BreadcrumbList",
+               "Organization", "AutoDealer", "AggregateOffer"}
+
+
 def a_annuncio(obj: dict, fonte: str, base: str) -> Annuncio | None:
     """Trasforma un oggetto JSON in Annuncio se ne ha l'aspetto."""
+    tipo = obj.get("@type")
+    if tipo in TIPI_PAGINA or (isinstance(obj.get("offers"), dict) and obj["offers"].get("@type") == "AggregateOffer"):
+        return None
     obj = _appiattisci_features(obj)
     url = _url(obj, base)
     if not url or url.rstrip("/") == base.rstrip("/"):
@@ -189,9 +200,14 @@ def _visita(nodo: Any, fonte: str, base: str, out: list[Annuncio]) -> None:
 
 
 def estrai_annunci(html: str, fonte: str, base: str) -> list[Annuncio]:
-    trovati: list[Annuncio] = []
-    for blocco in blocchi_json(html):
-        _visita(blocco, fonte, base, trovati)
+    from .pagine import LETTORI  # lettori dedicati per i siti che non usano dati strutturati
+
+    if fonte in LETTORI:
+        trovati = LETTORI[fonte](html, base)
+    else:
+        trovati = []
+        for blocco in blocchi_json(html):
+            _visita(blocco, fonte, base, trovati)
     unici: dict[str, Annuncio] = {}
     for a in trovati:
         # A parità di indirizzo tieni la versione con più dati

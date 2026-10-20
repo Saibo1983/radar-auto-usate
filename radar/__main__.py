@@ -22,7 +22,7 @@ from .estrai import estrai_annunci
 from .filtri import corrisponde
 from .modelli import Annuncio
 from .rete import ErroreRete, pausa, scarica
-from .siti import SITI, nome_sito, url_ricerca
+from .siti import BLOCCATI, SITI, nome_sito, url_ricerca
 from .stato import Stato
 
 RADICE = Path(__file__).resolve().parent.parent
@@ -57,7 +57,7 @@ def cerca(cfg: dict, solo_fonte: str | None) -> tuple[list[tuple[dict, list[Annu
     cerca.righe = []  # una riga per sito, per il rapporto di prova
     for ricerca in cfg.get("ricerche", []):
         trovati: list[Annuncio] = []
-        for fonte in ricerca.get("fonti") or list(SITI):
+        for fonte in ricerca.get("fonti") or [f for f in SITI if f not in BLOCCATI]:
             if fonte not in SITI or (solo_fonte and fonte != solo_fonte):
                 continue
             url = url_ricerca(fonte, ricerca)

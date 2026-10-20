@@ -65,7 +65,10 @@ def url_subito(r: dict) -> str:
         p["ps"] = r["prezzo_min"]
     if r.get("prezzo_max"):
         p["pe"] = r["prezzo_max"]
-    p["order"] = "datedesc"
+    if r.get("anno_min"):
+        p["ys"] = r["anno_min"]
+    if r.get("anno_max"):
+        p["ye"] = r["anno_max"]
     return f"https://www.subito.it/annunci-{area}/vendita/auto/?" + urlencode(p)
 
 
@@ -104,6 +107,8 @@ def url_quattroruote(r: dict) -> str:
         u += "/marca-" + slug(r["marca"])
         if r.get("modello"):
             u += "/modello-" + slug(r["modello"])
+    if r.get("anno_min"):
+        u += f"/anno-dal-{r['anno_min']}"
     return u
 
 
@@ -117,12 +122,23 @@ def url_automoto(r: dict) -> str:
 
 
 def url_autohero(r: dict) -> str:
-    return "https://www.autohero.com/it/search/"
+    p = {k: slug(r[v]) for k, v in (("brand", "marca"), ("model", "modello")) if r.get(v)}
+    return "https://www.autohero.com/it/search/" + ("?" + urlencode(p) if p else "")
 
 
 def url_spoticar(r: dict) -> str:
-    return "https://www.spoticar.it/auto-usate"
+    u = "https://www.spoticar.it/trova-veicoli-usati"
+    if r.get("marca"):
+        marca = slug(r["marca"])
+        u += "/" + ("mercedes" if marca == "mercedes-benz" else marca)
+        if r.get("modello"):
+            u += "/" + slug(r["modello"])
+    return u
 
+
+# mobile.de e AutoUncle bloccano le richieste dai server di GitHub (HTTP 403):
+# restano disponibili ma non sono tra i siti predefiniti.
+BLOCCATI = {"mobilede", "autouncle"}
 
 SITI = {
     "autoscout24": ("AutoScout24", url_autoscout24),

@@ -26,8 +26,30 @@ def _contiene(testo: str, parole: tuple[str, ...]) -> bool:
     return any(p in testo for p in parole)
 
 
+# Sigle dei motori, per capire l'alimentazione dal titolo quando il sito non la indica.
+# L'ordine conta: "firefly hybrid" è ibrida prima che benzina.
+SIGLE_MOTORE = (
+    ("elettrica", ("elettric", "electric", " ev ", "e tech electric")),
+    ("ibrida", ("hybrid", "ibrid", "phev", "mhev")),
+    ("gpl", ("gpl", "lpg", "easypower", "bi fuel", "bifuel")),
+    ("metano", ("metano", "cng", " tgi ", "natural power", "ecofuel")),
+    ("diesel", ("diesel", " tdi", "multijet", " mjt", " jtd", " hdi", "bluehdi", " crdi", " dci", " cdi",
+                "d4d", "ecoblue", "tdci", " cdti")),
+    ("benzina", ("benzina", " tsi", " tfsi", "firefly", "twinair", " fire ", " tce", "puretech", " vti",
+                 " t jet", "tjet", "ecoboost", " mpi")),
+)
+
+
+def carburante_da_titolo(titolo: str) -> str:
+    testo = f" {normalizza(titolo)} "
+    for nome, sigle in SIGLE_MOTORE:
+        if any(s in testo for s in sigle):
+            return nome
+    return ""
+
+
 def _carburante_ok(annuncio: Annuncio, voluto: str) -> bool:
-    testo = normalizza(annuncio.carburante)
+    testo = normalizza(annuncio.carburante) or carburante_da_titolo(annuncio.titolo)
     if not testo:
         return True
     if voluto != "ibrida" and _contiene(testo, PAROLE_CARBURANTE["ibrida"]):
