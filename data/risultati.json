@@ -1,0 +1,714 @@
+{
+ "data": "2026-10-20T12:17+02:00",
+ "siti": [
+  {
+   "ricerca": "Golf diesel per famiglia",
+   "sito": "AutoScout24",
+   "letti": 19,
+   "corrispondono": 19
+  },
+  {
+   "ricerca": "Golf diesel per famiglia",
+   "sito": "Subito",
+   "letti": 38,
+   "corrispondono": 4
+  },
+  {
+   "ricerca": "Golf diesel per famiglia",
+   "sito": "Automobile.it",
+   "letti": 20,
+   "corrispondono": 0
+  },
+  {
+   "ricerca": "Golf diesel per famiglia",
+   "sito": "Quattroruote",
+   "letti": 15,
+   "corrispondono": 0
+  },
+  {
+   "ricerca": "Golf diesel per famiglia",
+   "sito": "Automoto",
+   "letti": 13,
+   "corrispondono": 0
+  },
+  {
+   "ricerca": "Golf diesel per famiglia",
+   "sito": "Autohero",
+   "letti": 0,
+   "corrispondono": 0
+  },
+  {
+   "ricerca": "Golf diesel per famiglia",
+   "sito": "Spoticar",
+   "letti": 11,
+   "corrispondono": 1
+  },
+  {
+   "ricerca": "Panda in città",
+   "sito": "AutoScout24",
+   "letti": 20,
+   "corrispondono": 20
+  },
+  {
+   "ricerca": "Panda in città",
+   "sito": "Subito",
+   "letti": 36,
+   "corrispondono": 7
+  },
+  {
+   "ricerca": "Panda in città",
+   "sito": "Automobile.it",
+   "letti": 20,
+   "corrispondono": 3
+  },
+  {
+   "ricerca": "Panda in città",
+   "sito": "Quattroruote",
+   "letti": 15,
+   "corrispondono": 0
+  },
+  {
+   "ricerca": "Panda in città",
+   "sito": "Automoto",
+   "letti": 13,
+   "corrispondono": 0
+  },
+  {
+   "ricerca": "Panda in città",
+   "sito": "Autohero",
+   "letti": 24,
+   "corrispondono": 0
+  },
+  {
+   "ricerca": "Panda in città",
+   "sito": "Spoticar",
+   "letti": 11,
+   "corrispondono": 0
+  }
+ ],
+ "problemi": [],
+ "ricerche": [
+  {
+   "nome": "Golf diesel per famiglia",
+   "annunci": [
+    {
+     "titolo": "Volkswagen Golf 2.0 TDI 150 CV SCR Style",
+     "prezzo": 9500,
+     "anno": 2026,
+     "km": 5000,
+     "carburante": "Diesel",
+     "luogo": "Qualiano",
+     "url": "https://www.subito.it/auto/volkswagen-golf-2-0-tdi-150-cv-scr-style-napoli-664346788.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 11090,
+     "anno": 2023,
+     "km": 100345,
+     "carburante": "Diesel",
+     "luogo": "Pacengo - Verona",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-life-2-0-diesel-116cv-diesel-grigio-cat_ma74mo2084-0aa836df-6848-4540-8be6-b1cc25aefe36",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/0aa836df-6848-4540-8be6-b1cc25aefe36_cc181699-ad5f-4cd9-b419-83eaba8406ed.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 11400,
+     "anno": 2019,
+     "km": 117800,
+     "carburante": "Diesel",
+     "luogo": "biella",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-5p-1-6-tdi-business-115cv-diesel-cat_ma74mo2084-730fe573-8140-40ad-849f-3419fa9bc9e4",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/730fe573-8140-40ad-849f-3419fa9bc9e4_5893e78e-8c42-446e-bff1-3c6fe87265d1.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 12300,
+     "anno": 2018,
+     "km": 115000,
+     "carburante": "Diesel",
+     "luogo": "San Zeno Naviglio",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-vii-2017-5p-golf-5p-1-6-tdi-business-115cv-diesel-bianco-cat_ma74mo2084-b13528bb-cd87-480a-9e8d-69ff0f0e09c6",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/b13528bb-cd87-480a-9e8d-69ff0f0e09c6_3c5d2bc1-4a90-4dc3-882e-f9b4bbb02bfc.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 12500,
+     "anno": 2019,
+     "km": 115000,
+     "carburante": "Diesel",
+     "luogo": "Borghetto Lodigiano",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-5p-1-6-tdi-business-115cv-dsg-diesel-cat_ma74mo2084-61445722-6440-4332-b0d4-99fc77e32ce9",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/61445722-6440-4332-b0d4-99fc77e32ce9_9e25a5c1-6ce6-403b-ab8b-be70e3a1238d.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 12800,
+     "anno": 2019,
+     "km": 110000,
+     "carburante": "Diesel",
+     "luogo": "Bagnaria",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-5p-1-6-tdi-sport-115cv-dsg-diesel-cat_ma74mo2084-71baff06-7ea6-4317-a2bf-44918a127819",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/71baff06-7ea6-4317-a2bf-44918a127819_436090e2-a6d6-45eb-b71a-00a16eefffcb.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 12900,
+     "anno": 2019,
+     "km": 35000,
+     "carburante": "Diesel",
+     "luogo": "Castel Madama - Roma - RM",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-golf-5p-1-6-tdi-executive-115cv-diesel-nero-cat_ma74mo2084-48da4a76-d827-4adb-9992-57c905b17b25",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/48da4a76-d827-4adb-9992-57c905b17b25_79dd7de9-9915-4fac-a314-bc5f29771620.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 13000,
+     "anno": 2020,
+     "km": 118812,
+     "carburante": "Diesel",
+     "luogo": "Torino",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-1-6-tdi-bluemotion-technology-business-diesel-cat_ma74mo2084-4bddcc84-a982-451d-952a-d5cd754627cc",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/4bddcc84-a982-451d-952a-d5cd754627cc_8629ad75-37cc-4c57-abac-86fc3d71d4cd.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 13200,
+     "anno": 2020,
+     "km": 99000,
+     "carburante": "Diesel",
+     "luogo": "Baronissi",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-golf-5p-1-6-tdi-executive-115cv-diesel-bianco-cat_ma74mo2084-05747baf-0c87-46fd-a1c8-f413f9ae1acb",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/05747baf-0c87-46fd-a1c8-f413f9ae1acb_370586de-6e9e-4148-b5c5-034de2d2810c.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 13500,
+     "anno": 2018,
+     "km": 102200,
+     "carburante": "Diesel",
+     "luogo": "Pozzuoli",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-golf-vii-2017-5p-5p-1-6-tdi-business-115cv-dsg-diesel-argento-cat_ma74mo2084-3c2c8431-7c20-49f9-a739-d4515f091c94",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/3c2c8431-7c20-49f9-a739-d4515f091c94_eebeac22-459f-4325-bdd5-006f4d0b4a91.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 13800,
+     "anno": 2018,
+     "km": 117000,
+     "carburante": "Diesel",
+     "luogo": "Campiglia Marittima",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-golf-vii-2017-3p-3p-2-0-tdi-sport-150cv-diesel-cat_ma74mo2084-f1b925de-a9d4-4176-b31c-79d3d3d80913",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/f1b925de-a9d4-4176-b31c-79d3d3d80913_5ab43d2c-17f6-4749-995a-619bc3f75d3e.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 13900,
+     "anno": 2019,
+     "km": 120000,
+     "carburante": "Diesel",
+     "luogo": "Latina - LT",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-golf-vii-2019-1-6-tdi-sound-ok-neopatentati-navi-garanzia-permute-diesel-bianco-cat_ma74mo2084-306ac3a5-91c9-41e7-bc5f-ed196f80d52b",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/306ac3a5-91c9-41e7-bc5f-ed196f80d52b_f8419b28-4b36-4ca4-9e7a-e6417fba854d.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 14500,
+     "anno": 2020,
+     "km": 90000,
+     "carburante": "Diesel",
+     "luogo": "roma",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-5p-1-6-tdi-business-115cv-diesel-cat_ma74mo2084-72ef3fb9-2a2e-4564-9ee6-aea10b7ee745",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/72ef3fb9-2a2e-4564-9ee6-aea10b7ee745_80afb298-c823-4cab-806f-681eb75a75d5.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 14500,
+     "anno": 2018,
+     "km": 94000,
+     "carburante": "Diesel",
+     "luogo": "Genova - GE",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-vii-5p-1-6-tdi-executive-115cv-diesel-grigio-cat_ma74mo2084-c4726a6b-796e-4b31-8151-d98ee60b94c4",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/c4726a6b-796e-4b31-8151-d98ee60b94c4_5b7a54ef-f3c8-4347-b382-d2761454b604.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "VOLKSWAGEN golf viii 2020 variant Golf Variant 2.0",
+     "prezzo": 14881,
+     "anno": 2021,
+     "km": 75000,
+     "carburante": "Diesel",
+     "luogo": "Barzago",
+     "url": "https://www.subito.it/auto/volkswagen-golf-viii-2020-variant-golf-variant-2-0-lecco-651116201.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 14900,
+     "anno": 2019,
+     "km": 93000,
+     "carburante": "Diesel",
+     "luogo": "Dipignano - Cosenza - CS",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-golf-vii-2017-5p-5p-1-6-tdi-executive-115cv-diesel-blu-azzurro-cat_ma74mo2084-d1569177-c110-4775-a171-f8bc6a518d98",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/d1569177-c110-4775-a171-f8bc6a518d98_98e4ee45-91fc-4af5-9a3b-7d19d587f307.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 14900,
+     "anno": 2019,
+     "km": 82600,
+     "carburante": "Diesel",
+     "luogo": "Massa - Ms",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-golf-5p-1-6-tdi-business-115cv-diesel-grigio-cat_ma74mo2084-26c7a4b9-e91c-4c22-ba5f-3f3326d1c826",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/26c7a4b9-e91c-4c22-ba5f-3f3326d1c826_bc3ec808-26bd-432e-b7c6-3e635c591684.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf 1.6 TDI Highline BMT DSG",
+     "prezzo": 14900,
+     "anno": 2018,
+     "km": 74207,
+     "carburante": "Diesel",
+     "luogo": "",
+     "url": "https://www.spoticar.it/trova-veicoli-usati/volkswagen-golf-16-tdi-highline-bmt-dsg-lombardia-sesto-san-giovanni-1202502322",
+     "immagine": "https://s3.eu-central-1.amazonaws.com/uvpictures-eu-central-1/368/SP/IT/VOLKSWAGEN-GOLF-2502322_1.JPG",
+     "sito": "Spoticar",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 14980,
+     "anno": 2019,
+     "km": 119000,
+     "carburante": "Diesel",
+     "luogo": "Alatri - Frosinone - Fr",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-1-6-tdi-executive-85-kw-man-prezzo-reale-f1293-diesel-nero-cat_ma74mo2084-91d777d0-e01f-45e0-b583-a3cb3f4c7b51",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/91d777d0-e01f-45e0-b583-a3cb3f4c7b51_ac8476bf-61b9-46c7-a35a-9fdaec5d57f2.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 15000,
+     "anno": 2019,
+     "km": 102000,
+     "carburante": "Diesel",
+     "luogo": "Roma",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-5p-1-6-tdi-sport-115cv-diesel-cat_ma74mo2084-63f0d11a-ea10-4660-9647-99c51cb27abb",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/63f0d11a-ea10-4660-9647-99c51cb27abb_5e389c41-5e9b-4237-918d-2361a87e2ded.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 15000,
+     "anno": 2020,
+     "km": 108000,
+     "carburante": "Diesel",
+     "luogo": "Cernusco sul Naviglio",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-golf-vii-2017-5p-5p-1-6-tdi-business-115cv-diesel-grigio-cat_ma74mo2084-65668944-c319-40c9-9486-b34a0526d7ad",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/65668944-c319-40c9-9486-b34a0526d7ad_4d7f603c-a962-4b51-8229-61a9fd281c7a.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen Golf",
+     "prezzo": 15000,
+     "anno": 2018,
+     "km": 109000,
+     "carburante": "Diesel",
+     "luogo": "Beinasco",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-5p-1-6-tdi-executive-115cv-diesel-cat_ma74mo2084-f9b1dfad-74fa-4455-9806-d6ac598eea70",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/f9b1dfad-74fa-4455-9806-d6ac598eea70_82e3b28a-8f9f-4beb-8968-3f0d588b2e46.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    }
+   ]
+  },
+  {
+   "nome": "Panda in città",
+   "annunci": [
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 6000,
+     "anno": 2018,
+     "km": 45000,
+     "carburante": "Benzina",
+     "luogo": "Milano",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-3-serie-benzina-cat_ma28mo1746-81017d21-4b81-4a91-bb11-8a87521ef00b",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/81017d21-4b81-4a91-bb11-8a87521ef00b_1df1ab6d-cdc2-4e6e-b55c-1586864dabca.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda LOUNGE 0.9 TWINAIR 85CV BENZ/METANO - UFFICIALE",
+     "prezzo": 6490,
+     "anno": 2016,
+     "km": 84263,
+     "carburante": "Benzina - Euro 6",
+     "luogo": "Melito di Napoli (NA)",
+     "url": "https://www.automobile.it/melito-napoli-fiat-panda-lounge-0-9-twinair-85cv-benz-metano-ufficiale/180132335",
+     "immagine": "",
+     "sito": "Automobile.it",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda 1.2 BENZINA EURO6D-TEMP Van 2 posti AUTOCARRO",
+     "prezzo": 6500,
+     "anno": 2018,
+     "km": 60000,
+     "carburante": "Benzina - Euro 6",
+     "luogo": "Genova (GE)",
+     "url": "https://www.automobile.it/genova-fiat-panda-1-2-benzina-euro6d-temp-van-2-posti-autocarro/177370515",
+     "immagine": "",
+     "sito": "Automobile.it",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 6600,
+     "anno": 2016,
+     "km": 22612,
+     "carburante": "Benzina",
+     "luogo": "Milano",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-0-9-t-air-t-4x4-s-benzina-blu-azzurro-cat_ma28mo1746-2dd994e4-51dd-4241-ba4b-c4c2a2c1cf50",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/2dd994e4-51dd-4241-ba4b-c4c2a2c1cf50_c20a8980-8c71-4176-b910-1cd8584df8bf.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 6700,
+     "anno": 2016,
+     "km": 89000,
+     "carburante": "Benzina",
+     "luogo": "Genova",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-iii-2012-1-2-k-way-69cv-benzina-bianco-cat_ma28mo1746-53b4c1de-ffd7-4d35-ad1c-93299513e73c",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/53b4c1de-ffd7-4d35-ad1c-93299513e73c_f0148719-5ce6-47e9-966c-29e2ce961aef.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda 1.2 Pop Van 2 posti",
+     "prezzo": 6800,
+     "anno": 2019,
+     "km": 44000,
+     "carburante": "Benzina - Euro 6",
+     "luogo": "Genova (GE)",
+     "url": "https://www.automobile.it/genova-fiat-panda-1-2-pop-van-2-posti/179568661",
+     "immagine": "",
+     "sito": "Automobile.it",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 6999,
+     "anno": 2018,
+     "km": 115,
+     "carburante": "Benzina",
+     "luogo": "Parete",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-iii-2016-1-2-pop-69cv-benzina-grigio-cat_ma28mo1746-87074392-4891-452f-a00f-20461d288056",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/87074392-4891-452f-a00f-20461d288056_d9d34d1a-9fc5-41fd-94e8-30d80ad5947a.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 7000,
+     "anno": 2020,
+     "km": 80000,
+     "carburante": "Benzina",
+     "luogo": "Gavardo",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-iii-2016-1-2-pop-s-benzina-grigio-cat_ma28mo1746-6e5ccbc3-1ce7-4c80-96cc-26e44fe16536",
+     "immagine": "",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 7100,
+     "anno": 2019,
+     "km": 77000,
+     "carburante": "Benzina",
+     "luogo": "Parabita",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-1-2-easy-ss-69cv-my19-benzina-cat_ma28mo1746-307fc740-eeca-499d-b16b-019630d51b50",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/307fc740-eeca-499d-b16b-019630d51b50_48b81fe6-20bd-417c-b238-955351944a71.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 7200,
+     "anno": 2016,
+     "km": 74150,
+     "carburante": "Benzina",
+     "luogo": "Farra di Soligo",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-iii-2016-4x4-0-9-t-air-t-4x4-s-benzina-bianco-cat_ma28mo1746-9ecb8aa9-4c82-479d-80fe-73623af77cdb",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/9ecb8aa9-4c82-479d-80fe-73623af77cdb_ac19ceed-f1a5-43ba-96c4-a3bab0d26dcd.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 7299,
+     "anno": 2021,
+     "km": 89000,
+     "carburante": "Metano",
+     "luogo": "Santeramo in Colle",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-0-9-t-air-t-natural-power-city-life-70cv-metano-cat_ma28mo1746-bf6ed794-bb02-43b7-8567-357f00a48e8d",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/bf6ed794-bb02-43b7-8567-357f00a48e8d_472944a0-5753-47ff-8bcb-5864732e2489.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 7300,
+     "anno": 2016,
+     "km": 65000,
+     "carburante": "Diesel",
+     "luogo": "Torino",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-iii-2012-1-3-mjt-16v-lounge-s-diesel-bianco-cat_ma28mo1746-2b70c1d3-6e82-4c7a-95bf-d9c770c2531a",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/2b70c1d3-6e82-4c7a-95bf-d9c770c2531a_14a09f78-ed5b-4571-91ba-b573b5b1b75a.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 7500,
+     "anno": 2016,
+     "km": 43153,
+     "carburante": "Benzina",
+     "luogo": "Roma",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-1-2-pop-69cv-e6-benzina-beige-cat_ma28mo1746-05209dfe-6081-4f20-8beb-d9036b4faf64",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/05209dfe-6081-4f20-8beb-d9036b4faf64_d7333b12-8c11-4478-9fb0-f9ab224d38e3.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 7500,
+     "anno": 2019,
+     "km": 90000,
+     "carburante": "Metano",
+     "luogo": "Avigliano",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-0-9-twinair-turbo-85cv-natural-power-lounge-metano-cat_ma28mo1746-d8e1e5b0-e528-484c-b957-e6e427488533",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/d8e1e5b0-e528-484c-b957-e6e427488533_c0afea79-9dff-4793-a90b-a70868cbb342.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 7500,
+     "anno": 2016,
+     "km": 75000,
+     "carburante": "Benzina",
+     "luogo": "Capo d'Orlando",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-1-2-k-way-69cv-benzina-nero-cat_ma28mo1746-2c5f6186-b855-4452-8fdf-12ddbf30ec87",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/2c5f6186-b855-4452-8fdf-12ddbf30ec87_1d222374-538b-4163-b087-09e6addbc443.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "fiat panda",
+     "prezzo": 7500,
+     "anno": 2021,
+     "km": 88000,
+     "carburante": "Mild Hybrid Benzina",
+     "luogo": "Cologno Monzese",
+     "url": "https://www.subito.it/auto/fiat-panda-milano-659979782.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": true
+    },
+    {
+     "titolo": "Formula Fiat panda cavallini",
+     "prezzo": 7500,
+     "anno": 2026,
+     "km": 0,
+     "carburante": "",
+     "luogo": "Sarezzo",
+     "url": "https://www.subito.it/auto/formula-fiat-panda-cavallini-brescia-651192980.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 7600,
+     "anno": 2019,
+     "km": 44000,
+     "carburante": "Benzina",
+     "luogo": "Palermo",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-iii-2016-1-2-easy-s-benzina-grigio-cat_ma28mo1746-abe17bf9-5166-4c54-8568-a5ae98d9069e",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/abe17bf9-5166-4c54-8568-a5ae98d9069e_acf1a981-a5c4-4b58-9f79-9b1872873144.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "FIAT Panda 1,2 Lounge",
+     "prezzo": 7700,
+     "anno": 2019,
+     "km": 67660,
+     "carburante": "Benzina",
+     "luogo": "Varese",
+     "url": "https://www.subito.it/auto/fiat-panda-1-2-lounge-varese-665040258.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 7750,
+     "anno": 2021,
+     "km": 41780,
+     "carburante": "Benzina",
+     "luogo": "Milano",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-iii-2021-4x4-cross-0-9-t-air-t-cross-benzina-nero-cat_ma28mo1746-df832e24-6a61-4157-94a6-9e406cf27101",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/df832e24-6a61-4157-94a6-9e406cf27101_642e4468-e250-4193-bbdd-6f8320742088.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "FIAT Panda 1.2 69CV Van 2 posti N1 *UNICO PROPRI",
+     "prezzo": 7890,
+     "anno": 2019,
+     "km": 34163,
+     "carburante": "Benzina",
+     "luogo": "Cologno Monzese",
+     "url": "https://www.subito.it/auto/fiat-panda-1-2-69cv-van-2-posti-n1-unico-propri-milano-664462468.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 7900,
+     "anno": 2016,
+     "km": 61700,
+     "carburante": "Benzina",
+     "luogo": "Trieste",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-1-2-easy-69cv-e6-benzina-cat_ma28mo1746-fb6acae1-e651-4f8c-b31b-93f13e9c84ea",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/fb6acae1-e651-4f8c-b31b-93f13e9c84ea_4e087ec6-06af-4d11-80f8-484e13bb29fb.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 7900,
+     "anno": 2017,
+     "km": 35000,
+     "carburante": "Benzina",
+     "luogo": "Parma",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-1-2-easy-69cv-benzina-bianco-cat_ma28mo1746-03cba9b4-4eb0-41a4-bd12-7b7d929e2407",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/03cba9b4-4eb0-41a4-bd12-7b7d929e2407_9e924558-3401-47e1-a22b-217066ba6314.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 7900,
+     "anno": 2016,
+     "km": 65100,
+     "carburante": "Diesel",
+     "luogo": "Bussolengo",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-iii-2012-1-3-mjt-16v-easy-s-diesel-cat_ma28mo1746-df3a537c-6ca0-42ed-b455-888e8d9bdab1",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/df3a537c-6ca0-42ed-b455-888e8d9bdab1_28a1835e-4650-44b4-bb29-5f5a58a9fdaa.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 7900,
+     "anno": 2016,
+     "km": 14000,
+     "carburante": "Benzina",
+     "luogo": "Cadegliano-Viconago",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-iii-2012-1-2-easy-69cv-e6-benzina-beige-cat_ma28mo1746-451c7ca6-fa7d-46ac-8936-e5d2edf7a58b",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/451c7ca6-fa7d-46ac-8936-e5d2edf7a58b_fe51b1a4-3d40-4afd-86f7-fd5859dccf6c.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda 1.2",
+     "prezzo": 7900,
+     "anno": 2016,
+     "km": 89000,
+     "carburante": "Benzina",
+     "luogo": "Buccinasco",
+     "url": "https://www.subito.it/auto/fiat-panda-1-2-milano-650228854.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": true
+    },
+    {
+     "titolo": "FIAT Panda 1.0 S&S Hybrid N1 4 posti",
+     "prezzo": 7990,
+     "anno": 2022,
+     "km": 71000,
+     "carburante": "Ibrida",
+     "luogo": "Milano",
+     "url": "https://www.subito.it/auto/fiat-panda-1-0-s-s-hybrid-n1-4-posti-milano-659431424.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 8000,
+     "anno": 2021,
+     "km": 34450,
+     "carburante": "Elettrica/Benzina",
+     "luogo": "Milano",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-iii-2021-cross-1-0-firefly-hybrid-cross-s-elettrica-benzina-blu-azzurro-cat_ma28mo1746-5c2188e5-3998-4898-be16-5178be0c959e",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/5c2188e5-3998-4898-be16-5178be0c959e_ea502eaf-902d-426b-9b59-6e5431f6692b.png/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Panda",
+     "prezzo": 8000,
+     "anno": 2016,
+     "km": 72500,
+     "carburante": "Benzina",
+     "luogo": "Arese",
+     "url": "https://www.subito.it/auto/panda-milano-632269074.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": true
+    }
+   ]
+  }
+ ]
+}
