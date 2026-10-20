@@ -1,0 +1,62 @@
+name: Radar Auto
+
+on:
+  schedule:
+    # GitHub usa l'ora UTC. Le 11:30 italiane sono le 9:30 UTC con l'ora legale
+    # e le 10:30 UTC con l'ora solare: girano entrambe e lo script parte solo
+    # se in Italia è già l'orario scelto e oggi non ha ancora controllato.
+    - cron: "30 9 * * *"
+    - cron: "30 10 * * *"
+  workflow_dispatch:
+    inputs:
+      forza:
+        description: "Controlla subito, anche fuori orario"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar
+  cancel-in-progress: false
+
+jobs:
+  controlla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Cerca annunci e invia avvisi
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.forza }}" = "true" ]; then
+            python -m radar --forza
+          else
+            python -m radar
+          fi
+
+      - name: Salva gli annunci già visti
+        run: |
+          if [ -n "$(git status --porcelain data/)" ]; then
+            git config user.name "radar-auto[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/
+            git commit -m "Aggiorna annunci visti ($(TZ=Europe/Rome date +%Y-%m-%d))"
+            git push
+          fi

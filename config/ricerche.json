@@ -1,0 +1,51 @@
+{
+  "fuso_orario": "Europe/Rome",
+  "orario": "11:30",
+  "notifiche": {
+    "email": "nome@esempio.it",
+    "ntfy_topic": "",
+    "solo_nuovi": true
+  },
+  "ricerche": [
+    {
+      "id": "es1",
+      "nome": "Golf diesel per famiglia",
+      "marca": "Volkswagen",
+      "modello": "Golf",
+      "carrozzeria": null,
+      "alimentazione": "diesel",
+      "cambio": null,
+      "prezzo_min": null,
+      "prezzo_max": 15000,
+      "anno_min": 2018,
+      "anno_max": null,
+      "km_max": 120000,
+      "potenza_min_cv": null,
+      "cap": null,
+      "raggio_km": null,
+      "regione": null,
+      "venditore": null,
+      "fonti": ["autoscout24", "subito", "automobile", "mobilede", "autouncle", "quattroruote", "automoto", "autohero", "spoticar"]
+    },
+    {
+      "id": "es2",
+      "nome": "Panda in città",
+      "marca": "Fiat",
+      "modello": "Panda",
+      "carrozzeria": "utilitaria",
+      "alimentazione": null,
+      "cambio": "manuale",
+      "prezzo_min": null,
+      "prezzo_max": 8000,
+      "anno_min": 2016,
+      "anno_max": null,
+      "km_max": 90000,
+      "potenza_min_cv": null,
+      "cap": null,
+      "raggio_km": null,
+      "regione": "lombardia",
+      "venditore": "privato",
+      "fonti": ["autoscout24", "subito", "automobile", "mobilede", "autouncle", "quattroruote", "automoto", "autohero", "spoticar"]
+    }
+  ]
+}
