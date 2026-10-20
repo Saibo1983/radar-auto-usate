@@ -1,0 +1,225 @@
+{
+ "data": "2026-10-20T22:01+02:00",
+ "siti": [
+  {
+   "ricerca": "Fiat Panda",
+   "sito": "AutoScout24",
+   "letti": 20,
+   "corrispondono": 5
+  },
+  {
+   "ricerca": "Fiat Panda",
+   "sito": "Subito",
+   "letti": 41,
+   "corrispondono": 0
+  },
+  {
+   "ricerca": "Fiat Panda",
+   "sito": "Automobile.it",
+   "letti": 20,
+   "corrispondono": 0
+  },
+  {
+   "ricerca": "Fiat Panda",
+   "sito": "Quattroruote",
+   "letti": 15,
+   "corrispondono": 0
+  },
+  {
+   "ricerca": "Fiat Panda",
+   "sito": "Automoto",
+   "letti": 13,
+   "corrispondono": 5
+  },
+  {
+   "ricerca": "Fiat Panda",
+   "sito": "Autohero",
+   "letti": 24,
+   "corrispondono": 4
+  },
+  {
+   "ricerca": "Fiat Panda",
+   "sito": "Spoticar",
+   "letti": 11,
+   "corrispondono": 0
+  }
+ ],
+ "problemi": [],
+ "ricerche": [
+  {
+   "id": "rmvh3fyry",
+   "nome": "Fiat Panda",
+   "annunci": [
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 7800,
+     "anno": 2018,
+     "km": 170000,
+     "carburante": "Benzina",
+     "luogo": "Castellamare di Stabia - Napoli - Na",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-automatica-e-freno-sotto-sterzo-benzina-grigio-cat_ma28mo1746-e1741a1c-9ac4-44a1-809a-6ebe30e7d9e3",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/e1741a1c-9ac4-44a1-809a-6ebe30e7d9e3_122625d3-2476-4c34-9e31-60ca60f7aafe.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 8900,
+     "anno": 2018,
+     "km": 168027,
+     "carburante": "Benzina",
+     "luogo": "Atena Lucana",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-0-9-twinair-turbo-ss-lounge-dual-logic-benzina-argento-cat_ma28mo1746-8b65a1b9-9c18-46ce-aa8e-787b5c3bfe36",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/8b65a1b9-9c18-46ce-aa8e-787b5c3bfe36_36481b65-9937-400f-af2a-7f4afb337a09.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda 1.2 Pop",
+     "prezzo": 9199,
+     "anno": 2019,
+     "km": 74848,
+     "carburante": "",
+     "luogo": "",
+     "url": "https://www.autohero.com/it/fiat-panda/id/582f35e4-88e3-4320-b934-1a3b29039429/",
+     "immagine": "",
+     "sito": "Autohero",
+     "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 9700,
+     "anno": 2018,
+     "km": 32322,
+     "carburante": "Benzina",
+     "luogo": "Acerra - NA",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-0-9-t-air-t-easy-s-benzina-rosso-cat_ma28mo1746-028ead0e-067f-41c7-86a4-7bf93b12db2c",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/028ead0e-067f-41c7-86a4-7bf93b12db2c_12e50dec-cfa9-4889-8a32-bee83988c4cb.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda 1.2 Easy",
+     "prezzo": 9799,
+     "anno": 2018,
+     "km": 50484,
+     "carburante": "",
+     "luogo": "",
+     "url": "https://www.autohero.com/it/fiat-panda/id/6debc913-1764-4def-a6ee-226467e69118/",
+     "immagine": "",
+     "sito": "Autohero",
+     "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda 1.2 City Cross",
+     "prezzo": 9990,
+     "anno": 2018,
+     "km": 85200,
+     "carburante": "",
+     "luogo": "Caltanissetta (CL)",
+     "url": "https://www.automoto.it/auto-usate/fiat/panda/12-city-cross-my-19/16140109",
+     "immagine": "",
+     "sito": "Automoto",
+     "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 10000,
+     "anno": 2018,
+     "km": 33600,
+     "carburante": "Benzina",
+     "luogo": "Parma",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-0-9-t-air-t-easy-dualogic-automatica-benzina-arancione-cat_ma28mo1746-f7653164-3cae-4e09-8d2f-a9a63e9c2ea7",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/f7653164-3cae-4e09-8d2f-a9a63e9c2ea7_3b62d155-79c0-4fbd-b201-6e7d87c0c595.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 10450,
+     "anno": 2018,
+     "km": 112600,
+     "carburante": "Benzina",
+     "luogo": "Gallarate",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-0-9-twinair-turbo-85cv-e6-ss-easy-dualogic-benzina-rosso-cat_ma28mo1746-d78f083b-1d41-4be1-afe8-d8202ff8c89f",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/d78f083b-1d41-4be1-afe8-d8202ff8c89f_a8650d0e-7eba-4b9e-8cb2-9562a42739be.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda 1.2 Easy",
+     "prezzo": 11399,
+     "anno": 2019,
+     "km": 9137,
+     "carburante": "",
+     "luogo": "",
+     "url": "https://www.autohero.com/it/fiat-panda/id/f36b4dc5-b1d1-4c84-a449-240b59c50c1e/",
+     "immagine": "",
+     "sito": "Autohero",
+     "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda 0.9 TwinAir Turbo S&S 4x4 Wild",
+     "prezzo": 11490,
+     "anno": 2018,
+     "km": 30249,
+     "carburante": "",
+     "luogo": "Torino (TO)",
+     "url": "https://www.automoto.it/auto-usate/fiat/panda/09-twinair-turbo-s-s-4x4-wild/16102573",
+     "immagine": "",
+     "sito": "Automoto",
+     "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda 0.9 TwinAir Turbo S&S 4x4 Wild",
+     "prezzo": 11490,
+     "anno": 2021,
+     "km": 61322,
+     "carburante": "",
+     "luogo": "Torino (TO)",
+     "url": "https://www.automoto.it/auto-usate/fiat/panda/09-twinair-turbo-s-s-4x4-wild/16059660",
+     "immagine": "",
+     "sito": "Automoto",
+     "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda 0.9 Cross 4x4",
+     "prezzo": 11999,
+     "anno": 2019,
+     "km": 111727,
+     "carburante": "",
+     "luogo": "",
+     "url": "https://www.autohero.com/it/fiat-panda/id/f54dd668-b66c-4aae-8551-2a394ddf9983/",
+     "immagine": "",
+     "sito": "Autohero",
+     "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda van 0.9 nat.p. 70cv Pop 2p.ti serie 4 E6d",
+     "prezzo": 12800,
+     "anno": 2022,
+     "km": 29000,
+     "carburante": "",
+     "luogo": "Bastia Umbra (PG)",
+     "url": "https://www.automoto.it/auto-usate/fiat/panda/van-09-natp-70cv-pop-2pti-serie-4-e6d/16196124",
+     "immagine": "",
+     "sito": "Automoto",
+     "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda 0.9 TwinAir Turbo S&S 4x4 City Cross",
+     "prezzo": 14990,
+     "anno": 2023,
+     "km": 44551,
+     "carburante": "",
+     "luogo": "Torino (TO)",
+     "url": "https://www.automoto.it/auto-usate/fiat/panda/09-twinair-turbo-s-s-4x4-city-cross-my-22/16098348",
+     "immagine": "",
+     "sito": "Automoto",
+     "nuovo": false
+    }
+   ]
+  }
+ ],
+ "richiesta": "iniziale1"
+}
