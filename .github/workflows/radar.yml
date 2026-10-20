@@ -13,6 +13,10 @@ on:
         description: "Controlla subito, anche fuori orario"
         type: boolean
         default: true
+      prova:
+        description: "Solo prova: legge i siti e mostra i risultati, senza inviare avvisi né salvare"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -45,7 +49,9 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.forza }}" = "true" ]; then
+          if [ "${{ inputs.prova }}" = "true" ]; then
+            python -m radar --prova
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.forza }}" = "true" ]; then
             python -m radar --forza
           else
             python -m radar
