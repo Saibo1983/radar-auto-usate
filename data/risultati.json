@@ -1,17 +1,17 @@
 {
- "data": "2026-10-20T12:17+02:00",
+ "data": "2026-10-20T13:19+02:00",
  "siti": [
   {
    "ricerca": "Golf diesel per famiglia",
    "sito": "AutoScout24",
-   "letti": 19,
-   "corrispondono": 19
+   "letti": 18,
+   "corrispondono": 18
   },
   {
    "ricerca": "Golf diesel per famiglia",
    "sito": "Subito",
-   "letti": 38,
-   "corrispondono": 4
+   "letti": 39,
+   "corrispondono": 5
   },
   {
    "ricerca": "Golf diesel per famiglia",
@@ -265,8 +265,8 @@
      "anno": 2021,
      "km": 75000,
      "carburante": "Diesel",
-     "luogo": "Barzago",
-     "url": "https://www.subito.it/auto/volkswagen-golf-viii-2020-variant-golf-variant-2-0-lecco-651116201.htm",
+     "luogo": "Curno",
+     "url": "https://www.subito.it/auto/volkswagen-golf-viii-2020-variant-golf-variant-2-0-bergamo-651115782.htm",
      "immagine": "",
      "sito": "Subito",
      "nuovo": true
@@ -284,27 +284,27 @@
      "nuovo": true
     },
     {
-     "titolo": "Volkswagen Golf",
-     "prezzo": 14900,
-     "anno": 2019,
-     "km": 82600,
-     "carburante": "Diesel",
-     "luogo": "Massa - Ms",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-golf-golf-5p-1-6-tdi-business-115cv-diesel-grigio-cat_ma74mo2084-26c7a4b9-e91c-4c22-ba5f-3f3326d1c826",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/26c7a4b9-e91c-4c22-ba5f-3f3326d1c826_bc3ec808-26bd-432e-b7c6-3e635c591684.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": true
-    },
-    {
      "titolo": "Volkswagen Golf 1.6 TDI Highline BMT DSG",
      "prezzo": 14900,
      "anno": 2018,
      "km": 74207,
      "carburante": "Diesel",
-     "luogo": "",
-     "url": "https://www.spoticar.it/trova-veicoli-usati/volkswagen-golf-16-tdi-highline-bmt-dsg-lombardia-sesto-san-giovanni-1202502322",
-     "immagine": "https://s3.eu-central-1.amazonaws.com/uvpictures-eu-central-1/368/SP/IT/VOLKSWAGEN-GOLF-2502322_1.JPG",
-     "sito": "Spoticar",
+     "luogo": "Sesto San Giovanni",
+     "url": "https://www.subito.it/auto/volkswagen-golf-1-6-tdi-highline-bmt-dsg-milano-654711797.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": true
+    },
+    {
+     "titolo": "Golf  7.5    2018    2.0 Diesel  150 cv    4motion",
+     "prezzo": 14900,
+     "anno": 2018,
+     "km": 95000,
+     "carburante": "Diesel",
+     "luogo": "Roma",
+     "url": "https://www.subito.it/auto/golf-7-5-2018-2-0-diesel-150-cv-4motion-roma-663962440.htm",
+     "immagine": "",
+     "sito": "Subito",
      "nuovo": true
     },
     {

@@ -1,9 +1,9 @@
-# Prova del 20/10/2026 12:17
+# Prova del 20/10/2026 13:19
 
 | Ricerca | Sito | Annunci letti | Corrispondono |
 |---|---|---|---|
-| Golf diesel per famiglia | [AutoScout24](https://www.autoscout24.it/lst/volkswagen/golf?atype=C&cy=I&damaged_listing=exclude&sort=age&desc=1&ustate=N%2CU&priceto=15000&fregfrom=2018&kmto=120000&fuel=D) | 19 | 19 |
-| Golf diesel per famiglia | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Volkswagen+Golf&pe=15000&ys=2018) | 38 | 4 |
+| Golf diesel per famiglia | [AutoScout24](https://www.autoscout24.it/lst/volkswagen/golf?atype=C&cy=I&damaged_listing=exclude&sort=age&desc=1&ustate=N%2CU&priceto=15000&fregfrom=2018&kmto=120000&fuel=D) | 18 | 18 |
+| Golf diesel per famiglia | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Volkswagen+Golf&pe=15000&ys=2018) | 39 | 5 |
 | Golf diesel per famiglia | [Automobile.it](https://www.automobile.it/vw-golf) | 20 | 0 |
 | Golf diesel per famiglia | [Quattroruote](https://www.quattroruote.it/auto-usate/annunci/marca-volkswagen/modello-golf/anno-dal-2018) | 15 | 0 |
 | Golf diesel per famiglia | [Automoto](https://www.automoto.it/auto-usate/volkswagen/golf) | 13 | 0 |
@@ -34,10 +34,10 @@
 - [Volkswagen Golf](https://www.autoscout24.it/annunci/volkswagen-golf-golf-vii-2019-1-6-tdi-sound-ok-neopatentati-navi-garanzia-permute-diesel-bianco-cat_ma74mo2084-306ac3a5-91c9-41e7-bc5f-ed196f80d52b) · 13900 € · 2019 · 120000 km · AutoScout24
 - [Volkswagen Golf](https://www.autoscout24.it/annunci/volkswagen-golf-5p-1-6-tdi-business-115cv-diesel-cat_ma74mo2084-72ef3fb9-2a2e-4564-9ee6-aea10b7ee745) · 14500 € · 2020 · 90000 km · AutoScout24
 - [Volkswagen Golf](https://www.autoscout24.it/annunci/volkswagen-golf-vii-5p-1-6-tdi-executive-115cv-diesel-grigio-cat_ma74mo2084-c4726a6b-796e-4b31-8151-d98ee60b94c4) · 14500 € · 2018 · 94000 km · AutoScout24
-- [VOLKSWAGEN golf viii 2020 variant Golf Variant 2.0](https://www.subito.it/auto/volkswagen-golf-viii-2020-variant-golf-variant-2-0-lecco-651116201.htm) · 14881 € · 2021 · 75000 km · Subito
+- [VOLKSWAGEN golf viii 2020 variant Golf Variant 2.0](https://www.subito.it/auto/volkswagen-golf-viii-2020-variant-golf-variant-2-0-bergamo-651115782.htm) · 14881 € · 2021 · 75000 km · Subito
 - [Volkswagen Golf](https://www.autoscout24.it/annunci/volkswagen-golf-golf-vii-2017-5p-5p-1-6-tdi-executive-115cv-diesel-blu-azzurro-cat_ma74mo2084-d1569177-c110-4775-a171-f8bc6a518d98) · 14900 € · 2019 · 93000 km · AutoScout24
-- [Volkswagen Golf](https://www.autoscout24.it/annunci/volkswagen-golf-golf-5p-1-6-tdi-business-115cv-diesel-grigio-cat_ma74mo2084-26c7a4b9-e91c-4c22-ba5f-3f3326d1c826) · 14900 € · 2019 · 82600 km · AutoScout24
-- [Volkswagen Golf 1.6 TDI Highline BMT DSG](https://www.spoticar.it/trova-veicoli-usati/volkswagen-golf-16-tdi-highline-bmt-dsg-lombardia-sesto-san-giovanni-1202502322) · 14900 € · 2018 · 74207 km · Spoticar
+- [Volkswagen Golf 1.6 TDI Highline BMT DSG](https://www.subito.it/auto/volkswagen-golf-1-6-tdi-highline-bmt-dsg-milano-654711797.htm) · 14900 € · 2018 · 74207 km · Subito
+- [Golf  7.5    2018    2.0 Diesel  150 cv    4motion](https://www.subito.it/auto/golf-7-5-2018-2-0-diesel-150-cv-4motion-roma-663962440.htm) · 14900 € · 2018 · 95000 km · Subito
 - [Volkswagen Golf](https://www.autoscout24.it/annunci/volkswagen-golf-1-6-tdi-executive-85-kw-man-prezzo-reale-f1293-diesel-nero-cat_ma74mo2084-91d777d0-e01f-45e0-b583-a3cb3f4c7b51) · 14980 € · 2019 · 119000 km · AutoScout24
 - [Volkswagen Golf](https://www.autoscout24.it/annunci/volkswagen-golf-5p-1-6-tdi-sport-115cv-diesel-cat_ma74mo2084-63f0d11a-ea10-4660-9647-99c51cb27abb) · 15000 € · 2019 · 102000 km · AutoScout24
 - [Volkswagen Golf](https://www.autoscout24.it/annunci/volkswagen-golf-golf-vii-2017-5p-5p-1-6-tdi-business-115cv-diesel-grigio-cat_ma74mo2084-65668944-c319-40c9-9486-b34a0526d7ad) · 15000 € · 2020 · 108000 km · AutoScout24
