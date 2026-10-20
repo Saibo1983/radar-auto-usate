@@ -41,14 +41,13 @@ def pulisci(grezza: dict) -> dict:
     if r.get("tipo") not in ("auto", "furgone"):
         r["tipo"] = "auto"
     r.setdefault("nome", " ".join(x for x in (r.get("marca"), r.get("modello")) if x) or "Ricerca")
-    r["id"] = "adesso"
     return r
 
 
 def main(argv: list[str] | None = None) -> int:
     argv = sys.argv[1:] if argv is None else argv
     richiesta = argv[0] if argv else ""
-    ricerca = pulisci(json.loads(os.environ.get("RICERCA") or "{}"))
+    ricerca = {**pulisci(json.loads(os.environ.get("RICERCA") or "{}")), "id": "adesso"}
     adesso = datetime.now(ZoneInfo("Europe/Rome"))
     print(f"Ricerca immediata: {ricerca}")
 

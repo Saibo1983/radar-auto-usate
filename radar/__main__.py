@@ -56,6 +56,8 @@ def cerca(cfg: dict, solo_fonte: str | None) -> tuple[list[tuple[dict, list[Annu
     risultati, problemi, pagine_ok = [], [], 0
     cerca.righe = []  # una riga per sito, per il rapporto di prova
     for ricerca in cfg.get("ricerche", []):
+        if ricerca.get("attiva") is False:
+            continue
         trovati: list[Annuncio] = []
         for fonte in fonti_per(ricerca):
             if solo_fonte and fonte != solo_fonte:

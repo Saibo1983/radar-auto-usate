@@ -1,6 +1,6 @@
 # Radar Auto Usate
 
-Ogni giorno alle 11:30 (ora italiana) cerca auto usate su 9 siti e, se trova annunci nuovi, ti manda una email e una notifica push sul telefono.
+Ogni giorno alle 11:55 (ora italiana) cerca auto usate su 9 siti e, se trova annunci nuovi, ti manda una email e una notifica push sul telefono.
 
 **Siti controllati:** AutoScout24, Subito.it, Automobile.it, Quattroruote, Automoto.it, Autohero, Spoticar.
 
@@ -15,13 +15,15 @@ Ogni giorno alle 11:30 (ora italiana) cerca auto usate su 9 siti e, se trova ann
 | Spoticar | marca e modello | usato garantito Stellantis |
 | mobile.de, AutoUncle | — | **bloccano le richieste dai server di GitHub (HTTP 403)**: il codice c'è, ma sono esclusi dai siti predefiniti |
 
-Le ricerche si preparano con l'artefatto **Radar Auto Usate** su claude.ai, che genera il file `config/ricerche.json`. Si può anche modificare il file a mano.
+Le ricerche si creano, modificano, mettono in pausa ed eliminano dall'app, che le salva in `config/ricerche.json`. Si può anche modificare il file a mano.
 
 ## L'app
 
-L'app è su **https://saibo1983.github.io/radar-auto-usate/**. Mostra gli **ultimi risultati** del controllo giornaliero e ha un pulsante **Cerca adesso** che avvia subito una ricerca, per auto o furgoni, e dopo 2-4 minuti mostra i risultati.
+L'app è su **https://saibo1983.github.io/radar-auto-usate/**. Mostra gli **ultimi risultati** del controllo giornaliero e le **ricerche salvate**, e ha un pulsante **Cerca adesso** che avvia subito una ricerca, per auto o furgoni, e dopo 2-4 minuti mostra i risultati.
 
-Il pulsante la prima volta chiede un codice di GitHub (un *fine-grained personal access token* limitato a questo repository, con permesso **Actions: Read and write**), che resta salvato solo nel browser. La ricerca immediata non invia avvisi e non cambia gli annunci già visti: i risultati vanno in `data/ricerca-adesso.json`.
+Ogni modifica a una ricerca avvia il workflow `salva-ricerche.yml`, che scrive l'elenco in `config/ricerche.json`: il radar la usa dal controllo successivo.
+
+Salvare e cercare la prima volta chiede un codice di GitHub (un *fine-grained personal access token* limitato a questo repository, con permesso **Actions: Read and write**), che resta salvato solo nel browser. La ricerca immediata non invia avvisi e non cambia gli annunci già visti: i risultati vanno in `data/ricerca-adesso.json`.
 
 I **furgoni** (`"tipo": "furgone"`) si cercano su AutoScout24 e Subito; gli altri siti vendono solo auto.
 
@@ -39,7 +41,7 @@ Alla prima esecuzione tutti gli annunci trovati risultano nuovi, quindi la prima
 
 ### 1. Repository pubblico: cosa resta privato
 
-Il repository è pubblico, quindi tutto ciò che è nei file si vede: le ricerche in `config/ricerche.json` e gli annunci già visti in `data/stato.json`. Per questo **email e canale push non vanno mai nei file**, ma solo nei Secrets (punti 2 e 3), che restano privati anche in un repository pubblico. L'artefatto esporta la configurazione già senza questi dati.
+Il repository è pubblico, quindi tutto ciò che è nei file si vede: le ricerche in `config/ricerche.json` e gli annunci già visti in `data/stato.json`. Per questo **email e canale push non vanno mai nei file**, ma solo nei Secrets (punti 2 e 3), che restano privati anche in un repository pubblico.
 
 Nei repository pubblici GitHub Actions è gratuito senza limiti di minuti. GitHub sospende i workflow pianificati dopo 60 giorni senza attività nel repository: qui non succede, perché ogni controllo salva un commit con `data/stato.json`.
 
@@ -60,20 +62,21 @@ Per un altro provider aggiungi anche `SMTP_HOST` e `SMTP_PORT` (465 per SSL, 587
 ### 3. Notifiche push (ntfy)
 
 1. Installa l'app **ntfy** ([Android](https://play.google.com/store/apps/details?id=io.heckel.ntfy), [iPhone](https://apps.apple.com/app/ntfy/id1625396347)).
-2. Nell'app premi **+** e iscriviti a un canale con un nome difficile da indovinare, per esempio quello proposto dall'artefatto (`radar-auto-xxxxxxxx`).
+2. Nell'app premi **+** e iscriviti a un canale con un nome difficile da indovinare, per esempio `radar-auto-` seguito da otto lettere e cifre a caso.
 3. Aggiungi il secret `NTFY_TOPIC` con lo stesso nome.
 
 Chi conosce il nome del canale può leggerne le notifiche: non usare nomi semplici.
 
 ### 4. Ricerche
 
-Copia la configurazione dall'artefatto in `config/ricerche.json`. I campi:
+L'app scrive `config/ricerche.json` da sola. Se lo modifichi a mano, i campi sono:
 
 | Campo | Valori |
 |---|---|
-| `orario` | ora del controllo, es. `"11:30"` (vedi sotto per cambiarla) |
+| `orario` | ora del controllo, es. `"11:55"` (vedi sotto per cambiarla) |
 | `notifiche.email`, `notifiche.ntfy_topic` | non usarli in un repository pubblico: al loro posto ci sono i Secrets `EMAIL_TO` e `NTFY_TOPIC` |
 | `notifiche.solo_nuovi` | `true` avvisa solo per annunci mai visti; `false` rimanda ogni giorno tutti quelli trovati |
+| `attiva` | `false` mette la ricerca in pausa |
 | `tipo` | `auto` (predefinito) o `furgone` |
 | `marca`, `modello` | testo, es. `"Volkswagen"`, `"Golf"` |
 | `carrozzeria` | `utilitaria`, `berlina`, `sw`, `suv`, `monovolume`, `coupe`, `cabrio`, `furgone` |
@@ -85,7 +88,7 @@ Copia la configurazione dall'artefatto in `config/ricerche.json`. I campi:
 | `venditore` | `privato`, `concessionario` |
 | `fonti` | elenco dei siti: `autoscout24`, `subito`, `automobile`, `quattroruote`, `automoto`, `autohero`, `spoticar` (anche `mobilede` e `autouncle`, che però da GitHub sono bloccati) |
 
-Un campo `null` o assente significa "qualsiasi". Il campo `url` generato dall'artefatto serve solo come promemoria: lo script ricostruisce gli indirizzi da solo.
+Un campo `null` o assente significa "qualsiasi".
 
 ### 5. Prima prova
 
@@ -100,7 +103,7 @@ Se un sito smette di funzionare, **Actions → Diagnosi siti → Run workflow** 
 
 ## Cambiare orario
 
-Lo script parte solo se in Italia è già passato l'orario scelto e oggi non ha ancora controllato. GitHub però avvia il workflow solo agli orari scritti in `radar.yml`, in UTC. Gli orari attuali (9:30 e 10:30 UTC) coprono le 11:30 italiane sia con l'ora legale sia con l'ora solare.
+Lo script parte solo se in Italia è già passato l'orario scelto e oggi non ha ancora controllato. GitHub però avvia il workflow solo agli orari scritti in `radar.yml`, in UTC. Gli orari attuali (9:55 e 10:55 UTC) coprono le 11:55 italiane sia con l'ora legale sia con l'ora solare.
 
 Per un orario diverso cambia `orario` nel config e le due righe `cron` nel workflow. Esempio per le 18:00: `"0 16 * * *"` e `"0 17 * * *"`.
 
@@ -131,6 +134,7 @@ data/stato.json             annunci già segnalati (aggiornato in automatico)
 index.html                  l'app (GitHub Pages)
 radar/__main__.py           esecuzione giornaliera
 radar/adesso.py             ricerca immediata del pulsante "Cerca adesso"
+radar/salva_ricerche.py     salva le ricerche inviate dall'app
 radar/siti.py               indirizzi di ricerca per ogni sito
 radar/estrai.py             lettura degli annunci dai dati strutturati (JSON-LD, Next.js)
 radar/pagine.py             lettori dedicati: Automoto, Quattroruote, Spoticar, Autohero
@@ -140,6 +144,7 @@ radar/notifiche.py          email e push
 radar/prova_avvisi.py       messaggio di prova per email e push
 .github/workflows/radar.yml pianificazione su GitHub Actions
 .github/workflows/cerca-adesso.yml ricerca immediata avviata dall'app
+.github/workflows/salva-ricerche.yml salvataggio delle ricerche dall'app
 .github/workflows/diagnosi.yml scarica pagine per capire perché un sito non viene letto
 .github/workflows/prova-avvisi.yml email e push di prova
 strumenti/scarica_pagine.py usato dalla diagnosi

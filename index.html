@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: due colonne — a sinistra il modulo di ricerca, a destra ricerche salvate + avvisi; una colonna su telefono */
+/* Layout: due colonne — a sinistra il modulo di ricerca, a destra risultati e ricerche salvate; una colonna su telefono */
 :root {
   --bg: #eef0f3;
   --surface: #ffffff;
@@ -121,7 +121,6 @@ button.small, .btn.small { padding: 5px 10px; font-size: .85rem; }
 .card-title { display: grid; gap: 6px; min-width: 0; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip { font-family: var(--font-mono); font-size: .78rem; border: 1px solid var(--line); border-radius: 4px; padding: 2px 7px; background: var(--surface); white-space: nowrap; }
-.tag-example { font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--signal-ink); background: var(--signal); border-radius: 3px; padding: 1px 6px; font-weight: 600; }
 
 .switch { display: inline-flex; align-items: center; gap: 8px; font-size: .85rem; cursor: pointer; }
 .switch input { appearance: none; width: 36px; height: 20px; border-radius: 999px; background: var(--line); position: relative; padding: 0; border: 0; cursor: pointer; flex: none; }
@@ -133,7 +132,6 @@ button.small, .btn.small { padding: 5px 10px; font-size: .85rem; }
 .steps li { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; counter-increment: s; }
 .steps li::before { content: counter(s); font-family: var(--font-display); font-weight: 700; width: 26px; height: 26px; border-radius: 50%; background: var(--plate); color: var(--plate-ink); display: grid; place-items: center; }
 code { font-family: var(--font-mono); font-size: .85em; background: var(--field); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; overflow-wrap: anywhere; }
-textarea#export { font-family: var(--font-mono); font-size: .78rem; min-height: 220px; resize: vertical; white-space: pre; overflow: auto; }
 .ris-group { display: grid; gap: 8px; }
 .ris-group summary { cursor: pointer; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; }
 .ris-item { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 10px; align-items: start; border-top: 1px solid var(--line); padding-top: 8px; }
@@ -152,10 +150,10 @@ textarea#export { font-family: var(--font-mono); font-size: .78rem; min-height: 
 <div class="wrap">
   <header class="top">
     <div class="brand">
-      <span class="plate-badge" aria-hidden="true"><span class="band">I</span><span class="txt">RA 1130</span></span>
+      <span class="plate-badge" aria-hidden="true"><span class="band">I</span><span class="txt">RA 1155</span></span>
       <div>
         <h1>Radar Auto Usate</h1>
-        <p class="muted">Imposti la ricerca una volta. Ogni giorno alle 11:30 controlla 7 siti di annunci e concessionari e ti avvisa se ce ne sono di nuovi.</p>
+        <p class="muted">Imposti la ricerca una volta. Ogni giorno alle <span id="orarioTxt">11:55</span> controlla 7 siti di annunci e concessionari e ti avvisa se ce ne sono di nuovi.</p>
       </div>
     </div>
     <div class="next-run" id="nextRun"><span class="dot"></span><span id="nextRunTxt">Prossimo controllo: —</span></div>
@@ -235,6 +233,22 @@ textarea#export { font-family: var(--font-mono); font-size: .78rem; min-height: 
     </form>
 
     <div class="col">
+      <!-- COLLEGAMENTO: serve per salvare le ricerche e per "Cerca adesso" -->
+      <section class="panel" id="tokenBox" aria-labelledby="tokenH" hidden>
+        <h2 id="tokenH">Collega l'app a GitHub</h2>
+        <p>Per salvare le ricerche e avviare "Cerca adesso", l'app ha bisogno di un permesso di GitHub. Si fa una volta sola su questo dispositivo.</p>
+        <ol class="steps">
+          <li><p>Apri <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">questa pagina di GitHub ↗</a>.</p></li>
+          <li><p>In <strong>Token name</strong> scrivi <code>Radar auto</code>. In <strong>Expiration</strong> scegli la durata più lunga.</p></li>
+          <li><p>In <strong>Repository access</strong> scegli <strong>Only select repositories</strong> e poi <strong>radar-auto-usate</strong>.</p></li>
+          <li><p>In <strong>Permissions</strong> premi <strong>Add permissions</strong>, scegli <strong>Actions</strong> e imposta <strong>Read and write</strong>.</p></li>
+          <li><p>Premi <strong>Generate token</strong>, copia il codice che inizia con <code>github_pat_</code> e incollalo qui sotto.</p></li>
+        </ol>
+        <div class="f"><label for="token">Codice di GitHub</label>
+          <div style="display:flex;gap:8px"><input id="token" class="mono" autocomplete="off" placeholder="github_pat_…"><button type="button" class="primary" id="tokenSalva">Salva e continua</button></div>
+          <p class="muted" style="font-size:.85rem">Il codice resta solo in questo browser e serve solo per questo progetto.</p></div>
+      </section>
+
       <!-- CERCA ADESSO: la ricerca gira su GitHub e i risultati tornano in data/ricerca-adesso.json -->
       <section class="panel" id="adessoPanel" aria-labelledby="adessoH" hidden>
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap">
@@ -242,19 +256,6 @@ textarea#export { font-family: var(--font-mono); font-size: .78rem; min-height: 
           <span class="muted mono" id="adessoTempo"></span>
         </div>
         <p id="adessoStato"></p>
-        <div id="tokenBox" class="card" hidden>
-          <p>Per avviare la ricerca, l'app ha bisogno di un permesso di GitHub. Si fa una volta sola su questo dispositivo.</p>
-          <ol class="steps">
-            <li><p>Apri <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">questa pagina di GitHub ↗</a>.</p></li>
-            <li><p>In <strong>Token name</strong> scrivi <code>Radar auto</code>. In <strong>Expiration</strong> scegli la durata più lunga.</p></li>
-            <li><p>In <strong>Repository access</strong> scegli <strong>Only select repositories</strong> e poi <strong>radar-auto-usate</strong>.</p></li>
-            <li><p>In <strong>Permissions</strong> premi <strong>Add permissions</strong>, scegli <strong>Actions</strong> e imposta <strong>Read and write</strong>.</p></li>
-            <li><p>Premi <strong>Generate token</strong>, copia il codice che inizia con <code>github_pat_</code> e incollalo qui sotto.</p></li>
-          </ol>
-          <div class="f"><label for="token">Codice di GitHub</label>
-            <div style="display:flex;gap:8px"><input id="token" class="mono" autocomplete="off" placeholder="github_pat_…"><button type="button" class="primary" id="tokenSalva">Salva e cerca</button></div>
-            <p class="muted" style="font-size:.85rem">Il codice resta solo in questo browser e serve solo ad avviare le ricerche di questo progetto.</p></div>
-        </div>
         <div id="adessoRis" class="saved-list"></div>
       </section>
 
@@ -274,34 +275,9 @@ textarea#export { font-family: var(--font-mono); font-size: .78rem; min-height: 
           <span class="muted mono" id="savedCount"></span>
         </div>
         <div class="saved-list" id="saved"></div>
+        <p class="muted" id="savedStato" style="font-size:.85rem"></p>
       </section>
 
-      <!-- AVVISI -->
-      <section class="panel" aria-labelledby="notifH">
-        <h2 id="notifH">Avvisi</h2>
-        <div class="fields">
-          <div class="f"><label for="email">Email</label><input id="email" type="email" placeholder="nome@esempio.it" autocomplete="email"></div>
-          <div class="f"><label for="orario">Orario controllo <span class="muted">(ora italiana)</span></label><input id="orario" type="time" value="11:30" class="mono"></div>
-        </div>
-        <div class="f"><label for="ntfy">Canale push sul telefono <span class="muted">(app ntfy)</span></label>
-          <div style="display:flex;gap:8px"><input id="ntfy" class="mono"><button type="button" class="small" id="ntfyNew">Nuovo</button></div>
-          <p class="muted" style="font-size:.85rem">Installa l'app gratuita <strong>ntfy</strong> (Android o iPhone) e iscriviti a questo nome di canale. Usa un nome difficile da indovinare: chi lo conosce vede gli avvisi.</p>
-        </div>
-        <label class="switch"><input type="checkbox" id="soloNuovi" checked> Avvisa solo se ci sono annunci nuovi rispetto al giorno prima</label>
-      </section>
-
-      <!-- EXPORT -->
-      <section class="panel" aria-labelledby="expH">
-        <h2 id="expH">Collega a GitHub</h2>
-        <ol class="steps">
-          <li><p>Salva qui le ricerche e imposta gli avvisi.</p></li>
-          <li><p>Copia la configurazione qui sotto nel file <code>config/ricerche.json</code> del repository <a href="https://github.com/Saibo1983/radar-auto-usate/edit/main/config/ricerche.json" target="_blank" rel="noopener">(apri il file su GitHub ↗)</a>.</p></li>
-          <li><p>GitHub Actions esegue la ricerca ogni giorno all'orario scelto, confronta con gli annunci già visti e invia email e notifica push con i nuovi.</p></li>
-        </ol>
-        <p class="muted" style="font-size:.85rem">Il repository è pubblico, quindi email e canale push non sono inclusi qui sotto. Vanno nei <a href="https://github.com/Saibo1983/radar-auto-usate/settings/secrets/actions" target="_blank" rel="noopener">Secrets del repository ↗</a> come <code>EMAIL_TO</code> e <code>NTFY_TOPIC</code>, insieme a <code>SMTP_USER</code> e <code>SMTP_PASSWORD</code>.</p>
-        <textarea id="export" readonly aria-label="Configurazione JSON"></textarea>
-        <div class="btns"><button type="button" id="copyBtn">Copia configurazione</button></div>
-      </section>
     </div>
   </div>
 </div>
@@ -369,21 +345,15 @@ const AS_SELLER = { privato: "P", concessionario: "D" };
 // Bloccano le richieste dai server di GitHub (HTTP 403): disponibili ma non selezionati
 const BLOCCATI = ["mobilede", "autouncle"];
 const FONTI_TUTTE = FONTI.map(f => f[0]).filter(f => !BLOCCATI.includes(f));
-const ESEMPI = [
-  { id: "es1", esempio: true, attiva: true, nome: "Golf diesel per famiglia", marca: "Volkswagen", modello: "Golf", categoria: "", carburante: "diesel", cambio: "", prezzoMin: null, prezzoMax: 15000, annoMin: 2018, annoMax: null, kmMax: 120000, cvMin: null, cap: "", raggio: "", regione: "", venditore: "", fonti: FONTI_TUTTE },
-  { id: "es2", esempio: true, attiva: true, nome: "Panda in città", marca: "Fiat", modello: "Panda", categoria: "utilitaria", carburante: "", cambio: "manuale", prezzoMin: null, prezzoMax: 8000, annoMin: 2016, annoMax: null, kmMax: 90000, cvMin: null, cap: "", raggio: "", regione: "lombardia", venditore: "privato", fonti: FONTI_TUTTE },
-  { id: "es3", esempio: true, attiva: false, nome: "SUV ibrido automatico", marca: "Toyota", modello: "C-HR", categoria: "suv", carburante: "ibrida", cambio: "automatico", prezzoMin: 15000, prezzoMax: 24000, annoMin: 2019, annoMax: null, kmMax: 80000, cvMin: null, cap: "", raggio: "", regione: "", venditore: "", fonti: FONTI_TUTTE }
-];
 
 const $ = (id) => document.getElementById(id);
 const store = {
   get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } },
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
 };
-let ricerche = store.get("ra.ricerche", null) || ESEMPI.map(r => ({ ...r }));
-ricerche = ricerche.map(r => r.esempio ? { ...r, fonti: FONTI_TUTTE } : r);
-let avvisi = store.get("ra.avvisi", null) || { email: "", ntfy: "", orario: "11:30", soloNuovi: true };
-if (!avvisi.ntfy) avvisi.ntfy = "radar-auto-" + Math.random().toString(36).slice(2, 10);
+// Le ricerche vengono da config/ricerche.json, lo stesso file che usa il controllo giornaliero
+let ricerche = [];
+let orario = "11:55";
 let editingId = null;
 let confirmingId = null;
 
@@ -555,7 +525,6 @@ function renderSaved() {
           <div class="card-title">
             <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
               <span class="plate-badge sm" aria-hidden="true"><span class="band">I</span><span class="txt">${esc(targa(r))}</span></span>
-              ${r.esempio ? '<span class="tag-example">Esempio</span>' : ""}
             </div>
             <h3>${esc(r.nome)}</h3>
           </div>
@@ -571,7 +540,6 @@ function renderSaved() {
         </div>
       </article>`).join("");
   }
-  renderExport();
 }
 
 // Ricerca nel formato di config/ricerche.json
@@ -586,21 +554,56 @@ function aConfig(r) {
   };
 }
 
-function renderExport() {
-  const cfg = {
-    fuso_orario: "Europe/Rome",
-    orario: avvisi.orario || "11:30",
-    notifiche: { _nota: "Repository pubblico: email e canale push vanno nei Secrets EMAIL_TO e NTFY_TOPIC, non qui.", solo_nuovi: avvisi.soloNuovi },
-    ricerche: ricerche.filter(r => r.attiva).map(r => ({
-      id: r.id, ...aConfig(r),
-      url: Object.fromEntries(fontiPer(r).map(f => [f, SITI[f].url(r)]))
-    }))
+// Ricerca di config/ricerche.json nel formato del modulo
+function daConfig(c) {
+  return {
+    id: c.id, attiva: c.attiva !== false, nome: c.nome || "", tipo: c.tipo || "auto", marca: c.marca || "", modello: c.modello || "",
+    categoria: c.carrozzeria || "", carburante: c.alimentazione || "", cambio: c.cambio || "",
+    prezzoMin: c.prezzo_min ?? null, prezzoMax: c.prezzo_max ?? null, annoMin: c.anno_min ?? null, annoMax: c.anno_max ?? null,
+    kmMax: c.km_max ?? null, cvMin: c.potenza_min_cv ?? null,
+    cap: c.cap || "", raggio: c.raggio_km ? String(c.raggio_km) : "", regione: c.regione || "", venditore: c.venditore || "",
+    fonti: c.fonti && c.fonti.length ? c.fonti : FONTI_TUTTE
   };
-  $("export").value = JSON.stringify(cfg, null, 2);
 }
 
-function salva() { store.set("ra.ricerche", ricerche); renderSaved(); }
-function salvaAvvisi() { store.set("ra.avvisi", avvisi); renderExport(); aggiornaProssimo(); }
+// Subito dopo un salvataggio GitHub Pages mostra ancora il file vecchio: per qualche minuto vale la copia locale
+const VALIDITA_COPIA = 10 * 60 * 1000;
+async function caricaRicerche() {
+  const copia = store.get("ra.salvate", null);
+  const recente = copia && Date.now() - copia.quando < VALIDITA_COPIA;
+  if (recente) ricerche = copia.ricerche;
+  try {
+    const r = await fetch("config/ricerche.json?t=" + Date.now(), { cache: "no-store" });
+    if (!r.ok) throw new Error();
+    const cfg = await r.json();
+    orario = cfg.orario || orario;
+    $("orarioTxt").textContent = orario;
+    if (!recente) ricerche = (cfg.ricerche || []).map(daConfig);
+  } catch {
+    if (!ricerche.length) $("savedStato").textContent = "Non riesco a leggere le ricerche salvate. Ricarica la pagina.";
+  }
+  renderSaved(); aggiornaProssimo();
+}
+
+// Ogni modifica invia l'elenco completo al workflow salva-ricerche.yml, che lo scrive in config/ricerche.json
+let timerSalva = null;
+function salva() {
+  renderSaved();
+  store.set("ra.salvate", { quando: Date.now(), ricerche });
+  $("savedStato").textContent = "Salvataggio su GitHub…";
+  clearTimeout(timerSalva);
+  timerSalva = setTimeout(inviaRicerche, 1200);
+}
+async function inviaRicerche() {
+  if (!store.get("ra.token", "")) {
+    $("savedStato").textContent = "Collega l'app a GitHub per salvare le ricerche.";
+    chiediToken(inviaRicerche); return;
+  }
+  const elenco = ricerche.map(r => ({ id: r.id, attiva: r.attiva, ...aConfig(r) }));
+  const ok = await chiamaGitHub("salva-ricerche.yml", { ricerche: JSON.stringify(elenco) }, inviaRicerche);
+  $("savedStato").textContent = ok ? "Salvate su GitHub: il radar le usa dal prossimo controllo."
+    : "Salvataggio non riuscito: le modifiche restano su questo dispositivo finché non riesce.";
+}
 
 function toast(msg) {
   const t = $("toast"); t.textContent = msg; t.hidden = false;
@@ -626,7 +629,7 @@ function aggiornaAnteprima() {
 
 // Prossima esecuzione, calcolata nell'ora italiana
 function aggiornaProssimo() {
-  const [h, m] = (avvisi.orario || "11:30").split(":").map(Number);
+  const [h, m] = orario.split(":").map(Number);
   const now = new Date();
   const parts = Object.fromEntries(new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(now).map(p => [p.type, p.value]));
   const minNow = Number(parts.hour) * 60 + Number(parts.minute);
@@ -644,7 +647,6 @@ renderSeg("categoria", CATEGORIE); renderSeg("carburante", CARBURANTI); renderSe
 renderSeg("venditore", VENDITORI); renderSeg("fonti", FONTI, true);
 $("marche").innerHTML = Object.keys(MARCHE).map(m => `<option value="${esc(m)}">`).join("");
 $("regione").innerHTML = `<option value="">Tutta Italia</option>` + REGIONI.map(r => `<option value="${r}">${r.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase())}</option>`).join("");
-$("email").value = avvisi.email; $("ntfy").value = avvisi.ntfy; $("orario").value = avvisi.orario; $("soloNuovi").checked = avvisi.soloNuovi;
 
 $("marca").addEventListener("input", () => { aggiornaModelli(); });
 $("form").addEventListener("input", aggiornaAnteprima);
@@ -657,7 +659,7 @@ $("form").addEventListener("submit", (e) => {
   if (r.prezzoMin && r.prezzoMax && r.prezzoMin > r.prezzoMax) { toast("Il prezzo minimo supera il massimo"); return; }
   if (r.cap && !/^\d{5}$/.test(r.cap)) { toast("Il CAP deve avere 5 cifre"); return; }
   if (editingId) {
-    ricerche = ricerche.map(x => x.id === editingId ? { ...x, ...r, esempio: false } : x);
+    ricerche = ricerche.map(x => x.id === editingId ? { ...x, ...r } : x);
     toast("Ricerca aggiornata");
   } else {
     ricerche.unshift({ id: "r" + Date.now().toString(36), attiva: true, ...r });
@@ -687,18 +689,6 @@ $("saved").addEventListener("click", (e) => {
   if (act === "del") { confirmingId = id; renderSaved(); return; }
   if (act === "del-no") { confirmingId = null; renderSaved(); return; }
   if (act === "del-yes") { confirmingId = null; ricerche = ricerche.filter(x => x.id !== id); if (editingId === id) fineModifica(); salva(); aggiornaProssimo(); toast("Ricerca eliminata"); }
-});
-
-$("email").addEventListener("input", e => { avvisi.email = e.target.value.trim(); salvaAvvisi(); });
-$("ntfy").addEventListener("input", e => { avvisi.ntfy = slug(e.target.value) || avvisi.ntfy; salvaAvvisi(); });
-$("ntfy").addEventListener("blur", e => { e.target.value = avvisi.ntfy; });
-$("ntfyNew").addEventListener("click", () => { avvisi.ntfy = "radar-auto-" + Math.random().toString(36).slice(2, 10); $("ntfy").value = avvisi.ntfy; salvaAvvisi(); });
-$("orario").addEventListener("change", e => { avvisi.orario = e.target.value || "11:30"; salvaAvvisi(); });
-$("soloNuovi").addEventListener("change", e => { avvisi.soloNuovi = e.target.checked; salvaAvvisi(); });
-
-$("copyBtn").addEventListener("click", () => {
-  const ta = $("export");
-  navigator.clipboard.writeText(ta.value).then(() => toast("Configurazione copiata"), () => { ta.focus(); ta.select(); toast("Testo selezionato: premi Ctrl+C / Cmd+C"); });
 });
 
 async function caricaRisultati() {
@@ -744,20 +734,11 @@ function validaForm(r) {
 function statoAdesso(testo) { $("adessoStato").textContent = testo; }
 function fineAdesso() { clearInterval(timerAdesso); $("cercaAdesso").disabled = false; $("adessoTempo").textContent = ""; }
 
-$("cercaAdesso").addEventListener("click", () => {
-  const r = leggiForm();
-  const errore = validaForm(r);
-  if (errore) { toast(errore); return; }
-  $("adessoPanel").hidden = false;
-  $("adessoPanel").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
-  if (!store.get("ra.token", "")) {
-    inAttesa = r;
-    $("tokenBox").hidden = false;
-    statoAdesso("Serve il collegamento a GitHub (una volta sola).");
-    return;
-  }
-  avviaRicerca(r);
-});
+function chiediToken(azione) {
+  inAttesa = azione;
+  $("tokenBox").hidden = false;
+  $("tokenBox").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+}
 
 $("tokenSalva").addEventListener("click", () => {
   const t = $("token").value.trim();
@@ -765,34 +746,52 @@ $("tokenSalva").addEventListener("click", () => {
   store.set("ra.token", t);
   $("token").value = "";
   $("tokenBox").hidden = true;
-  avviaRicerca(inAttesa || leggiForm());
+  if (inAttesa) { const a = inAttesa; inAttesa = null; a(); }
 });
 
-async function avviaRicerca(r) {
-  const token = store.get("ra.token", "");
-  const richiesta = Date.now().toString(36);
-  $("cercaAdesso").disabled = true;
-  $("adessoRis").innerHTML = "";
-  statoAdesso("Avvio della ricerca…");
+// Avvia un workflow; se il codice manca o non vale più lo chiede di nuovo e poi ripete "riprova"
+async function chiamaGitHub(workflow, inputs, riprova) {
   let res;
   try {
-    res = await fetch(API + "/actions/workflows/cerca-adesso.yml/dispatches", {
+    res = await fetch(API + "/actions/workflows/" + workflow + "/dispatches", {
       method: "POST",
-      headers: { Authorization: "Bearer " + token, Accept: "application/vnd.github+json" },
-      body: JSON.stringify({ ref: "main", inputs: { ricerca: JSON.stringify(aConfig(r)), richiesta } })
+      headers: { Authorization: "Bearer " + store.get("ra.token", ""), Accept: "application/vnd.github+json" },
+      body: JSON.stringify({ ref: "main", inputs })
     });
   } catch {
-    statoAdesso("Non riesco a contattare GitHub. Controlla la connessione e riprova.");
-    fineAdesso(); return;
+    toast("Non riesco a contattare GitHub. Controlla la connessione.");
+    return false;
   }
   if (res.status === 401 || res.status === 403 || res.status === 404) {
     store.set("ra.token", "");
-    inAttesa = r;
-    $("tokenBox").hidden = false;
-    statoAdesso("GitHub non ha accettato il codice: forse è scaduto o manca il permesso Actions. Creane uno nuovo.");
-    fineAdesso(); return;
+    toast("GitHub non ha accettato il codice: forse è scaduto o manca il permesso Actions.");
+    chiediToken(riprova);
+    return false;
   }
-  if (!res.ok) { statoAdesso("GitHub ha risposto con un errore (" + res.status + "). Riprova tra poco."); fineAdesso(); return; }
+  if (!res.ok) { toast("GitHub ha risposto con un errore (" + res.status + "). Riprova tra poco."); return false; }
+  return true;
+}
+
+$("cercaAdesso").addEventListener("click", () => {
+  const r = leggiForm();
+  const errore = validaForm(r);
+  if (errore) { toast(errore); return; }
+  avviaRicerca(r);
+});
+
+async function avviaRicerca(r) {
+  const richiesta = Date.now().toString(36);
+  $("adessoPanel").hidden = false;
+  $("adessoRis").innerHTML = "";
+  if (!store.get("ra.token", "")) {
+    statoAdesso("Collega l'app a GitHub per avviare la ricerca.");
+    chiediToken(() => avviaRicerca(r)); return;
+  }
+  $("adessoPanel").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+  $("cercaAdesso").disabled = true;
+  statoAdesso("Avvio della ricerca…");
+  const ok = await chiamaGitHub("cerca-adesso.yml", { ricerca: JSON.stringify(aConfig(r)), richiesta }, () => avviaRicerca(r));
+  if (!ok) { statoAdesso("Ricerca non avviata."); fineAdesso(); return; }
 
   const inizio = Date.now();
   statoAdesso(`Ricerca di "${r.nome || [r.marca, r.modello].filter(Boolean).join(" ") || "tutti i veicoli"}" avviata su ${fontiPer(r).length} siti. I risultati arrivano in 2-4 minuti: puoi lasciare aperta la pagina.`);
@@ -803,7 +802,7 @@ async function avviaRicerca(r) {
     if (sec > 12 * 60) { statoAdesso("La ricerca sta impiegando troppo. Riprova più tardi."); fineAdesso(); return; }
     try {
       const f = await fetch(API + "/contents/data/ricerca-adesso.json?ref=main", {
-        headers: { Authorization: "Bearer " + token, Accept: "application/vnd.github.raw+json" }, cache: "no-store"
+        headers: { Authorization: "Bearer " + store.get("ra.token", ""), Accept: "application/vnd.github.raw+json" }, cache: "no-store"
       });
       if (!f.ok) return;
       const d = await f.json();
@@ -817,7 +816,7 @@ async function avviaRicerca(r) {
 }
 
 scriviForm({});
-renderSaved();
+caricaRicerche();
 caricaRisultati();
 aggiornaProssimo();
 setInterval(aggiornaProssimo, 60000);

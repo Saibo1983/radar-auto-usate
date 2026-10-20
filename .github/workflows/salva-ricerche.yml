@@ -1,0 +1,42 @@
+name: Salva ricerche
+
+# Avviato dall'app quando si salva, modifica, mette in pausa o elimina una ricerca:
+# scrive l'elenco completo delle ricerche in config/ricerche.json.
+on:
+  workflow_dispatch:
+    inputs:
+      ricerche:
+        description: "Elenco delle ricerche in formato JSON"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: salva-ricerche
+  cancel-in-progress: true
+
+jobs:
+  salva:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Scrivi le ricerche
+        env:
+          RICERCHE: ${{ inputs.ricerche }}
+        run: python -m radar.salva_ricerche
+      - name: Salva nel repository
+        run: |
+          if [ -n "$(git status --porcelain config/)" ]; then
+            git config user.name "radar-auto[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add config/ricerche.json
+            git commit -qm "Ricerche aggiornate dall'app"
+            for i in 1 2 3; do git pull -q --rebase && git push && break; sleep 5; done
+          fi

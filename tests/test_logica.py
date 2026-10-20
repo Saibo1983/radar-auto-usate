@@ -1,3 +1,4 @@
+import json
 from datetime import date, datetime
 from zoneinfo import ZoneInfo
 
@@ -100,5 +101,31 @@ def test_ricerca_adesso_accetta_solo_campi_noti():
 
     r = pulisci({"marca": "Fiat", "prezzo_max": 9000, "anno_min": "2018", "fonti": ["subito", "x"],
                  "tipo": "astronave", "comando": "rm -rf /"})
-    assert r == {"marca": "Fiat", "prezzo_max": 9000, "fonti": ["subito"], "tipo": "auto", "nome": "Fiat",
-                 "id": "adesso"}
+    assert r == {"marca": "Fiat", "prezzo_max": 9000, "fonti": ["subito"], "tipo": "auto", "nome": "Fiat"}
+
+
+def test_salva_ricerche_dall_app(tmp_path):
+    from radar.salva_ricerche import aggiorna
+
+    percorso = tmp_path / "ricerche.json"
+    percorso.write_text(json.dumps({"orario": "11:55", "notifiche": {"solo_nuovi": True}, "ricerche": []}))
+    aggiorna(percorso, [
+        {"id": "r1", "attiva": True, "marca": "Fiat", "modello": "Panda", "prezzo_max": 8000, "fonti": ["subito"]},
+        {"id": "../x", "attiva": False, "nome": "Pausa", "comando": "rm -rf /"},
+        "non una ricerca",
+    ])
+    cfg = json.loads(percorso.read_text())
+    assert cfg["orario"] == "11:55" and cfg["notifiche"] == {"solo_nuovi": True}
+    assert cfg["ricerche"][0] == {"id": "r1", "attiva": True, "nome": "Fiat Panda", "marca": "Fiat",
+                                  "modello": "Panda", "tipo": "auto", "prezzo_max": 8000, "fonti": ["subito"]}
+    assert cfg["ricerche"][1]["id"] == "r2" and cfg["ricerche"][1]["attiva"] is False
+    assert len(cfg["ricerche"]) == 2
+
+
+def test_ricerca_in_pausa_non_viene_cercata(monkeypatch):
+    import radar.__main__ as radar
+
+    monkeypatch.setattr(radar, "scarica", lambda url: "")
+    monkeypatch.setattr(radar, "pausa", lambda: None)
+    tutti, _, _ = radar.cerca({"ricerche": [{**GOLF, "attiva": False, "fonti": ["subito"]}]}, None)
+    assert tutti == []
