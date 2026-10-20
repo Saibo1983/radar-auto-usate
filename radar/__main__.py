@@ -54,6 +54,7 @@ def e_ora(cfg: dict, stato: Stato, adesso: datetime) -> tuple[bool, str]:
 def cerca(cfg: dict, solo_fonte: str | None) -> tuple[list[tuple[dict, list[Annuncio]]], list[str], int]:
     """Restituisce (risultati per ricerca, problemi dei siti, pagine lette)."""
     risultati, problemi, pagine_ok = [], [], 0
+    cerca.righe = []  # una riga per sito, per il rapporto di prova
     for ricerca in cfg.get("ricerche", []):
         trovati: list[Annuncio] = []
         for fonte in ricerca.get("fonti") or list(SITI):
@@ -64,10 +65,13 @@ def cerca(cfg: dict, solo_fonte: str | None) -> tuple[list[tuple[dict, list[Annu
                 html = scarica(url)
             except ErroreRete as e:
                 problemi.append(f"{nome_sito(fonte)} ({ricerca['nome']}): non raggiungibile, {e}")
+                cerca.righe.append((ricerca["nome"], nome_sito(fonte), None, None, url))
                 continue
             finally:
                 pausa()
             letti = estrai_annunci(html, fonte, url)
+            cerca.righe.append((ricerca["nome"], nome_sito(fonte), len(letti),
+                                sum(corrisponde(a, ricerca) for a in letti), url))
             if not letti:
                 problemi.append(f"{nome_sito(fonte)} ({ricerca['nome']}): nessun annuncio letto, "
                                 "il sito potrebbe aver cambiato formato")
@@ -80,6 +84,24 @@ def cerca(cfg: dict, solo_fonte: str | None) -> tuple[list[tuple[dict, list[Annu
     return risultati, problemi, pagine_ok
 
 
+def scrivi_rapporto(percorso: Path, adesso: datetime, righe, risultati, problemi) -> None:
+    out = [f"# Prova del {adesso:%d/%m/%Y %H:%M}", "",
+           "| Ricerca | Sito | Annunci letti | Corrispondono |", "|---|---|---|---|"]
+    for nome, sito, letti, buoni, url in righe:
+        stato = "non raggiungibile" if letti is None else str(letti)
+        out.append(f"| {nome} | [{sito}]({url}) | {stato} | {'' if buoni is None else buoni} |")
+    if problemi:
+        out += ["", "## Problemi", ""] + [f"- {p}" for p in problemi]
+    out += ["", "## Annunci trovati", ""]
+    for ricerca, annunci in risultati:
+        out.append(f"### {ricerca['nome']} ({len(annunci)})")
+        out += [f"- [{a.titolo or 'Annuncio'}]({a.url}) · {a.prezzo or '?'} € · {a.anno or '?'} · "
+                f"{a.km if a.km is not None else '?'} km · {nome_sito(a.fonte)}" for a in annunci[:20]]
+        out.append("")
+    percorso.parent.mkdir(parents=True, exist_ok=True)
+    percorso.write_text("\n".join(out), encoding="utf-8")
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="radar")
     ap.add_argument("--forza", action="store_true", help="esegue anche fuori orario")
@@ -87,6 +109,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--fonte", choices=list(SITI), help="controlla un solo sito")
     ap.add_argument("--config", type=Path, default=RADICE / "config" / "ricerche.json")
     ap.add_argument("--stato", type=Path, default=RADICE / "data" / "stato.json")
+    ap.add_argument("--rapporto", type=Path, help="con --prova, scrive i risultati in un file Markdown")
     args = ap.parse_args(argv)
 
     cfg = carica_config(args.config)
@@ -115,6 +138,8 @@ def main(argv: list[str] | None = None) -> int:
     for p in problemi:
         print(f"  ! {p}")
 
+    if args.prova and args.rapporto:
+        scrivi_rapporto(args.rapporto, adesso, cerca.righe, risultati, problemi)
     if args.prova:
         for ricerca, annunci in risultati:
             for a in annunci:

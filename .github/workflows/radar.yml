@@ -50,7 +50,7 @@ jobs:
           NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}
         run: |
           if [ "${{ inputs.prova }}" = "true" ]; then
-            python -m radar --prova
+            python -m radar --prova --rapporto data/ultima-prova.md
           elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.forza }}" = "true" ]; then
             python -m radar --forza
           else
@@ -63,6 +63,6 @@ jobs:
             git config user.name "radar-auto[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data/
-            git commit -m "Aggiorna annunci visti ($(TZ=Europe/Rome date +%Y-%m-%d))"
+            git commit -m "Aggiorna dati del radar ($(TZ=Europe/Rome date +%Y-%m-%d))"
             git push
           fi
