@@ -7,6 +7,26 @@
   },
   "ricerche": [
     {
+      "id": "rmvh3fyry",
+      "attiva": true,
+      "nome": "Fiat Panda",
+      "marca": "Fiat",
+      "modello": "Panda",
+      "alimentazione": "benzina",
+      "cambio": "automatico",
+      "tipo": "auto",
+      "anno_min": 2018,
+      "fonti": [
+        "autoscout24",
+        "subito",
+        "automobile",
+        "quattroruote",
+        "automoto",
+        "autohero",
+        "spoticar"
+      ]
+    },
+    {
       "id": "rmvh389rf",
       "attiva": true,
       "nome": "Volkswagen up!",
