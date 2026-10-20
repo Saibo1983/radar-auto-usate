@@ -1,23 +1,23 @@
 {
- "data": "2026-10-20T21:33+02:00",
+ "data": "2026-10-20T21:37+02:00",
  "siti": [
   {
    "ricerca": "Volkswagen up!",
    "sito": "AutoScout24",
-   "letti": 19,
-   "corrispondono": 12
+   "letti": 20,
+   "corrispondono": 6
   },
   {
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
    "letti": 42,
-   "corrispondono": 3
+   "corrispondono": 1
   },
   {
    "ricerca": "Volkswagen up!",
    "sito": "Automobile.it",
    "letti": 20,
-   "corrispondono": 1
+   "corrispondono": 0
   },
   {
    "ricerca": "Volkswagen up!",
@@ -41,7 +41,7 @@
    "ricerca": "Volkswagen up!",
    "sito": "Spoticar",
    "letti": 11,
-   "corrispondono": 1
+   "corrispondono": 0
   }
  ],
  "problemi": [],
@@ -51,121 +51,73 @@
    "annunci": [
     {
      "titolo": "Volkswagen up!",
+     "prezzo": 7900,
+     "anno": 2018,
+     "km": 104182,
+     "carburante": "Benzina",
+     "luogo": "Massarosa - Lucca - LU",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-up-1-0-move-up-60cv-asg-benzina-nero-cat_ma74mo19750-c57a953c-440b-4627-a7ed-302e14ed893c",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/c57a953c-440b-4627-a7ed-302e14ed893c_501a103a-f5fb-415b-94c5-50a6842fcea5.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
+     "titolo": "Volkswagen up!",
      "prezzo": 8900,
-     "anno": 2020,
-     "km": 9200,
-     "carburante": "Elettrica",
-     "luogo": "Torino - TO",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-e-up-5p-elettrica-cat_ma74mo19750-024e6b51-7f3b-4775-95e6-deb79a1e135c",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/024e6b51-7f3b-4775-95e6-deb79a1e135c_490f9bf0-6444-4d29-9d4c-9aceed8d917f.jpg/250x188.webp",
+     "anno": 2019,
+     "km": 127800,
+     "carburante": "Benzina",
+     "luogo": "Abbiategrasso - Mi",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-1-0-high-up-75cv-asg-5-porte-tagliandata-benzina-bianco-cat_ma74mo19750-4b0015ad-0c01-4a08-9513-6b2cab8e8048",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/4b0015ad-0c01-4a08-9513-6b2cab8e8048_2912a65b-b28c-414b-8421-6876224750bb.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
     },
     {
-     "titolo": "Volkswagen up!",
-     "prezzo": 9990,
-     "anno": 2022,
-     "km": 75000,
-     "carburante": "Elettrica",
-     "luogo": "Torino - TO",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2017-e-up-5p-elettrica-bianco-cat_ma74mo19750-e4d2ce79-2677-4108-9c9e-6423d48dc867",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/e4d2ce79-2677-4108-9c9e-6423d48dc867_a0b80b14-02c0-4cc7-9fcf-d0875b7bba6a.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
-     "prezzo": 10500,
-     "anno": 2020,
-     "km": 74500,
-     "carburante": "Elettrica",
-     "luogo": "Roma",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2017-e-up-5p-elettrica-argento-cat_ma74mo19750-8bc1fa99-91a8-4885-86c1-2ca57ffc2223",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/8bc1fa99-91a8-4885-86c1-2ca57ffc2223_c61ff596-b675-4404-b5fe-1ba68e74b3ca.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
-     "prezzo": 10900,
-     "anno": 2020,
-     "km": 91555,
-     "carburante": "Elettrica",
-     "luogo": "Messina - Me",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2017-e-up-5p-elettrica-bianco-cat_ma74mo19750-d07eff93-5d8a-452d-a2f1-706fd511d309",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/d07eff93-5d8a-452d-a2f1-706fd511d309_491b411a-94e8-4b36-ae52-f5ed87577a5d.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
-     "prezzo": 10900,
-     "anno": 2021,
-     "km": 57000,
-     "carburante": "Elettrica",
-     "luogo": "Torino",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2017e-up-5p-elettrica-bianco-cat_ma74mo19750-df4b91f4-a4ac-4730-9336-2ea4abdd9197",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/df4b91f4-a4ac-4730-9336-2ea4abdd9197_8e86ec90-3440-4b88-8751-e4c41481ad53.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
-     "prezzo": 11599,
-     "anno": 2020,
-     "km": 62421,
-     "carburante": "Elettrica",
-     "luogo": "Firenze - FI",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-electric-drive-61-kw-e-up-82-cv-elettrica-blu-azzurro-cat_ma74mo19750-c0914a64-ee8e-4a0f-8223-f8529a20623b",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/c0914a64-ee8e-4a0f-8223-f8529a20623b_d5423f35-430a-4b8d-84ce-fe39eeb5e4e0.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up! e-up! 82 CV",
-     "prezzo": 11900,
-     "anno": 2021,
-     "km": 69000,
-     "carburante": "Elettrico",
-     "luogo": "Ciriè (TO)",
-     "url": "https://www.automobile.it/cirie-volkswagen-up-up-82-cv/179932056",
-     "immagine": "",
-     "sito": "Automobile.it",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
-     "prezzo": 12000,
-     "anno": 2021,
-     "km": 62000,
-     "carburante": "Elettrica",
+     "titolo": "Volkswagen up! Adatta a neopatentati cambio automa",
+     "prezzo": 9200,
+     "anno": 2018,
+     "km": 93565,
+     "carburante": "Benzina",
      "luogo": "Brescia",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2017-e-up-5p-elettrica-nero-cat_ma74mo19750-704a1f7c-a4bd-41e6-b68f-5a0ec0fa30a3",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/704a1f7c-a4bd-41e6-b68f-5a0ec0fa30a3_9ac66dd1-7d9b-48d5-953e-32e458957187.jpg/250x188.webp",
+     "url": "https://www.subito.it/auto/volkswagen-up-adatta-a-neopatentati-cambio-automa-brescia-660415423.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": false
+    },
+    {
+     "titolo": "Volkswagen up!",
+     "prezzo": 9900,
+     "anno": 2018,
+     "km": 69000,
+     "carburante": "Benzina",
+     "luogo": "Roma - RM",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-up-5p-1-0-move-60cv-asg-benzina-cat_ma74mo19750-645da7ae-4555-44c1-845b-4fd94b69f10c",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/645da7ae-4555-44c1-845b-4fd94b69f10c_2fdc96c6-5ab2-4ef4-b3cd-ad00616cb788.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
     },
     {
      "titolo": "Volkswagen up!",
-     "prezzo": 12600,
-     "anno": 2021,
-     "km": 38000,
-     "carburante": "Elettrica",
-     "luogo": "Mornago - Varese - VA",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2017-e-up-5p-elettrica-nero-cat_ma74mo19750-5309324d-df3c-45d9-b149-0c97a87fe71a",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/5309324d-df3c-45d9-b149-0c97a87fe71a_93dc3515-2e85-4418-b38f-e2ad3c7acbbf.jpg/250x188.webp",
+     "prezzo": 10490,
+     "anno": 2018,
+     "km": 44800,
+     "carburante": "Benzina",
+     "luogo": "Striano - Napoli - NA",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-up-1-0-44kw-move-bmt-asg-gpl-+-800e-benzina-nero-cat_ma74mo19750-f23a877e-b844-4a41-b592-f2e981560519",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/f23a877e-b844-4a41-b592-f2e981560519_2cbcf8ca-9ab9-4c63-832d-a329801b6d49.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
     },
     {
      "titolo": "Volkswagen up!",
-     "prezzo": 12900,
-     "anno": 2021,
-     "km": 18160,
-     "carburante": "Elettrica",
-     "luogo": "Brescia- BS",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2017-e-up-5p-elettrica-nero-cat_ma74mo19750-6a23c540-e609-4dd5-92a5-c3de9732a0e9",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/6a23c540-e609-4dd5-92a5-c3de9732a0e9_fc7b14c5-47e4-4fef-bf26-3abc2a49a945.jpg/250x188.webp",
+     "prezzo": 11800,
+     "anno": 2018,
+     "km": 63381,
+     "carburante": "Benzina",
+     "luogo": "Sovizzo",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2018-5p-1-0-move-60cv-asg-benzina-bianco-cat_ma74mo19750-5ca7ad04-e0f1-4995-9c41-0b186638ba97",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/5ca7ad04-e0f1-4995-9c41-0b186638ba97_af5f805d-640d-4516-bce0-622f02539b07.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
     },
@@ -182,30 +134,6 @@
      "nuovo": false
     },
     {
-     "titolo": "VOLKSWAGEN e-up! 5p",
-     "prezzo": 13900,
-     "anno": 2021,
-     "km": 41055,
-     "carburante": "Elettrica (BEV)",
-     "luogo": "Vicenza",
-     "url": "https://www.subito.it/auto/volkswagen-e-up-5p-vicenza-664528849.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
-     "titolo": "VOLKSWAGEN e-up! 82 CV",
-     "prezzo": 13900,
-     "anno": 2022,
-     "km": 34743,
-     "carburante": "Elettrica (BEV)",
-     "luogo": "Vigevano",
-     "url": "https://www.subito.it/auto/volkswagen-e-up-82-cv-pavia-663834992.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
      "titolo": "Volkswagen up! TSI 5p. up! GTI BlueMotion Technology",
      "prezzo": 13900,
      "anno": 2022,
@@ -216,45 +144,9 @@
      "immagine": "",
      "sito": "Automoto",
      "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
-     "prezzo": 15000,
-     "anno": 2020,
-     "km": 60000,
-     "carburante": "Elettrica",
-     "luogo": "Roma",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-e-up-5p-elettrica-bianco-cat_ma74mo19750-0d202161-3973-4f49-a207-60669c07029c",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/0d202161-3973-4f49-a207-60669c07029c_d20dfb3e-ac74-44c4-b792-752b0541de38.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
-     "prezzo": 16000,
-     "anno": 2021,
-     "km": 51400,
-     "carburante": "Elettrica",
-     "luogo": "Montesilvano",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2017-e-up-5p-elettrica-blu-azzurro-cat_ma74mo19750-b516ff46-8382-4a86-8064-bb4f365f873e",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/b516ff46-8382-4a86-8064-bb4f365f873e_9affa178-11f1-4756-a573-45f9fe1187f3.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen Up ! 5p 2017 e- 5p",
-     "prezzo": 16000,
-     "anno": 2022,
-     "km": 8800,
-     "carburante": "Elettrica",
-     "luogo": "",
-     "url": "https://www.spoticar.it/trova-veicoli-usati/volkswagen-5p-2017-e-5p-abruzzo-spoltore-602305480",
-     "immagine": "https://s3.eu-central-1.amazonaws.com/uvpictures-eu-central-1/368/SP/IT/VOLKSWAGEN-UP-2305480_1.JPG",
-     "sito": "Spoticar",
-     "nuovo": false
     }
    ]
   }
  ],
- "richiesta": "mvh2yadj"
+ "richiesta": "mvh33qzg"
 }
