@@ -1,9 +1,9 @@
-# Prova del 20/10/2026 11:14
+# Prova del 20/10/2026 11:18
 
 | Ricerca | Sito | Annunci letti | Corrispondono |
 |---|---|---|---|
 | Golf diesel per famiglia | [AutoScout24](https://www.autoscout24.it/lst/volkswagen/golf?atype=C&cy=I&damaged_listing=exclude&sort=age&desc=1&ustate=N%2CU&priceto=15000&fregfrom=2018&kmto=120000&fuel=D) | 19 | 19 |
-| Golf diesel per famiglia | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Volkswagen+Golf&pe=15000&ys=2018) | 39 | 7 |
+| Golf diesel per famiglia | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Volkswagen+Golf&pe=15000&ys=2018) | 40 | 7 |
 | Golf diesel per famiglia | [Automobile.it](https://www.automobile.it/vw-golf) | 20 | 0 |
 | Golf diesel per famiglia | [Quattroruote](https://www.quattroruote.it/auto-usate/annunci/marca-volkswagen/modello-golf/anno-dal-2018) | 15 | 0 |
 | Golf diesel per famiglia | [Automoto](https://www.automoto.it/auto-usate/volkswagen/golf) | 13 | 0 |
@@ -16,10 +16,6 @@
 | Panda in città | [Automoto](https://www.automoto.it/auto-usate/fiat/panda) | 13 | 0 |
 | Panda in città | [Autohero](https://www.autohero.com/it/search/?brand=fiat&model=panda) | 24 | 0 |
 | Panda in città | [Spoticar](https://www.spoticar.it/trova-veicoli-usati/fiat/panda) | 11 | 0 |
-
-## Problemi
-
-- Autohero (Golf diesel per famiglia): nessun annuncio letto, il sito potrebbe aver cambiato formato
 
 ## Annunci trovati
 
@@ -40,7 +36,7 @@
 - [Volkswagen Golf](https://www.autoscout24.it/annunci/volkswagen-golf-golf-vii-2019-1-6-tdi-sound-ok-neopatentati-navi-garanzia-permute-diesel-bianco-cat_ma74mo2084-306ac3a5-91c9-41e7-bc5f-ed196f80d52b) · 13900 € · 2019 · 120000 km · AutoScout24
 - [Volkswagen Golf](https://www.autoscout24.it/annunci/volkswagen-golf-5p-1-6-tdi-business-115cv-diesel-cat_ma74mo2084-72ef3fb9-2a2e-4564-9ee6-aea10b7ee745) · 14500 € · 2020 · 90000 km · AutoScout24
 - [Volkswagen Golf](https://www.autoscout24.it/annunci/volkswagen-golf-vii-5p-1-6-tdi-executive-115cv-diesel-grigio-cat_ma74mo2084-c4726a6b-796e-4b31-8151-d98ee60b94c4) · 14500 € · 2018 · 94000 km · AutoScout24
-- [VOLKSWAGEN golf viii 2020 variant Golf Variant 2.0](https://www.subito.it/auto/volkswagen-golf-viii-2020-variant-golf-variant-2-0-padova-651115797.htm) · 14881 € · 2021 · 75000 km · Subito
+- [VOLKSWAGEN golf viii 2020 variant Golf Variant 2.0](https://www.subito.it/auto/volkswagen-golf-viii-2020-variant-golf-variant-2-0-lecco-651116201.htm) · 14881 € · 2021 · 75000 km · Subito
 - [Volkswagen Golf](https://www.autoscout24.it/annunci/volkswagen-golf-golf-vii-2017-5p-5p-1-6-tdi-executive-115cv-diesel-blu-azzurro-cat_ma74mo2084-d1569177-c110-4775-a171-f8bc6a518d98) · 14900 € · 2019 · 93000 km · AutoScout24
 - [Volkswagen Golf 1.6 TDI Highline BMT DSG](https://www.spoticar.it/trova-veicoli-usati/volkswagen-golf-16-tdi-highline-bmt-dsg-lombardia-sesto-san-giovanni-1202502322) · 14900 € · 2018 · 74207 km · Spoticar
 - [Volkswagen Golf](https://www.autoscout24.it/annunci/volkswagen-golf-1-6-tdi-executive-85-kw-man-prezzo-reale-f1293-diesel-nero-cat_ma74mo2084-91d777d0-e01f-45e0-b583-a3cb3f4c7b51) · 14980 € · 2019 · 119000 km · AutoScout24
@@ -54,6 +50,7 @@
 - [Fiat Panda 1.2 Pop Van 2 posti](https://www.automobile.it/genova-fiat-panda-1-2-pop-van-2-posti/179568661) · 6800 € · 2019 · 44000 km · Automobile.it
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-panda-iii-2016-1-2-pop-69cv-benzina-grigio-cat_ma28mo1746-87074392-4891-452f-a00f-20461d288056) · 6999 € · 2018 · 115 km · AutoScout24
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-panda-iii-2016-1-2-pop-s-benzina-grigio-cat_ma28mo1746-6e5ccbc3-1ce7-4c80-96cc-26e44fe16536) · 7000 € · 2020 · 80000 km · AutoScout24
+- [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-1-2-easy-ss-69cv-my19-benzina-cat_ma28mo1746-307fc740-eeca-499d-b16b-019630d51b50) · 7100 € · 2019 · 77000 km · AutoScout24
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-panda-iii-2016-4x4-0-9-t-air-t-4x4-s-benzina-bianco-cat_ma28mo1746-9ecb8aa9-4c82-479d-80fe-73623af77cdb) · 7200 € · 2016 · 74150 km · AutoScout24
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-0-9-t-air-t-natural-power-city-life-70cv-metano-cat_ma28mo1746-bf6ed794-bb02-43b7-8567-357f00a48e8d) · 7299 € · 2021 · 89000 km · AutoScout24
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-panda-iii-2012-1-3-mjt-16v-lounge-s-diesel-bianco-cat_ma28mo1746-2b70c1d3-6e82-4c7a-95bf-d9c770c2531a) · 7300 € · 2016 · 65000 km · AutoScout24
@@ -65,4 +62,3 @@
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-panda-iii-2016-1-2-easy-s-benzina-grigio-cat_ma28mo1746-abe17bf9-5166-4c54-8568-a5ae98d9069e) · 7600 € · 2019 · 44000 km · AutoScout24
 - [FIAT Panda 1,2 Lounge](https://www.subito.it/auto/fiat-panda-1-2-lounge-varese-665040258.htm) · 7700 € · 2019 · 67660 km · Subito
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-panda-iii-2021-4x4-cross-0-9-t-air-t-cross-benzina-nero-cat_ma28mo1746-df832e24-6a61-4157-94a6-9e406cf27101) · 7750 € · 2021 · 41780 km · AutoScout24
-- [FIAT Panda 1.2 69CV Van 2 posti N1 *UNICO PROPRI](https://www.subito.it/auto/fiat-panda-1-2-69cv-van-2-posti-n1-unico-propri-milano-664462468.htm) · 7890 € · 2019 · 34163 km · Subito
