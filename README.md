@@ -21,6 +21,8 @@ Le ricerche si creano, modificano, mettono in pausa ed eliminano dall'app, che l
 
 L'app è su **https://saibo1983.github.io/radar-auto-usate/**. Mostra gli **ultimi risultati** del controllo giornaliero e le **ricerche salvate**, e ha un pulsante **Cerca adesso** che avvia subito una ricerca, per auto o furgoni, e dopo 2-4 minuti mostra i risultati.
 
+Nelle ricerche salvate, **Vedi annunci** apre l'elenco degli ultimi annunci trovati, memorizzati in `data/annunci/<id>.json`: li aggiorna il controllo giornaliero, oppure subito il pulsante **Aggiorna**.
+
 Ogni modifica a una ricerca avvia il workflow `salva-ricerche.yml`, che scrive l'elenco in `config/ricerche.json`: il radar la usa dal controllo successivo.
 
 Salvare e cercare la prima volta chiede un codice di GitHub (un *fine-grained personal access token* limitato a questo repository, con permesso **Actions: Read and write**), che resta salvato solo nel browser. La ricerca immediata non invia avvisi e non cambia gli annunci già visti: i risultati vanno in `data/ricerca-adesso.json`.
@@ -131,6 +133,7 @@ pytest                                   # test
 ```
 config/ricerche.json        le tue ricerche
 data/stato.json             annunci già segnalati (aggiornato in automatico)
+data/annunci/<id>.json      ultimi annunci di ogni ricerca, per "Vedi annunci"
 index.html                  l'app (GitHub Pages)
 radar/__main__.py           esecuzione giornaliera
 radar/adesso.py             ricerca immediata del pulsante "Cerca adesso"

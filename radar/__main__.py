@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
 from datetime import datetime, time
 from pathlib import Path
@@ -127,8 +128,21 @@ def scrivi_json(percorso: Path, dati: dict) -> None:
 
 def scrivi_risultati(cartella: Path, adesso: datetime, righe, elenco, nuovi_url: set[str], problemi) -> None:
     """Risultati dell'ultimo controllo, leggibili su GitHub e dall'app (data/risultati.json)."""
-    scrivi_json(cartella / "risultati.json", dati_risultati(adesso, righe, elenco, nuovi_url, problemi))
+    dati = dati_risultati(adesso, righe, elenco, nuovi_url, problemi)
+    scrivi_json(cartella / "risultati.json", dati)
+    scrivi_annunci(cartella, dati)
     scrivi_rapporto(cartella / "risultati.md", adesso, righe, elenco, problemi)
+
+
+ID_VALIDO = re.compile(r"[A-Za-z0-9_-]{1,30}")
+
+
+def scrivi_annunci(cartella: Path, dati: dict) -> None:
+    """Ultimi annunci di ogni ricerca salvata (data/annunci/<id>.json), che l'app mostra in "Vedi annunci"."""
+    for gruppo in dati["ricerche"]:
+        if isinstance(gruppo.get("id"), str) and ID_VALIDO.fullmatch(gruppo["id"]):
+            singola = {**dati, "siti": [s for s in dati["siti"] if s["ricerca"] == gruppo["nome"]], "ricerche": [gruppo]}
+            scrivi_json(cartella / "annunci" / f"{gruppo['id']}.json", singola)
 
 
 def main(argv: list[str] | None = None) -> int:

@@ -31,6 +31,10 @@ def test_esecuzione_completa(tmp_path, monkeypatch):
     assert "Volkswagen Golf 1.6 TDI" in email[0][3]
     assert push[0][0] == "canale-prova"
 
+    # Gli annunci della ricerca restano memorizzati per "Vedi annunci" nell'app
+    memorizzati = json.loads((tmp_path / "annunci" / "g.json").read_text())
+    assert [a["titolo"] for a in memorizzati["ricerche"][0]["annunci"]] == ["Volkswagen Golf 1.6 TDI"]
+
     # Il giorno dopo la stessa auto non viene segnalata di nuovo
     assert radar.main(argomenti) == 0
     assert len(email) == 1 and len(push) == 1

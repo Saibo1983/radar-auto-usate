@@ -33,10 +33,10 @@ jobs:
         run: python -m radar.salva_ricerche
       - name: Salva nel repository
         run: |
-          if [ -n "$(git status --porcelain config/)" ]; then
+          if [ -n "$(git status --porcelain config/ data/)" ]; then
             git config user.name "radar-auto[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add config/ricerche.json
+            git add config/ricerche.json data/
             git commit -qm "Ricerche aggiornate dall'app"
             for i in 1 2 3; do git pull -q --rebase && git push && break; sleep 5; done
           fi

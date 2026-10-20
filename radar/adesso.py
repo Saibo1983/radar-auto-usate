@@ -3,7 +3,10 @@
 Esegue una sola ricerca, senza avvisi e senza toccare gli annunci già visti,
 e scrive i risultati in data/ricerca-adesso.json per l'app.
 
-Uso: RICERCA='{"marca": "Fiat", "modello": "Ducato", "tipo": "furgone"}' python -m radar.adesso ID
+Con l'id di una ricerca salvata ("Vedi annunci" nell'app) i risultati vanno
+invece in data/annunci/<id>.json, dove restano memorizzati.
+
+Uso: RICERCA='{"marca": "Fiat", "modello": "Ducato", "tipo": "furgone"}' python -m radar.adesso RICHIESTA [ID]
 """
 
 from __future__ import annotations
@@ -15,7 +18,7 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from .__main__ import RADICE, cerca, dati_risultati, scrivi_json
+from .__main__ import ID_VALIDO, RADICE, cerca, dati_risultati, scrivi_annunci, scrivi_json
 from .siti import SITI
 from .stato import Stato
 
@@ -47,7 +50,8 @@ def pulisci(grezza: dict) -> dict:
 def main(argv: list[str] | None = None) -> int:
     argv = sys.argv[1:] if argv is None else argv
     richiesta = argv[0] if argv else ""
-    ricerca = {**pulisci(json.loads(os.environ.get("RICERCA") or "{}")), "id": "adesso"}
+    salvata = argv[1] if len(argv) > 1 and ID_VALIDO.fullmatch(argv[1]) else None
+    ricerca = {**pulisci(json.loads(os.environ.get("RICERCA") or "{}")), "id": salvata or "adesso"}
     adesso = datetime.now(ZoneInfo("Europe/Rome"))
     print(f"Ricerca immediata: {ricerca}")
 
@@ -55,7 +59,10 @@ def main(argv: list[str] | None = None) -> int:
     elenco = [(r, sorted(Stato.togli_doppioni(annunci), key=lambda a: a.prezzo or 0)) for r, annunci in tutti]
     dati = dati_risultati(adesso, cerca.righe, elenco, set(), problemi)
     dati["richiesta"] = richiesta
-    scrivi_json(RADICE / "data" / "ricerca-adesso.json", dati)
+    if salvata:
+        scrivi_annunci(RADICE / "data", dati)
+    else:
+        scrivi_json(RADICE / "data" / "ricerca-adesso.json", dati)
     print(f"Trovati {sum(len(a) for _, a in elenco)} annunci")
     return 0
 

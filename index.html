@@ -140,6 +140,8 @@ code { font-family: var(--font-mono); font-size: .85em; background: var(--field)
 .ris-item img { width: 72px; height: 54px; object-fit: cover; border-radius: 4px; background: var(--field); }
 .ris-item a { color: var(--accent); font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
 .ris-item .meta { font-size: .85rem; color: var(--muted); }
+.vedi { display: grid; gap: 8px; border-top: 1px solid var(--line); padding-top: 10px; }
+.vedi-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; font-size: .9rem; }
 .tag-new { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; background: var(--ok); color: #fff; border-radius: 3px; padding: 1px 5px; font-weight: 600; margin-left: 6px; }
 .empty { border: 1px dashed var(--line); border-radius: 8px; padding: 18px; text-align: center; color: var(--muted); }
 .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(20px + env(safe-area-inset-bottom, 0px)); background: var(--fg); color: var(--bg); padding: 10px 16px; border-radius: 8px; font-weight: 600; z-index: 20; }
@@ -518,6 +520,7 @@ function esc(s) { return String(s).replace(/[&<>"']/g, m => ({ "&": "&amp;", "<"
 
 function renderSaved() {
   renderRisultati();
+  setTimeout(() => aperti.forEach(renderVedi));
   const el = $("saved");
   const attive = ricerche.filter(r => r.attiva).length;
   $("savedCount").textContent = ricerche.length ? `${attive} attive su ${ricerche.length}` : "";
@@ -538,12 +541,13 @@ function renderSaved() {
         <div class="chips">${chips(r).map(c => `<span class="chip">${esc(c)}</span>`).join("") || '<span class="muted">Nessun filtro</span>'}</div>
         <div class="btns">
           ${linkSiti(r, "small")}
-          <button type="button" class="small primary" data-act="vedi">Vedi annunci</button>
+          <button type="button" class="small primary" data-act="vedi" aria-expanded="${aperti.has(r.id)}">${aperti.has(r.id) ? "Nascondi annunci ▴" : "Vedi annunci ▾"}</button>
           <button type="button" class="small ghost" data-act="edit">Modifica</button>
           ${confirmingId === r.id
             ? `<span class="confirm">Eliminare? <button type="button" class="small danger" data-act="del-yes">Elimina</button><button type="button" class="small ghost" data-act="del-no">No</button></span>`
             : `<button type="button" class="small ghost danger" data-act="del">Elimina</button>`}
         </div>
+        ${aperti.has(r.id) ? `<div class="vedi" id="vedi-${esc(r.id)}"></div>` : ""}
       </article>`).join("");
   }
 }
@@ -597,6 +601,9 @@ let timerSalva = null;
 function salva() {
   renderSaved();
   store.set("ra.salvate", { quando: Date.now(), ricerche });
+  const m = memorizzati();
+  for (const id of Object.keys(m)) if (!ricerche.some(r => r.id === id)) delete m[id];
+  store.set("ra.annunci", m);
   $("savedStato").textContent = "Salvataggio su GitHub…";
   clearTimeout(timerSalva);
   timerSalva = setTimeout(inviaRicerche, 1200);
@@ -687,7 +694,12 @@ $("saved").addEventListener("click", (e) => {
   const id = e.target.closest(".card").dataset.id;
   const r = ricerche.find(x => x.id === id);
   if (act === "toggle") { r.attiva = e.target.checked; salva(); aggiornaProssimo(); return; }
-  if (act === "vedi") { avviaRicerca(r); return; }
+  if (act === "vedi") {
+    if (aperti.has(id)) aperti.delete(id);
+    else { aperti.add(id); if (!annunci[id]) caricaAnnunci(id); }
+    renderSaved(); return;
+  }
+  if (act === "aggiorna") { aggiornaAnnunci(r); return; }
   if (act === "edit") {
     editingId = id; scriviForm(r);
     $("formTitle").textContent = "Modifica ricerca"; $("saveBtn").textContent = "Salva modifiche"; $("cancelEdit").hidden = false;
@@ -711,7 +723,7 @@ async function caricaRisultati() {
     return;
   }
   const quando = new Date(ultimi.data);
-  $("risData").textContent = "controllo del " + quando.toLocaleString("it-IT", { dateStyle: "short", timeStyle: "short" });
+  $("risData").textContent = "controllo del " + quando.toLocaleString("it-IT", { dateStyle: "short", timeStyle: "short", timeZone: "Europe/Rome" });
   renderRisultati();
 }
 
@@ -747,17 +759,21 @@ $("risultati").addEventListener("click", (e) => {
   renderRisultati();
 });
 
-function mostraRisultati(el, d, elimina) {
+function listaAnnunci(annunci) {
   const euro = n => n ? "€ " + fmt(n) : "prezzo n.d.";
-  el.innerHTML = d.ricerche.map((ric, i) => `
-    <details class="ris-group card" ${i === 0 ? "open" : ""}>
-      <summary>${esc(ric.nome)} <span class="muted mono">(${ric.annunci.length})</span>${elimina ? pulsantiRis(ricercaDi(ric)) : ""}</summary>
-      ${ric.annunci.length ? ric.annunci.map(a => `
+  return annunci.length ? annunci.map(a => `
         <div class="ris-item">
           ${a.immagine ? `<img src="${esc(a.immagine.replace("{size}", ""))}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">` : "<span></span>"}
           <div><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.titolo || "Annuncio")}</a>${a.nuovo ? '<span class="tag-new">Nuovo</span>' : ""}
             <div class="meta"><strong>${euro(a.prezzo)}</strong> · ${[a.anno, a.km != null ? fmt(a.km) + " km" : "", a.carburante, a.luogo, a.sito].filter(Boolean).map(esc).join(" · ")}</div></div>
-        </div>`).join("") : '<p class="muted">Nessun annuncio corrisponde ai filtri.</p>'}
+        </div>`).join("") : '<p class="muted">Nessun annuncio corrisponde ai filtri.</p>';
+}
+
+function mostraRisultati(el, d, elimina) {
+  el.innerHTML = d.ricerche.map((ric, i) => `
+    <details class="ris-group card" ${i === 0 ? "open" : ""}>
+      <summary>${esc(ric.nome)} <span class="muted mono">(${ric.annunci.length})</span>${elimina ? pulsantiRis(ricercaDi(ric)) : ""}</summary>
+      ${listaAnnunci(ric.annunci)}
     </details>`).join("") + (d.problemi.length ? `<p class="muted" style="font-size:.85rem">Problemi: ${d.problemi.map(esc).join("; ")}</p>` : "");
 }
 
@@ -829,6 +845,73 @@ async function chiamaGitHub(workflow, inputs, riprova) {
   }
   if (!res.ok) { toast("GitHub ha risposto con un errore (" + res.status + "). Riprova tra poco."); return false; }
   return true;
+}
+
+// "Vedi annunci": gli ultimi annunci di ogni ricerca salvata restano in data/annunci/<id>.json.
+// Il controllo giornaliero li aggiorna; "Aggiorna" avvia subito una nuova ricerca.
+const annunci = {};  // id -> { dati, caricato, cercando, stato }
+const aperti = new Set();
+const timerAnnunci = {};
+
+function memorizzati() { return store.get("ra.annunci", {}) || {}; }
+function memorizza(id, d) { const m = memorizzati(); m[id] = d; store.set("ra.annunci", m); }
+
+async function caricaAnnunci(id) {
+  const a = annunci[id] = annunci[id] || {};
+  // La copia locale vale finché GitHub Pages non pubblica quella più recente
+  let d = memorizzati()[id] || null;
+  try {
+    const r = await fetch(`data/annunci/${encodeURIComponent(id)}.json?t=` + Date.now(), { cache: "no-store" });
+    if (r.ok) { const pubblicati = await r.json(); if (!d || new Date(pubblicati.data) >= new Date(d.data)) d = pubblicati; }
+  } catch { /* resta la copia locale */ }
+  a.dati = d; a.caricato = true;
+  renderVedi(id);
+}
+
+function renderVedi(id) {
+  const el = document.getElementById("vedi-" + id);
+  if (!el) return;
+  const a = annunci[id] || {};
+  if (!a.caricato) { el.innerHTML = '<p class="muted">Caricamento degli annunci…</p>'; return; }
+  const g = a.dati && a.dati.ricerche[0];
+  const quando = g ? new Date(a.dati.data).toLocaleString("it-IT", { dateStyle: "short", timeStyle: "short", timeZone: "Europe/Rome" }) : "";
+  el.innerHTML = `
+    <div class="vedi-head">
+      <span class="muted">${g ? `${g.annunci.length === 1 ? "1 annuncio" : g.annunci.length + " annunci"} · ricerca del ${quando}` : "Nessun annuncio memorizzato."}</span>
+      <button type="button" class="small" data-act="aggiorna" id="agg-${esc(id)}"${a.cercando ? " disabled" : ""}>${a.cercando ? "Ricerca in corso…" : "Aggiorna"}</button>
+    </div>
+    ${a.stato ? `<p class="muted" style="font-size:.85rem">${esc(a.stato)}</p>` : ""}
+    ${g ? listaAnnunci(g.annunci) : a.cercando ? "" : '<p class="muted" style="font-size:.85rem">Premi Aggiorna per cercarli adesso: arrivano in 2-4 minuti.</p>'}`;
+}
+
+async function aggiornaAnnunci(r) {
+  const id = r.id, a = annunci[id] = annunci[id] || { caricato: true };
+  if (!store.get("ra.token", "")) { chiediToken(() => aggiornaAnnunci(r)); return; }
+  const richiesta = Date.now().toString(36);
+  clearInterval(timerAnnunci[id]);
+  a.cercando = true; a.stato = "Avvio della ricerca…"; renderVedi(id);
+  const ok = await chiamaGitHub("cerca-adesso.yml", { ricerca: JSON.stringify(aConfig(r)), richiesta, id }, () => aggiornaAnnunci(r));
+  if (!ok) { a.cercando = false; a.stato = "Ricerca non avviata."; renderVedi(id); return; }
+  a.stato = `Cerco su ${fontiPer(r).length} siti: i nuovi annunci arrivano in 2-4 minuti.`; renderVedi(id);
+  const inizio = Date.now();
+  const fine = (stato) => { clearInterval(timerAnnunci[id]); a.cercando = false; a.stato = stato; renderVedi(id); };
+  timerAnnunci[id] = setInterval(async () => {
+    const sec = Math.round((Date.now() - inizio) / 1000);
+    const btn = document.getElementById("agg-" + id);
+    if (btn) btn.textContent = "Ricerca in corso " + Math.floor(sec / 60) + ":" + String(sec % 60).padStart(2, "0");
+    if (sec % 15 !== 0) return;
+    if (sec > 12 * 60) { fine("La ricerca sta impiegando troppo. Riprova più tardi."); return; }
+    try {
+      const f = await fetch(API + `/contents/data/annunci/${encodeURIComponent(id)}.json?ref=main`, {
+        headers: { Authorization: "Bearer " + store.get("ra.token", ""), Accept: "application/vnd.github.raw+json" }, cache: "no-store"
+      });
+      if (!f.ok) return;
+      const d = await f.json();
+      if (d.richiesta !== richiesta) return;
+      a.dati = d; memorizza(id, d);
+      fine("");
+    } catch { /* riprova al giro successivo */ }
+  }, 1000);
 }
 
 $("cercaAdesso").addEventListener("click", () => {

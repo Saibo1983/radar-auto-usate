@@ -109,17 +109,22 @@ def test_salva_ricerche_dall_app(tmp_path):
 
     percorso = tmp_path / "ricerche.json"
     percorso.write_text(json.dumps({"orario": "11:55", "notifiche": {"solo_nuovi": True}, "ricerche": []}))
+    annunci = tmp_path / "annunci"
+    annunci.mkdir()
+    (annunci / "r1.json").write_text("{}")
+    (annunci / "vecchia.json").write_text("{}")
     aggiorna(percorso, [
         {"id": "r1", "attiva": True, "marca": "Fiat", "modello": "Panda", "prezzo_max": 8000, "fonti": ["subito"]},
         {"id": "../x", "attiva": False, "nome": "Pausa", "comando": "rm -rf /"},
         "non una ricerca",
-    ])
+    ], annunci)
     cfg = json.loads(percorso.read_text())
     assert cfg["orario"] == "11:55" and cfg["notifiche"] == {"solo_nuovi": True}
     assert cfg["ricerche"][0] == {"id": "r1", "attiva": True, "nome": "Fiat Panda", "marca": "Fiat",
                                   "modello": "Panda", "tipo": "auto", "prezzo_max": 8000, "fonti": ["subito"]}
     assert cfg["ricerche"][1]["id"] == "r2" and cfg["ricerche"][1]["attiva"] is False
     assert len(cfg["ricerche"]) == 2
+    assert sorted(f.name for f in annunci.iterdir()) == ["r1.json"]
 
 
 def test_ricerca_in_pausa_non_viene_cercata(monkeypatch):
@@ -129,3 +134,19 @@ def test_ricerca_in_pausa_non_viene_cercata(monkeypatch):
     monkeypatch.setattr(radar, "pausa", lambda: None)
     tutti, _, _ = radar.cerca({"ricerche": [{**GOLF, "attiva": False, "fonti": ["subito"]}]}, None)
     assert tutti == []
+
+
+def test_ricerca_adesso_di_una_ricerca_salvata_resta_memorizzata(tmp_path, monkeypatch):
+    import radar.adesso as adesso
+
+    monkeypatch.setattr(adesso, "RADICE", tmp_path)
+    monkeypatch.setattr(adesso, "cerca", lambda cfg, fonte: ([(cfg["ricerche"][0], [])], [], 1))
+    adesso.cerca.righe = []
+    monkeypatch.setenv("RICERCA", json.dumps({"marca": "Fiat", "modello": "Panda"}))
+    assert adesso.main(["abc", "r1"]) == 0
+    d = json.loads((tmp_path / "data" / "annunci" / "r1.json").read_text())
+    assert d["richiesta"] == "abc" and d["ricerche"][0]["id"] == "r1"
+    assert not (tmp_path / "data" / "ricerca-adesso.json").exists()
+
+    assert adesso.main(["def", "../x"]) == 0  # id non valido: ricerca dal modulo
+    assert json.loads((tmp_path / "data" / "ricerca-adesso.json").read_text())["richiesta"] == "def"
