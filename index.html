@@ -538,6 +538,7 @@ function renderSaved() {
         <div class="chips">${chips(r).map(c => `<span class="chip">${esc(c)}</span>`).join("") || '<span class="muted">Nessun filtro</span>'}</div>
         <div class="btns">
           ${linkSiti(r, "small")}
+          <button type="button" class="small primary" data-act="vedi">Vedi annunci</button>
           <button type="button" class="small ghost" data-act="edit">Modifica</button>
           ${confirmingId === r.id
             ? `<span class="confirm">Eliminare? <button type="button" class="small danger" data-act="del-yes">Elimina</button><button type="button" class="small ghost" data-act="del-no">No</button></span>`
@@ -686,6 +687,7 @@ $("saved").addEventListener("click", (e) => {
   const id = e.target.closest(".card").dataset.id;
   const r = ricerche.find(x => x.id === id);
   if (act === "toggle") { r.attiva = e.target.checked; salva(); aggiornaProssimo(); return; }
+  if (act === "vedi") { avviaRicerca(r); return; }
   if (act === "edit") {
     editingId = id; scriviForm(r);
     $("formTitle").textContent = "Modifica ricerca"; $("saveBtn").textContent = "Salva modifiche"; $("cancelEdit").hidden = false;
@@ -838,6 +840,7 @@ $("cercaAdesso").addEventListener("click", () => {
 
 async function avviaRicerca(r) {
   const richiesta = Date.now().toString(36);
+  clearInterval(timerAdesso);  // una nuova ricerca sostituisce quella in corso
   $("adessoPanel").hidden = false;
   $("adessoRis").innerHTML = "";
   if (!store.get("ra.token", "")) {
@@ -865,7 +868,7 @@ async function avviaRicerca(r) {
       const d = await f.json();
       if (d.richiesta !== richiesta) return;
       const n = d.ricerche.reduce((t, x) => t + x.annunci.length, 0);
-      statoAdesso(n ? `Trovati ${n} annunci.` : "Nessun annuncio corrisponde ai filtri. Prova ad allargare la ricerca.");
+      statoAdesso(n ? (n === 1 ? "Trovato 1 annuncio." : `Trovati ${n} annunci.`) : "Nessun annuncio corrisponde ai filtri. Prova ad allargare la ricerca.");
       mostraRisultati($("adessoRis"), d);
       fineAdesso();
     } catch { /* riprova al giro successivo */ }
