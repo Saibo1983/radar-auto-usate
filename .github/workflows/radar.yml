@@ -2,11 +2,11 @@ name: Radar Auto
 
 on:
   schedule:
-    # GitHub usa l'ora UTC. Le 11:30 italiane sono le 9:30 UTC con l'ora legale
-    # e le 10:30 UTC con l'ora solare: girano entrambe e lo script parte solo
+    # GitHub usa l'ora UTC. Le 11:55 italiane sono le 9:55 UTC con l'ora legale
+    # e le 10:55 UTC con l'ora solare: girano entrambe e lo script parte solo
     # se in Italia è già l'orario scelto e oggi non ha ancora controllato.
-    - cron: "30 9 * * *"
-    - cron: "30 10 * * *"
+    - cron: "55 9 * * *"
+    - cron: "55 10 * * *"
   workflow_dispatch:
     inputs:
       forza:

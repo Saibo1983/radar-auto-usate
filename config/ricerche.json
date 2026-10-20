@@ -1,6 +1,6 @@
 {
   "fuso_orario": "Europe/Rome",
-  "orario": "11:30",
+  "orario": "11:55",
   "notifiche": {
     "_nota": "Repository pubblico: email e canale push vanno nei Secrets EMAIL_TO e NTFY_TOPIC, non qui.",
     "solo_nuovi": true

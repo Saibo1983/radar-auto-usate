@@ -149,7 +149,9 @@ def main(argv: list[str] | None = None) -> int:
     email = cfg["notifiche"].get("email")
     topic = cfg["notifiche"].get("ntfy_topic")
     if not email and not topic:
-        print("Nessun avviso configurato: aggiungi i Secrets EMAIL_TO e/o NTFY_TOPIC")
+        # Senza destinatari non si segna nulla come visto: gli annunci arriveranno al primo invio vero
+        print("Nessun avviso configurato: aggiungi i Secrets EMAIL_TO e/o NTFY_TOPIC. Nulla è stato salvato.")
+        return 0
     if n:
         oggetto = f"Radar Auto: {n} {'nuovo annuncio' if n == 1 else 'nuovi annunci'}"
         if email and "@esempio." not in email:
