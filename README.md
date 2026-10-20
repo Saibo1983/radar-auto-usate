@@ -8,7 +8,7 @@ Ogni giorno alle 11:30 (ora italiana) cerca auto usate su 9 siti e, se trova ann
 |---|---|---|
 | AutoScout24 | tutti | ordinati dai più recenti |
 | Subito.it | marca, modello, prezzo, anno, regione | il resto lo filtra lo script |
-| Automobile.it | marca e modello | il resto lo filtra lo script |
+| Automobile.it | marca e modello | il sito ignora gli altri filtri nell'indirizzo e non ordina per data: si leggono i primi 20 risultati |
 | Quattroruote | marca, modello, anno | il resto lo filtra lo script |
 | Automoto.it | marca e modello | l'alimentazione si ricava dalla sigla del motore (TDI, TSI…) |
 | Autohero | marca e modello | concessionario online |

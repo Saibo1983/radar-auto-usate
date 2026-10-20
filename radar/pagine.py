@@ -1,6 +1,7 @@
 """Lettori dedicati per i siti che non mettono gli annunci in dati strutturati.
 
-Ognuno riceve l'HTML della pagina dei risultati e restituisce gli annunci.
+Ognuno riceve l'HTML della pagina dei risultati e restituisce gli annunci,
+oppure None se non riconosce la pagina (il sito potrebbe essere cambiato).
 Se un sito cambia l'aspetto delle pagine, è qui che va aggiornato.
 """
 
@@ -33,7 +34,9 @@ def _primo(regex: str, testo: str, flags: int = re.S) -> str:
     return m.group(1) if m else ""
 
 
-def automoto(html: str, base: str) -> list[Annuncio]:
+def automoto(html: str, base: str) -> list[Annuncio] | None:
+    if "mcard-body" not in html:
+        return None
     out = []
     for blocco in html.split('<div class="mcard-body">')[1:]:
         blocco = blocco.split("</li>")[0]
@@ -57,7 +60,9 @@ def automoto(html: str, base: str) -> list[Annuncio]:
     return out
 
 
-def quattroruote(html: str, base: str) -> list[Annuncio]:
+def quattroruote(html: str, base: str) -> list[Annuncio] | None:
+    if "ad-teaser-wrapper" not in html:
+        return None
     out = []
     for blocco in html.split("ad-teaser-wrapper")[1:]:
         url = _primo(r'href="(https://www\.quattroruote\.it/auto-usate/annuncio/[^"?]+)"', blocco)
@@ -85,7 +90,9 @@ def quattroruote(html: str, base: str) -> list[Annuncio]:
     return out
 
 
-def spoticar(html: str, base: str) -> list[Annuncio]:
+def spoticar(html: str, base: str) -> list[Annuncio] | None:
+    if 'id="search-list"' not in html:
+        return None
     out = []
     for blocco in html.split('<div class="vehicle-card ')[1:]:
         url = _primo(r'<a[^>]*href="(/trova-veicoli-usati/[^"]+-\d{8,})"[^>]*class="vehicle-card-link"', blocco) \
@@ -110,11 +117,11 @@ def spoticar(html: str, base: str) -> list[Annuncio]:
     return out
 
 
-def autohero(html: str, base: str) -> list[Annuncio]:
+def autohero(html: str, base: str) -> list[Annuncio] | None:
     # Lo stato dell'app è una stringa JSON che contiene a sua volta JSON
     m = re.search(r'window\.__APOLLO_STATE__\s*=\s*("(?:[^"\\]|\\.)*")', html, re.S)
     if not m:
-        return []
+        return None
     radice = json.loads(json.loads(m.group(1))).get("ROOT_QUERY", {})
     out = []
     for chiave, valore in radice.items():

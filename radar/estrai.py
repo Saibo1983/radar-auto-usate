@@ -199,15 +199,23 @@ def _visita(nodo: Any, fonte: str, base: str, out: list[Annuncio]) -> None:
             _visita(v, fonte, base, out)
 
 
-def estrai_annunci(html: str, fonte: str, base: str) -> list[Annuncio]:
+def estrai_annunci(html: str, fonte: str, base: str) -> list[Annuncio] | None:
+    """Annunci della pagina; None se la pagina non è stata riconosciuta.
+
+    Una lista vuota significa invece che il sito oggi non ha risultati per la ricerca.
+    """
     from .pagine import LETTORI  # lettori dedicati per i siti che non usano dati strutturati
 
     if fonte in LETTORI:
         trovati = LETTORI[fonte](html, base)
+        if trovati is None:
+            return None
     else:
         trovati = []
         for blocco in blocchi_json(html):
             _visita(blocco, fonte, base, trovati)
+        if not trovati:
+            return None
     unici: dict[str, Annuncio] = {}
     for a in trovati:
         # A parità di indirizzo tieni la versione con più dati

@@ -63,7 +63,7 @@ def test_json_ld_schema_org():
 def test_ignora_oggetti_senza_prezzo_o_url():
     dati = {"menu": [{"url": "/chi-siamo", "title": "Chi siamo"}], "banner": {"price": 99}}
     html = pagina(('type="application/ld+json"', dati))
-    assert estrai_annunci(html, "x", "https://esempio.it/") == []
+    assert estrai_annunci(html, "x", "https://esempio.it/") is None
 
 
 def test_lettore_automoto():
@@ -90,7 +90,7 @@ def test_lettore_quattroruote():
 
 
 def test_lettore_spoticar():
-    html = '''<div class="vehicle-card " data-vo-id="1"> <img data-src="https://img/1.jpg">
+    html = '''<div id="search-list"></div><div class="vehicle-card " data-vo-id="1"> <img data-src="https://img/1.jpg">
       <a href="/trova-veicoli-usati/fiat-panda-10-hybrid-lombardia-milano-1202520834" class="vehicle-card-link">
       <div class="vehicle-card-title"> <h3> Fiat Panda <span class="car-version"> 1.0 Hybrid </span> </h3> </div>
       <span class="tag">58 265 km</span> <span class="tag">Ibrido</span> <span class="tag">01-2024</span> <span class="tag">Manuale</span>
@@ -107,3 +107,10 @@ def test_lettore_autohero():
     [a] = estrai_annunci(html, "autohero", "https://www.autohero.com/it/search/")
     assert (a.titolo, a.prezzo, a.anno, a.km) == ("Toyota Aygo X 1.0", 15799, 2024, 27987)
     assert a.url == "https://www.autohero.com/it/toyota-aygo-x/id/abc/"
+
+
+def test_pagina_valida_senza_risultati():
+    stato = {"ROOT_QUERY": {"searchAdV9AdsV2:{}": {"total": 0, "data": []}}}
+    html = f"<script>window.__APOLLO_STATE__ = {json.dumps(json.dumps(stato))};</script>"
+    assert estrai_annunci(html, "autohero", "https://www.autohero.com/it/search/") == []
+    assert estrai_annunci("<html>pagina diversa</html>", "autohero", "https://www.autohero.com/") is None

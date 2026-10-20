@@ -70,9 +70,9 @@ def cerca(cfg: dict, solo_fonte: str | None) -> tuple[list[tuple[dict, list[Annu
             finally:
                 pausa()
             letti = estrai_annunci(html, fonte, url)
-            cerca.righe.append((ricerca["nome"], nome_sito(fonte), len(letti),
-                                sum(corrisponde(a, ricerca) for a in letti), url))
-            if not letti:
+            cerca.righe.append((ricerca["nome"], nome_sito(fonte), len(letti or []),
+                                sum(corrisponde(a, ricerca) for a in letti or []), url))
+            if letti is None:
                 problemi.append(f"{nome_sito(fonte)} ({ricerca['nome']}): nessun annuncio letto, "
                                 "il sito potrebbe aver cambiato formato")
                 continue
