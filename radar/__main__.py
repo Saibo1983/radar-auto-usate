@@ -96,10 +96,28 @@ def scrivi_rapporto(percorso: Path, adesso: datetime, righe, risultati, problemi
     for ricerca, annunci in risultati:
         out.append(f"### {ricerca['nome']} ({len(annunci)})")
         out += [f"- [{a.titolo or 'Annuncio'}]({a.url}) · {a.prezzo or '?'} € · {a.anno or '?'} · "
-                f"{a.km if a.km is not None else '?'} km · {nome_sito(a.fonte)}" for a in annunci[:20]]
+                f"{a.km if a.km is not None else '?'} km · {nome_sito(a.fonte)}" for a in annunci]
         out.append("")
     percorso.parent.mkdir(parents=True, exist_ok=True)
     percorso.write_text("\n".join(out), encoding="utf-8")
+
+
+def scrivi_risultati(cartella: Path, adesso: datetime, righe, elenco, nuovi_url: set[str], problemi) -> None:
+    """Risultati dell'ultimo controllo, leggibili su GitHub e dall'app (data/risultati.json)."""
+    dati = {
+        "data": adesso.isoformat(timespec="minutes"),
+        "siti": [{"ricerca": r, "sito": s, "letti": l, "corrispondono": c} for r, s, l, c, _ in righe],
+        "problemi": problemi,
+        "ricerche": [{
+            "nome": ricerca["nome"],
+            "annunci": [{**{k: getattr(a, k) for k in ("titolo", "prezzo", "anno", "km", "carburante", "luogo",
+                                                       "url", "immagine")},
+                         "sito": nome_sito(a.fonte), "nuovo": a.url in nuovi_url} for a in annunci],
+        } for ricerca, annunci in elenco],
+    }
+    cartella.mkdir(parents=True, exist_ok=True)
+    (cartella / "risultati.json").write_text(json.dumps(dati, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    scrivi_rapporto(cartella / "risultati.md", adesso, righe, elenco, problemi)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -124,10 +142,12 @@ def main(argv: list[str] | None = None) -> int:
             return 0
 
     print(f"Controllo del {adesso:%d/%m/%Y %H:%M}")
-    risultati = []
+    risultati, elenco = [], []
     tutti, problemi, pagine_ok = cerca(cfg, args.fonte)
     for ricerca, annunci in tutti:
         id_r = ricerca.get("id") or ricerca["nome"]
+        senza_doppioni = sorted(stato.nuovi(id_r, annunci, ignora_visti=True), key=lambda a: a.prezzo or 0)
+        elenco.append((ricerca, senza_doppioni))
         da_inviare = stato.nuovi(id_r, annunci, ignora_visti=not cfg["notifiche"]["solo_nuovi"])
         stato.ricorda(id_r, annunci, oggi)
         da_inviare.sort(key=lambda a: a.prezzo or 0)
@@ -138,6 +158,9 @@ def main(argv: list[str] | None = None) -> int:
     for p in problemi:
         print(f"  ! {p}")
 
+    if not args.prova:
+        scrivi_risultati(args.stato.parent, adesso, cerca.righe, elenco,
+                         {a.url for _, lista in risultati for a in lista}, problemi)
     if args.prova and args.rapporto:
         scrivi_rapporto(args.rapporto, adesso, cerca.righe, risultati, problemi)
     if args.prova:
