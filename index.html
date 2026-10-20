@@ -135,6 +135,7 @@ button.small, .btn.small { padding: 5px 10px; font-size: .85rem; }
 code { font-family: var(--font-mono); font-size: .85em; background: var(--field); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; overflow-wrap: anywhere; }
 .ris-group { display: grid; gap: 8px; }
 .ris-group summary { cursor: pointer; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; }
+.ris-group summary .btns { float: right; font-family: var(--font-body); font-size: .9rem; font-weight: 400; }
 .ris-item { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 10px; align-items: start; border-top: 1px solid var(--line); padding-top: 8px; }
 .ris-item img { width: 72px; height: 54px; object-fit: cover; border-radius: 4px; background: var(--field); }
 .ris-item a { color: var(--accent); font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
@@ -355,6 +356,7 @@ const store = {
 };
 // Le ricerche vengono da config/ricerche.json, lo stesso file che usa il controllo giornaliero
 let ricerche = [];
+let ricercheCaricate = false;
 let orario = "11:55";
 let editingId = null;
 let confirmingId = null;
@@ -515,6 +517,7 @@ function targa(r) {
 function esc(s) { return String(s).replace(/[&<>"']/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m])); }
 
 function renderSaved() {
+  renderRisultati();
   const el = $("saved");
   const attive = ricerche.filter(r => r.attiva).length;
   $("savedCount").textContent = ricerche.length ? `${attive} attive su ${ricerche.length}` : "";
@@ -584,6 +587,7 @@ async function caricaRicerche() {
   } catch {
     if (!ricerche.length) $("savedStato").textContent = "Non riesco a leggere le ricerche salvate. Ricarica la pagina.";
   }
+  ricercheCaricate = true;
   renderSaved(); aggiornaProssimo();
 }
 
@@ -693,27 +697,59 @@ $("saved").addEventListener("click", (e) => {
   if (act === "del-yes") { confirmingId = null; ricerche = ricerche.filter(x => x.id !== id); if (editingId === id) fineModifica(); salva(); aggiornaProssimo(); toast("Ricerca eliminata"); }
 });
 
+let ultimi = null, confermaRis = null;
 async function caricaRisultati() {
   const el = $("risultati");
-  let d;
   try {
     const r = await fetch("data/risultati.json?t=" + Date.now());
     if (!r.ok) throw new Error();
-    d = await r.json();
+    ultimi = await r.json();
   } catch {
     el.innerHTML = '<div class="empty">Nessun controllo ancora eseguito. I risultati compaiono qui dopo il primo controllo giornaliero.</div>';
     return;
   }
-  const quando = new Date(d.data);
+  const quando = new Date(ultimi.data);
   $("risData").textContent = "controllo del " + quando.toLocaleString("it-IT", { dateStyle: "short", timeStyle: "short" });
-  mostraRisultati(el, d);
+  renderRisultati();
 }
 
-function mostraRisultati(el, d) {
+// La ricerca salvata a cui appartiene un gruppo di risultati (i risultati più vecchi non hanno l'id)
+function ricercaDi(gruppo) {
+  return ricerche.find(r => gruppo.id ? r.id === gruppo.id : r.nome === gruppo.nome);
+}
+// Mostra solo i risultati delle ricerche che esistono ancora, ognuno con il pulsante per eliminarla
+function pulsantiRis(r) {
+  if (!r) return "";
+  return `<span class="btns">${confermaRis === r.id
+    ? `<span class="confirm">Eliminare la ricerca? <button type="button" class="small danger" data-act="ris-yes" data-id="${esc(r.id)}">Elimina</button><button type="button" class="small ghost" data-act="ris-no" data-id="${esc(r.id)}">No</button></span>`
+    : `<button type="button" class="small ghost danger" data-act="ris-del" data-id="${esc(r.id)}">Elimina</button>`}</span>`;
+}
+function renderRisultati() {
+  if (!ultimi) return;
+  const gruppi = ricercheCaricate ? ultimi.ricerche.filter(ricercaDi) : ultimi.ricerche;
+  if (!gruppi.length) { $("risultati").innerHTML = '<div class="empty">Nessun risultato: le ricerche di questo controllo sono state eliminate.</div>'; return; }
+  mostraRisultati($("risultati"), { ...ultimi, ricerche: gruppi }, ricercheCaricate);
+}
+$("risultati").addEventListener("click", (e) => {
+  const act = e.target.dataset.act; if (!act) return;
+  e.preventDefault();  // il pulsante sta nel titolo del gruppo: non deve aprirlo o chiuderlo
+  const r = ricerche.find(x => x.id === e.target.dataset.id);
+  if (act === "ris-del") confermaRis = r && r.id;
+  if (act === "ris-no") confermaRis = null;
+  if (act === "ris-yes" && r) {
+    confermaRis = null;
+    ricerche = ricerche.filter(x => x.id !== r.id);
+    if (editingId === r.id) fineModifica();
+    salva(); aggiornaProssimo(); toast("Ricerca eliminata");
+  }
+  renderRisultati();
+});
+
+function mostraRisultati(el, d, elimina) {
   const euro = n => n ? "€ " + fmt(n) : "prezzo n.d.";
   el.innerHTML = d.ricerche.map((ric, i) => `
     <details class="ris-group card" ${i === 0 ? "open" : ""}>
-      <summary>${esc(ric.nome)} <span class="muted mono">(${ric.annunci.length})</span></summary>
+      <summary>${esc(ric.nome)} <span class="muted mono">(${ric.annunci.length})</span>${elimina ? pulsantiRis(ricercaDi(ric)) : ""}</summary>
       ${ric.annunci.length ? ric.annunci.map(a => `
         <div class="ris-item">
           ${a.immagine ? `<img src="${esc(a.immagine.replace("{size}", ""))}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">` : "<span></span>"}
