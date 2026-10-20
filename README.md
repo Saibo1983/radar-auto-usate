@@ -94,6 +94,8 @@ In **Actions → Radar Auto → Run workflow**:
 - con **Solo prova** spuntato legge i siti e scrive i risultati in `data/ultima-prova.md`, senza inviare avvisi né segnare gli annunci come visti;
 - senza **Solo prova** fa un controllo vero, con email e notifica.
 
+Per controllare solo email e notifica push, **Actions → Prova avvisi → Run workflow** invia un messaggio di prova senza leggere i siti. Se qualcosa non va, il controllo diventa rosso e il log dice cosa manca.
+
 Se un sito smette di funzionare, **Actions → Diagnosi siti → Run workflow** scarica le pagine indicate nel ramo `diagnosi`, così si può vedere com'è cambiato il sito.
 
 ## Cambiare orario
@@ -135,8 +137,10 @@ radar/pagine.py             lettori dedicati: Automoto, Quattroruote, Spoticar, 
 radar/filtri.py             filtri su prezzo, anno, km, motore, modello
 radar/stato.py              memoria degli annunci visti e doppioni
 radar/notifiche.py          email e push
+radar/prova_avvisi.py       messaggio di prova per email e push
 .github/workflows/radar.yml pianificazione su GitHub Actions
 .github/workflows/cerca-adesso.yml ricerca immediata avviata dall'app
 .github/workflows/diagnosi.yml scarica pagine per capire perché un sito non viene letto
+.github/workflows/prova-avvisi.yml email e push di prova
 strumenti/scarica_pagine.py usato dalla diagnosi
 ```
