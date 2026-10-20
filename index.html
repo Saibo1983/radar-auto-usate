@@ -46,6 +46,7 @@ body {
   padding-right: max(16px, env(safe-area-inset-right, 0px));
   padding-block: 24px 48px;
 }
+[hidden] { display: none !important; }
 .wrap { max-width: 1180px; margin: 0 auto; display: grid; gap: 24px; }
 h1, h2, h3 { font-family: var(--font-display); font-weight: 700; margin: 0; text-wrap: balance; letter-spacing: .01em; }
 h1 { font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1; text-transform: uppercase; }
@@ -245,7 +246,8 @@ code { font-family: var(--font-mono); font-size: .85em; background: var(--field)
           <li><p>Premi <strong>Generate token</strong>, copia il codice che inizia con <code>github_pat_</code> e incollalo qui sotto.</p></li>
         </ol>
         <div class="f"><label for="token">Codice di GitHub</label>
-          <div style="display:flex;gap:8px"><input id="token" class="mono" autocomplete="off" placeholder="github_pat_…"><button type="button" class="primary" id="tokenSalva">Salva e continua</button></div>
+          <div style="display:flex;gap:8px"><input id="token" class="mono" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="github_pat_…"><button type="button" class="primary" id="tokenSalva">Salva e continua</button></div>
+          <p id="tokenStato" role="alert" style="font-weight:600" hidden></p>
           <p class="muted" style="font-size:.85rem">Il codice resta solo in questo browser e serve solo per questo progetto.</p></div>
       </section>
 
@@ -734,19 +736,39 @@ function validaForm(r) {
 function statoAdesso(testo) { $("adessoStato").textContent = testo; }
 function fineAdesso() { clearInterval(timerAdesso); $("cercaAdesso").disabled = false; $("adessoTempo").textContent = ""; }
 
-function chiediToken(azione) {
+function chiediToken(azione, messaggio) {
   inAttesa = azione;
+  $("tokenStato").textContent = messaggio || "";
+  $("tokenStato").hidden = !messaggio;
   $("tokenBox").hidden = false;
   $("tokenBox").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
 }
+function erroreToken(testo) { $("tokenStato").textContent = testo; $("tokenStato").hidden = false; }
 
-$("tokenSalva").addEventListener("click", () => {
-  const t = $("token").value.trim();
-  if (!/^(github_pat_|ghp_)\w+$/.test(t)) { toast("Il codice deve iniziare con github_pat_"); return; }
+const PERMESSO = "GitHub ha rifiutato il codice. Creane uno nuovo controllando due cose: in Repository access deve esserci radar-auto-usate, e in Permissions deve esserci Actions con Read and write.";
+
+$("tokenSalva").addEventListener("click", async () => {
+  // Sul telefono la tastiera può mettere la maiuscola iniziale o spezzare il codice con spazi
+  const t = $("token").value.replace(/\s+/g, "").replace(/^github_pat_/i, "github_pat_").replace(/^ghp_/i, "ghp_");
+  if (!/^(github_pat_|ghp_)\w+$/.test(t)) { erroreToken("Il codice deve iniziare con github_pat_: copialo di nuovo da GitHub."); return; }
+  $("tokenSalva").disabled = true;
+  erroreToken("Controllo il codice…");
+  let res;
+  try {
+    res = await fetch(API, { headers: { Authorization: "Bearer " + t, Accept: "application/vnd.github+json" }, cache: "no-store" });
+  } catch {
+    res = null;
+  }
+  $("tokenSalva").disabled = false;
+  if (!res) { erroreToken("Non riesco a contattare GitHub. Controlla la connessione e riprova."); return; }
+  if (res.status === 401) { erroreToken("GitHub non riconosce il codice: forse è incompleto o scaduto. Copialo di nuovo o creane uno nuovo."); return; }
+  if (!res.ok) { erroreToken(PERMESSO); return; }
   store.set("ra.token", t);
   $("token").value = "";
+  $("tokenStato").hidden = true;
   $("tokenBox").hidden = true;
   if (inAttesa) { const a = inAttesa; inAttesa = null; a(); }
+  else toast("Collegato a GitHub");
 });
 
 // Avvia un workflow; se il codice manca o non vale più lo chiede di nuovo e poi ripete "riprova"
@@ -764,8 +786,7 @@ async function chiamaGitHub(workflow, inputs, riprova) {
   }
   if (res.status === 401 || res.status === 403 || res.status === 404) {
     store.set("ra.token", "");
-    toast("GitHub non ha accettato il codice: forse è scaduto o manca il permesso Actions.");
-    chiediToken(riprova);
+    chiediToken(riprova, res.status === 401 ? "Il codice è scaduto: creane uno nuovo." : PERMESSO);
     return false;
   }
   if (!res.ok) { toast("GitHub ha risposto con un errore (" + res.status + "). Riprova tra poco."); return false; }
