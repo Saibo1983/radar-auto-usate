@@ -1,17 +1,17 @@
 {
- "data": "2026-10-20T22:24+02:00",
+ "data": "2026-10-20T22:40+02:00",
  "siti": [
   {
    "ricerca": "dacia Jogger",
    "sito": "AutoScout24",
-   "letti": 19,
-   "corrispondono": 19
+   "letti": 18,
+   "corrispondono": 18
   },
   {
    "ricerca": "dacia Jogger",
    "sito": "Subito",
    "letti": 32,
-   "corrispondono": 29
+   "corrispondono": 11
   },
   {
    "ricerca": "dacia Jogger",
@@ -23,13 +23,13 @@
    "ricerca": "dacia Jogger",
    "sito": "Quattroruote",
    "letti": 15,
-   "corrispondono": 15
+   "corrispondono": 9
   },
   {
    "ricerca": "dacia Jogger",
    "sito": "Automoto",
    "letti": 13,
-   "corrispondono": 1
+   "corrispondono": 0
   },
   {
    "ricerca": "dacia Jogger",
@@ -51,196 +51,14 @@
    "nome": "dacia Jogger",
    "annunci": [
     {
-     "titolo": "Dacia Jogger 1.0 TCe GPL 100 CV 5 posti Expression",
-     "prezzo": 4990,
-     "anno": 2025,
-     "km": 18800,
-     "carburante": "Benzina/Gpl",
-     "cambio": "Manuale",
-     "luogo": "Striano",
-     "url": "https://www.subito.it/auto/dacia-jogger-1-0-tce-gpl-100-cv-5-posti-expression-napoli-657449972.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
-     "titolo": "DACIA JOGGER GPL del 2025",
-     "prezzo": 14500,
-     "anno": 2025,
-     "km": 42000,
-     "carburante": "Benzina/Gpl",
-     "cambio": "Manuale",
-     "luogo": "Soave",
-     "url": "https://www.subito.it/auto/dacia-jogger-gpl-del-2025-verona-651452460.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger",
-     "prezzo": 15950,
-     "anno": 2026,
-     "km": 6,
-     "carburante": "GPL",
-     "cambio": "Manuale",
-     "luogo": "Torino - TO",
-     "url": "https://www.autoscout24.it/annunci/dacia-jogger-120-cv-gpl-verde-cat_ma16360mo76029-d42ee307-55af-45f8-b11b-dbffc5404eca",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/d42ee307-55af-45f8-b11b-dbffc5404eca_01ec7712-e7f4-41d2-82f6-115636e1ab55.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger 1.2 120 CV",
-     "prezzo": 15950,
-     "anno": 2026,
-     "km": null,
-     "carburante": "Benzina/Gpl",
-     "cambio": "Manuale",
-     "luogo": "Torino",
-     "url": "https://www.subito.it/auto/dacia-jogger-1-2-120-cv-torino-663482876.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger 120 CV - APERTI AD AGOSTO",
-     "prezzo": 15950,
-     "anno": 2026,
-     "km": null,
-     "carburante": "Benzina/Gpl",
-     "cambio": "Manuale",
-     "luogo": "Torino",
-     "url": "https://www.subito.it/auto/dacia-jogger-120-cv-aperti-ad-agosto-torino-663482697.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger 1.2 120 CV",
-     "prezzo": 15950,
-     "anno": 2026,
-     "km": null,
-     "carburante": "Benzina/Gpl",
-     "cambio": "Manuale",
-     "luogo": "Torino",
-     "url": "https://www.subito.it/auto/dacia-jogger-1-2-120-cv-torino-662860141.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger 120 CV - APERTI AD AGOSTO",
-     "prezzo": 15950,
-     "anno": 2026,
-     "km": null,
-     "carburante": "Benzina/Gpl",
-     "cambio": "Manuale",
-     "luogo": "Torino",
-     "url": "https://www.subito.it/auto/dacia-jogger-120-cv-aperti-ad-agosto-torino-662859879.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger",
-     "prezzo": 17500,
-     "anno": 2025,
-     "km": 71125,
-     "carburante": "Benzina",
-     "cambio": "Manuale",
-     "luogo": "Recanati",
-     "url": "https://www.autoscout24.it/annunci/dacia-jogger-jogger-1-0-tce-extreme-gpl-100cv-7p-ti-benzina-bianco-cat_ma16360mo76029-3d7f4741-db82-4e2c-b4bc-2a43df56207c",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/3d7f4741-db82-4e2c-b4bc-2a43df56207c_e617e16f-4d78-4deb-acf0-8f0224cb2df5.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger",
-     "prezzo": 17900,
-     "anno": 2025,
-     "km": 32000,
-     "carburante": "GPL",
-     "cambio": "Manuale",
-     "luogo": "Empoli - Firenze - FI",
-     "url": "https://www.autoscout24.it/annunci/dacia-jogger-1-0-tce-gpl-extreme-gpl-nero-cat_ma16360mo76029-e7f95e03-7660-4587-89df-6730b9fb3eb6",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/e7f95e03-7660-4587-89df-6730b9fb3eb6_64525248-14b0-4cf8-9e62-0fc8822b4d48.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger Jogger 1.0 TCe GPL 100 CV 7 posti Extreme",
-     "prezzo": 18490,
-     "anno": 2025,
-     "km": null,
-     "carburante": "",
-     "cambio": "",
-     "luogo": "Torino (TO)",
-     "url": "https://www.quattroruote.it/auto-usate/annuncio/dacia-jogger-109112192",
-     "immagine": "",
-     "sito": "Quattroruote",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger 1.0 GPL  Extreme UP",
-     "prezzo": 18500,
-     "anno": 2025,
-     "km": 16000,
-     "carburante": "Benzina/Gpl",
-     "cambio": "Manuale",
-     "luogo": "Foggia",
-     "url": "https://www.subito.it/auto/dacia-jogger-1-0-gpl-extreme-up-foggia-662968568.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia jogger Extreme 1.0 100cv GPL 2025 km 5000",
-     "prezzo": 18600,
-     "anno": 2025,
-     "km": 5000,
-     "carburante": "Benzina/Gpl",
-     "cambio": "Manuale",
-     "luogo": "Zola Predosa",
-     "url": "https://www.subito.it/auto/dacia-jogger-extreme-1-0-100cv-gpl-2025-km-5000-bologna-640380011.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger",
-     "prezzo": 19000,
-     "anno": 2025,
-     "km": 23053,
-     "carburante": "GPL",
-     "cambio": "Manuale",
-     "luogo": "Recanati - Macerata - Mc",
-     "url": "https://www.autoscout24.it/annunci/dacia-jogger-jogger-1-0-tce-essential-gpl-100cv-gpl-cat_ma16360mo76029-b23f89e5-62e9-4236-8de1-c2921e4c3591",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/b23f89e5-62e9-4236-8de1-c2921e4c3591_cb88f074-ce51-4e14-939b-4ce0f9adc3fe.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger",
+     "titolo": "Dacia jogger 1.0 GPL",
      "prezzo": 19000,
      "anno": 2025,
      "km": 27000,
-     "carburante": "GPL",
-     "cambio": "Manuale",
-     "luogo": "Alpignano",
-     "url": "https://www.autoscout24.it/annunci/dacia-jogger-jogger-1-0-tce-extreme-gpl-100cv-gpl-cat_ma16360mo76029-ea32012f-539a-4828-a3a0-f990a462bc0e",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/ea32012f-539a-4828-a3a0-f990a462bc0e_1abf62cd-1720-4ff8-a311-e3f67ec56a48.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia jogger 1.0 gpl turbo",
-     "prezzo": 19500,
-     "anno": 2025,
-     "km": 35000,
      "carburante": "Benzina/Gpl",
-     "cambio": "Manuale",
-     "luogo": "Controguerra",
-     "url": "https://www.subito.it/auto/dacia-jogger-1-0-gpl-turbo-teramo-663054416.htm",
+     "cambio": "Automatico",
+     "luogo": "Torino",
+     "url": "https://www.subito.it/auto/dacia-jogger-1-0-gpl-torino-665274654.htm",
      "immagine": "",
      "sito": "Subito",
      "nuovo": false
@@ -259,84 +77,6 @@
      "nuovo": false
     },
     {
-     "titolo": "Dacia Jogger Jogger 1.0 TCe GPL 100 CV 5 posti Expression",
-     "prezzo": 19800,
-     "anno": 2026,
-     "km": null,
-     "carburante": "",
-     "cambio": "",
-     "luogo": "Francavilla al Mare (CH)",
-     "url": "https://www.quattroruote.it/auto-usate/annuncio/dacia-jogger-110091810",
-     "immagine": "",
-     "sito": "Quattroruote",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger",
-     "prezzo": 19950,
-     "anno": 2026,
-     "km": 0,
-     "carburante": "GPL",
-     "cambio": "Manuale",
-     "luogo": "Somma Vesuviana - Na",
-     "url": "https://www.autoscout24.it/annunci/dacia-jogger-1-0-tce-gpl-100cv-5-posti-expres-gpl-verde-cat_ma16360mo76029-3ad6d505-3ae7-48fa-87ea-841e301c2179",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/3ad6d505-3ae7-48fa-87ea-841e301c2179_c66a749b-615d-4330-8c8e-20e5bf8e5cdf.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "DACIA Jogger 1.0 TCe GPL 100CV 5 posti Expres.",
-     "prezzo": 19950,
-     "anno": 2026,
-     "km": null,
-     "carburante": "Benzina/Gpl",
-     "cambio": "Manuale",
-     "luogo": "Somma Vesuviana",
-     "url": "https://www.subito.it/auto/dacia-jogger-1-0-tce-gpl-100cv-5-posti-expres-napoli-663515557.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger Jogger 1.0 tce Extreme UP Gpl 100cv 7p.ti",
-     "prezzo": 20990,
-     "anno": 2026,
-     "km": 10,
-     "carburante": "GPL",
-     "cambio": "",
-     "luogo": "Milano (MI)",
-     "url": "https://www.quattroruote.it/auto-usate/annuncio/dacia-jogger-110284910",
-     "immagine": "",
-     "sito": "Quattroruote",
-     "nuovo": false
-    },
-    {
-     "titolo": "DACIA Jogger Jogger 1.0 TCe GPL 100 CV 7 posti E",
-     "prezzo": 21200,
-     "anno": 2026,
-     "km": 3676,
-     "carburante": "Benzina/Gpl",
-     "cambio": "Manuale",
-     "luogo": "Roma",
-     "url": "https://www.subito.it/auto/dacia-jogger-jogger-1-0-tce-gpl-100-cv-7-posti-e-roma-657172746.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger",
-     "prezzo": 21490,
-     "anno": 2026,
-     "km": 1,
-     "carburante": "GPL",
-     "cambio": "Manuale",
-     "luogo": "Cinisello Balsamo - MI",
-     "url": "https://www.autoscout24.it/annunci/dacia-jogger-1-0-gpl-100-cv-7-posti-extreme-up-prezzo-promo-gpl-grigio-cat_ma16360mo76029-5af17071-2def-467a-bae9-b1000e3915dc",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/5af17071-2def-467a-bae9-b1000e3915dc_4478e6fa-ba18-4ecd-8399-9aa90c03004c.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
      "titolo": "Dacia Jogger",
      "prezzo": 21900,
      "anno": 2026,
@@ -351,54 +91,15 @@
     },
     {
      "titolo": "Dacia Jogger",
-     "prezzo": 21950,
-     "anno": 2025,
-     "km": 16,
-     "carburante": "GPL",
-     "cambio": "Manuale",
-     "luogo": "Carrara - Massa Carrara",
-     "url": "https://www.autoscout24.it/annunci/dacia-jogger-jogger-1-0-tce-extreme-up-gpl-100cv-gpl-grigio-cat_ma16360mo76029-700e6ec9-ab58-4e2d-a396-b19fee707bb8",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/700e6ec9-ab58-4e2d-a396-b19fee707bb8_9725aa31-dc81-4420-897f-0da8cfd897f8.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger 1.0 tce Extreme UP Gpl 100cv",
-     "prezzo": 21950,
-     "anno": 2025,
-     "km": null,
-     "carburante": "Benzina/Gpl",
-     "cambio": "Manuale",
-     "luogo": "Carrara",
-     "url": "https://www.subito.it/auto/dacia-jogger-1-0-tce-extreme-up-gpl-100cv-massa-carrara-663829662.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger Jogger 1.0 TCe GPL 100 CV 5 posti Extreme",
-     "prezzo": 22350,
-     "anno": 2025,
-     "km": 1,
-     "carburante": "GPL",
-     "cambio": "Manuale",
-     "luogo": "Rovigo (RO)",
-     "url": "https://www.quattroruote.it/auto-usate/annuncio/dacia-jogger-108855062",
-     "immagine": "",
-     "sito": "Quattroruote",
-     "nuovo": false
-    },
-    {
-     "titolo": "DACIA Jogger TR47949",
      "prezzo": 22399,
      "anno": 2025,
      "km": 5200,
-     "carburante": "Ibrida",
+     "carburante": "Elettrica/Benzina",
      "cambio": "Automatico",
-     "luogo": "Roma",
-     "url": "https://www.subito.it/auto/dacia-jogger-tr47949-roma-660156287.htm",
-     "immagine": "",
-     "sito": "Subito",
+     "luogo": "Sassari - SS",
+     "url": "https://www.autoscout24.it/annunci/dacia-jogger-1-6-hybrid-e-tech-extreme-elettrica-benzina-nero-cat_ma16360mo76029-aebccc44-d265-481a-96a0-68cb2bbbe0d5",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/aebccc44-d265-481a-96a0-68cb2bbbe0d5_76e3542a-fdd8-413d-b7f4-bef1c626fda6.jpg/250x188.webp",
+     "sito": "AutoScout24",
      "nuovo": false
     },
     {
@@ -454,19 +155,6 @@
      "nuovo": false
     },
     {
-     "titolo": "Dacia Jogger Jogger Hybrid 155 CV 5 posti Expreme",
-     "prezzo": 23950,
-     "anno": 2026,
-     "km": 1,
-     "carburante": "Elettrica / Benzina",
-     "cambio": "",
-     "luogo": "Gioia Tauro (RC)",
-     "url": "https://www.quattroruote.it/auto-usate/annuncio/dacia-jogger-109548657",
-     "immagine": "",
-     "sito": "Quattroruote",
-     "nuovo": false
-    },
-    {
      "titolo": "Dacia Jogger",
      "prezzo": 24500,
      "anno": 2026,
@@ -480,16 +168,29 @@
      "nuovo": false
     },
     {
-     "titolo": "Dacia Jogger Expression MY24 Hybrid 140 7p",
-     "prezzo": 24900,
+     "titolo": "Dacia Jogger",
+     "prezzo": 24500,
      "anno": 2025,
-     "km": null,
-     "carburante": "Ibrida",
-     "cambio": "Manuale",
-     "luogo": "Palermo",
-     "url": "https://www.subito.it/auto/dacia-jogger-expression-my24-hybrid-140-7p-palermo-664081675.htm",
-     "immagine": "",
-     "sito": "Subito",
+     "km": 9700,
+     "carburante": "Elettrica/Benzina",
+     "cambio": "Automatico",
+     "luogo": "Rovereto",
+     "url": "https://www.autoscout24.it/annunci/dacia-jogger-1-6-hybrid-extreme-140cv-7p-ti-elettrica-benzina-cat_ma16360mo76029-6f64589e-dab0-47ad-8a6b-f36204c47417",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/6f64589e-dab0-47ad-8a6b-f36204c47417_29bca6dc-72dc-4a9e-a67c-439f47e28f64.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
+     "titolo": "Dacia Jogger",
+     "prezzo": 24700,
+     "anno": 2026,
+     "km": 1,
+     "carburante": "Elettrica/Benzina",
+     "cambio": "Automatico",
+     "luogo": "Caresanablot - Vercelli",
+     "url": "https://www.autoscout24.it/annunci/dacia-jogger-expression-7p-my25-hybrid-155-elettrica-benzina-bianco-cat_ma16360mo76029-08197e67-4ff0-4989-8edd-43a9104dbc8e",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/08197e67-4ff0-4989-8edd-43a9104dbc8e_0962341d-eba3-47a3-8ef8-178ee73ad039.jpg/250x188.webp",
+     "sito": "AutoScout24",
      "nuovo": false
     },
     {
@@ -558,6 +259,19 @@
      "nuovo": false
     },
     {
+     "titolo": "Dacia Jogger",
+     "prezzo": 25900,
+     "anno": null,
+     "km": null,
+     "carburante": "Elettrica/Benzina",
+     "cambio": "Automatico",
+     "luogo": "Padova",
+     "url": "https://www.autoscout24.it/annunci/dacia-jogger-elettrica-benzina-cat_ma16360mo76029-f3c05c1d-41ad-4eff-8d7d-8391e34a97f9",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/f3c05c1d-41ad-4eff-8d7d-8391e34a97f9_9c8f6232-4725-4ee0-a392-d02c17815a73.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
      "titolo": "Dacia Jogger Hybrid 155 CV 5 posti Expreme",
      "prezzo": 25900,
      "anno": 2026,
@@ -568,19 +282,6 @@
      "url": "https://www.subito.it/auto/dacia-jogger-hybrid-155-cv-5-posti-expreme-bari-664322586.htm",
      "immagine": "",
      "sito": "Subito",
-     "nuovo": false
-    },
-    {
-     "titolo": "Dacia Jogger",
-     "prezzo": 26000,
-     "anno": 2026,
-     "km": 18700,
-     "carburante": "Elettrica/Benzina",
-     "cambio": "",
-     "luogo": "L'aquila -Aq",
-     "url": "https://www.autoscout24.it/annunci/dacia-jogger-extreme-elettrica-benzina-cat_ma16360mo76029-243d327d-26ac-46a1-9017-a5fcc062f835",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/243d327d-26ac-46a1-9017-a5fcc062f835_609b0795-80d7-4cbf-8e16-d74b6ae3f936.jpg/250x188.webp",
-     "sito": "AutoScout24",
      "nuovo": false
     },
     {
@@ -606,6 +307,19 @@
      "luogo": "Salerno - SA",
      "url": "https://www.autoscout24.it/annunci/dacia-jogger-1-6-hybrid-extreme-up-140cv-7p-ti-elettrica-benzina-grigio-cat_ma16360mo76029-86375158-fafc-439c-abd8-e96c402aa645",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/86375158-fafc-439c-abd8-e96c402aa645_128657a0-57cb-4dae-b2b0-4e5a07877d09.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
+     "titolo": "Dacia Jogger",
+     "prezzo": 26500,
+     "anno": 2026,
+     "km": 20,
+     "carburante": "Elettrica/Benzina",
+     "cambio": "Automatico",
+     "luogo": "Vigorovea- PD",
+     "url": "https://www.autoscout24.it/annunci/dacia-jogger-km0-jogger-2026-1-8-hybrid-extreme-155cv-auto-km0-elettrica-benzina-grigio-cat_ma16360mo76029-7abc0772-0772-40b2-9ecd-37a49fd242b9",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/7abc0772-0772-40b2-9ecd-37a49fd242b9_bd1da102-17ee-4a94-84b4-6ad03d38c2c6.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
     },
@@ -638,5 +352,5 @@
    ]
   }
  ],
- "richiesta": "mvh4r623"
+ "richiesta": "mvh5ca0s"
 }
