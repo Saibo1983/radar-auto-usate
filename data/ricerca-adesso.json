@@ -1,5 +1,5 @@
 {
- "data": "2026-10-20T21:43+02:00",
+ "data": "2026-10-20T21:56+02:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
@@ -29,7 +29,7 @@
    "ricerca": "Fiat Panda",
    "sito": "Automoto",
    "letti": 13,
-   "corrispondono": 6
+   "corrispondono": 5
   },
   {
    "ricerca": "Fiat Panda",
@@ -47,6 +47,7 @@
  "problemi": [],
  "ricerche": [
   {
+   "id": "adesso",
    "nome": "Fiat Panda",
    "annunci": [
     {
@@ -159,18 +160,6 @@
     },
     {
      "titolo": "Fiat Panda 0.9 TwinAir Turbo S&S 4x4 Wild",
-     "prezzo": 10490,
-     "anno": 2021,
-     "km": 115480,
-     "carburante": "",
-     "luogo": "Torino (TO)",
-     "url": "https://www.automoto.it/auto-usate/fiat/panda/09-twinair-turbo-s-s-4x4-wild/15994011",
-     "immagine": "",
-     "sito": "Automoto",
-     "nuovo": false
-    },
-    {
-     "titolo": "Fiat Panda 0.9 TwinAir Turbo S&S 4x4 Wild",
      "prezzo": 11490,
      "anno": 2018,
      "km": 30249,
@@ -232,5 +221,5 @@
    ]
   }
  ],
- "richiesta": "mvh3b99k"
+ "richiesta": "mvh3ra8m"
 }
