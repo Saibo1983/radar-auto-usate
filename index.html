@@ -134,6 +134,13 @@ button.small, .btn.small { padding: 5px 10px; font-size: .85rem; }
 .steps li::before { content: counter(s); font-family: var(--font-display); font-weight: 700; width: 26px; height: 26px; border-radius: 50%; background: var(--plate); color: var(--plate-ink); display: grid; place-items: center; }
 code { font-family: var(--font-mono); font-size: .85em; background: var(--field); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; overflow-wrap: anywhere; }
 textarea#export { font-family: var(--font-mono); font-size: .78rem; min-height: 220px; resize: vertical; white-space: pre; overflow: auto; }
+.ris-group { display: grid; gap: 8px; }
+.ris-group summary { cursor: pointer; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; }
+.ris-item { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 10px; align-items: start; border-top: 1px solid var(--line); padding-top: 8px; }
+.ris-item img { width: 72px; height: 54px; object-fit: cover; border-radius: 4px; background: var(--field); }
+.ris-item a { color: var(--accent); font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
+.ris-item .meta { font-size: .85rem; color: var(--muted); }
+.tag-new { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; background: var(--ok); color: #fff; border-radius: 3px; padding: 1px 5px; font-weight: 600; margin-left: 6px; }
 .empty { border: 1px dashed var(--line); border-radius: 8px; padding: 18px; text-align: center; color: var(--muted); }
 .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(20px + env(safe-area-inset-bottom, 0px)); background: var(--fg); color: var(--bg); padding: 10px 16px; border-radius: 8px; font-weight: 600; z-index: 20; }
 .confirm { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: .88rem; }
@@ -225,6 +232,15 @@ textarea#export { font-family: var(--font-mono); font-size: .78rem; min-height: 
     </form>
 
     <div class="col">
+      <!-- ULTIMI RISULTATI (scritti dal controllo giornaliero in data/risultati.json) -->
+      <section class="panel" aria-labelledby="risH">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap">
+          <h2 id="risH">Ultimi risultati</h2>
+          <span class="muted mono" id="risData"></span>
+        </div>
+        <div id="risultati" class="saved-list"><div class="empty">Caricamento dei risultati dell'ultimo controllo…</div></div>
+      </section>
+
       <!-- RICERCHE SALVATE -->
       <section class="panel" aria-labelledby="savedH">
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap">
@@ -630,8 +646,35 @@ $("copyBtn").addEventListener("click", () => {
   navigator.clipboard.writeText(ta.value).then(() => toast("Configurazione copiata"), () => { ta.focus(); ta.select(); toast("Testo selezionato: premi Ctrl+C / Cmd+C"); });
 });
 
+async function caricaRisultati() {
+  const el = $("risultati");
+  let d;
+  try {
+    const r = await fetch("data/risultati.json?t=" + Date.now());
+    if (!r.ok) throw new Error();
+    d = await r.json();
+  } catch {
+    el.innerHTML = '<div class="empty">Nessun controllo ancora eseguito. I risultati compaiono qui dopo il primo controllo giornaliero.</div>';
+    return;
+  }
+  const quando = new Date(d.data);
+  $("risData").textContent = "controllo del " + quando.toLocaleString("it-IT", { dateStyle: "short", timeStyle: "short" });
+  const euro = n => n ? "€ " + fmt(n) : "prezzo n.d.";
+  el.innerHTML = d.ricerche.map((ric, i) => `
+    <details class="ris-group card" ${i === 0 ? "open" : ""}>
+      <summary>${esc(ric.nome)} <span class="muted mono">(${ric.annunci.length})</span></summary>
+      ${ric.annunci.length ? ric.annunci.map(a => `
+        <div class="ris-item">
+          ${a.immagine ? `<img src="${esc(a.immagine.replace("{size}", ""))}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">` : "<span></span>"}
+          <div><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.titolo || "Annuncio")}</a>${a.nuovo ? '<span class="tag-new">Nuovo</span>' : ""}
+            <div class="meta"><strong>${euro(a.prezzo)}</strong> · ${[a.anno, a.km != null ? fmt(a.km) + " km" : "", a.carburante, a.luogo, a.sito].filter(Boolean).map(esc).join(" · ")}</div></div>
+        </div>`).join("") : '<p class="muted">Nessun annuncio corrisponde ai filtri.</p>'}
+    </details>`).join("") + (d.problemi.length ? `<p class="muted" style="font-size:.85rem">Problemi: ${d.problemi.map(esc).join("; ")}</p>` : "");
+}
+
 scriviForm({});
 renderSaved();
+caricaRisultati();
 aggiornaProssimo();
 setInterval(aggiornaProssimo, 60000);
 </script>
