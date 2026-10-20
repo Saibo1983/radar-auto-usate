@@ -1,0 +1,40 @@
+name: Diagnosi siti
+
+# Scarica le pagine indicate e le salva nel ramo "diagnosi" per capire
+# come leggere un sito che ha cambiato formato. Si avvia solo a mano.
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "Indirizzi da scaricare, separati da spazi"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  scarica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Scarica le pagine
+        env:
+          URLS: ${{ inputs.urls }}
+        run: python strumenti/scarica_pagine.py /tmp/pagine $URLS
+      - name: Salva nel ramo diagnosi
+        run: |
+          git config user.name "radar-auto[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan diagnosi
+          git rm -rq --cached .
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp /tmp/pagine/* .
+          git add .
+          git commit -qm "Pagine scaricate per la diagnosi"
+          git push -f origin diagnosi
