@@ -117,6 +117,11 @@ def spoticar(html: str, base: str) -> list[Annuncio] | None:
     return out
 
 
+# Codici di Autohero, ricavati dalle pagine: le Yaris ibride hanno tutte 1139, le Panda 1138
+AUTOHERO_CAMBIO = {1138: "Manuale", 1139: "Automatico"}
+AUTOHERO_CARBURANTE = {1039: "Benzina", 1040: "Diesel", 1046: "Ibrida"}
+
+
 def autohero(html: str, base: str) -> list[Annuncio] | None:
     # Lo stato dell'app è una stringa JSON che contiene a sua volta JSON
     m = re.search(r'window\.__APOLLO_STATE__\s*=\s*("(?:[^"\\]|\\.)*")', html, re.S)
@@ -138,6 +143,8 @@ def autohero(html: str, base: str) -> list[Annuncio] | None:
                 prezzo=round(prezzo / 100) if prezzo else None,
                 anno=ad.get("firstRegistrationYear") or ad.get("builtYear"),
                 km=(ad.get("mileage") or {}).get("distance"),
+                carburante=AUTOHERO_CARBURANTE.get(ad.get("fuelType"), ""),
+                cambio=AUTOHERO_CAMBIO.get(ad.get("gearType"), ""),
             ))
     return out
 

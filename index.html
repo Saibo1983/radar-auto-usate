@@ -765,7 +765,7 @@ function listaAnnunci(annunci) {
         <div class="ris-item">
           ${a.immagine ? `<img src="${esc(a.immagine.replace("{size}", ""))}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">` : "<span></span>"}
           <div><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.titolo || "Annuncio")}</a>${a.nuovo ? '<span class="tag-new">Nuovo</span>' : ""}
-            <div class="meta"><strong>${euro(a.prezzo)}</strong> · ${[a.anno, a.km != null ? fmt(a.km) + " km" : "", a.carburante, a.luogo, a.sito].filter(Boolean).map(esc).join(" · ")}</div></div>
+            <div class="meta"><strong>${euro(a.prezzo)}</strong> · ${[a.anno, a.km != null ? fmt(a.km) + " km" : "", a.carburante, a.cambio, a.luogo, a.sito].filter(Boolean).map(esc).join(" · ")}</div></div>
         </div>`).join("") : '<p class="muted">Nessun annuncio corrisponde ai filtri.</p>';
 }
 

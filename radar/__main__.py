@@ -114,8 +114,8 @@ def dati_risultati(adesso: datetime, righe, elenco, nuovi_url: set[str], problem
         "ricerche": [{
             "id": ricerca.get("id"),
             "nome": ricerca["nome"],
-            "annunci": [{**{k: getattr(a, k) for k in ("titolo", "prezzo", "anno", "km", "carburante", "luogo",
-                                                       "url", "immagine")},
+            "annunci": [{**{k: getattr(a, k) for k in ("titolo", "prezzo", "anno", "km", "carburante", "cambio",
+                                                       "luogo", "url", "immagine")},
                          "sito": nome_sito(a.fonte), "nuovo": a.url in nuovi_url} for a in annunci],
         } for ricerca, annunci in elenco],
     }

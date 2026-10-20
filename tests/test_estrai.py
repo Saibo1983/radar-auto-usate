@@ -102,11 +102,13 @@ def test_lettore_spoticar():
 def test_lettore_autohero():
     stato = {"ROOT_QUERY": {"searchAdV9AdsV2:{}": {"total": 1, "data": [
         {"id": "abc", "manufacturer": "Toyota", "model": "Aygo X", "subType": "1.0",
-         "offerPrice": {"amountMinorUnits": 1579900}, "mileage": {"distance": 27987}, "firstRegistrationYear": 2024}]}}}
+         "offerPrice": {"amountMinorUnits": 1579900}, "mileage": {"distance": 27987}, "firstRegistrationYear": 2024,
+         "fuelType": 1039, "gearType": 1139}]}}}
     html = f"<script>window.__APOLLO_STATE__ = {json.dumps(json.dumps(stato))};</script>"
     [a] = estrai_annunci(html, "autohero", "https://www.autohero.com/it/search/")
     assert (a.titolo, a.prezzo, a.anno, a.km) == ("Toyota Aygo X 1.0", 15799, 2024, 27987)
     assert a.url == "https://www.autohero.com/it/toyota-aygo-x/id/abc/"
+    assert (a.carburante, a.cambio) == ("Benzina", "Automatico")
 
 
 def test_pagina_valida_senza_risultati():

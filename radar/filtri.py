@@ -1,7 +1,8 @@
 """Applica i filtri della ricerca agli annunci letti.
 
 Un dato che il sito non fornisce non esclude l'annuncio: meglio un avviso in
-più che un'auto giusta persa.
+più che un'auto giusta persa. L'eccezione è il cambio automatico, che è la
+minoranza: senza indicazioni l'annuncio passa solo se il titolo lo nomina.
 """
 
 from __future__ import annotations
@@ -57,9 +58,17 @@ def _carburante_ok(annuncio: Annuncio, voluto: str) -> bool:
     return _contiene(testo, PAROLE_CARBURANTE.get(voluto, (voluto,)))
 
 
+# Nomi dei cambi automatici che compaiono nei titoli ("Panda 1.2 Dualogic", "Golf 2.0 TDI DSG")
+SIGLE_AUTOMATICO = (" automat", " aut ", " dsg", " cvt", "dualogic", "tronic", " edc", " eat6", " eat8", " at6",
+                    " at8", " robotizzat", " sequenzial", " powershift", " 7g", " 9g", " dct", " amt")
+
+
 def _cambio_ok(annuncio: Annuncio, voluto: str) -> bool:
     testo = normalizza(annuncio.cambio)
     if not testo:
+        # Il cambio automatico è la minoranza: se il sito non lo indica, passa solo se lo dice il titolo
+        if voluto == "automatico":
+            return any(s in f" {normalizza(annuncio.titolo)} " for s in SIGLE_AUTOMATICO)
         return True
     return _contiene(testo, PAROLE_CAMBIO.get(voluto, (voluto,)))
 

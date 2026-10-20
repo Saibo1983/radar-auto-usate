@@ -150,3 +150,13 @@ def test_ricerca_adesso_di_una_ricerca_salvata_resta_memorizzata(tmp_path, monke
 
     assert adesso.main(["def", "../x"]) == 0  # id non valido: ricerca dal modulo
     assert json.loads((tmp_path / "data" / "ricerca-adesso.json").read_text())["richiesta"] == "def"
+
+
+def test_cambio_automatico_senza_indicazioni_serve_il_titolo():
+    panda = {"marca": "Fiat", "modello": "Panda", "cambio": "automatico"}
+    assert not corrisponde(Annuncio(fonte="automoto", url="u", titolo="Fiat Panda 1.2 Easy"), panda)
+    assert corrisponde(Annuncio(fonte="automoto", url="u", titolo="Fiat Panda 1.2 Dualogic Lounge"), panda)
+    assert corrisponde(Annuncio(fonte="subito", url="u", titolo="Fiat Panda", cambio="Automatico"), panda)
+    assert not corrisponde(Annuncio(fonte="autohero", url="u", titolo="Fiat Panda", cambio="Manuale"), panda)
+    # Per il manuale un annuncio senza indicazioni resta valido
+    assert corrisponde(Annuncio(fonte="automoto", url="u", titolo="Fiat Panda 1.2 Easy"), {**panda, "cambio": "manuale"})

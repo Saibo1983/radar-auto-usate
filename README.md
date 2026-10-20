@@ -83,7 +83,7 @@ L'app scrive `config/ricerche.json` da sola. Se lo modifichi a mano, i campi son
 | `marca`, `modello` | testo, es. `"Volkswagen"`, `"Golf"` |
 | `carrozzeria` | `utilitaria`, `berlina`, `sw`, `suv`, `monovolume`, `coupe`, `cabrio`, `furgone` |
 | `alimentazione` | `benzina`, `diesel`, `ibrida`, `elettrica`, `gpl`, `metano` |
-| `cambio` | `manuale`, `automatico` |
+| `cambio` | `manuale`, `automatico`. Con `automatico`, un annuncio di un sito che non indica il cambio (Automoto) passa solo se il titolo lo nomina (DSG, Dualogic…) |
 | `prezzo_min`, `prezzo_max`, `anno_min`, `anno_max`, `km_max`, `potenza_min_cv` | numeri |
 | `cap`, `raggio_km` | zona per AutoScout24 |
 | `regione` | es. `lombardia`, per Subito |
