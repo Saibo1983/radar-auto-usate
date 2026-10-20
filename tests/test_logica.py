@@ -29,6 +29,7 @@ def test_filtri():
     assert not corrisponde(auto(carburante="Ibrida diesel"), GOLF)
     assert not corrisponde(auto(titolo="Volkswagen Polo 1.6 TDI"), GOLF)
     assert corrisponde(auto(km=None, anno=None, carburante=""), GOLF)  # dati mancanti non escludono
+    assert not corrisponde(auto(titolo="Volkswagen Golf 8 sinistrata"), GOLF)
 
 
 def test_url_autoscout_con_filtri():

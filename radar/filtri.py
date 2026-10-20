@@ -75,7 +75,14 @@ def _nome_ok(annuncio: Annuncio, nome: str | None) -> bool:
     return f" {nome} " in f" {titolo} " or nome.replace(" ", "") in titolo.replace(" ", "")
 
 
+# Come il filtro "escludi incidentati" di AutoScout24, anche per gli altri siti
+PAROLE_DANNI = ("sinistrat", "incidentat", "per ricambi", "non funzionante", "motore rotto", "da riparare",
+                "grandinat")
+
+
 def corrisponde(annuncio: Annuncio, r: dict) -> bool:
+    if any(p in normalizza(annuncio.titolo) for p in PAROLE_DANNI):
+        return False
     p = annuncio.prezzo
     if p is not None:
         if r.get("prezzo_min") and p < r["prezzo_min"]:
