@@ -26,51 +26,6 @@
         "autohero",
         "spoticar"
       ]
-    },
-    {
-      "id": "es1",
-      "attiva": true,
-      "nome": "Golf diesel per famiglia",
-      "marca": "Volkswagen",
-      "modello": "Golf",
-      "alimentazione": "diesel",
-      "tipo": "auto",
-      "prezzo_max": 15000,
-      "anno_min": 2018,
-      "km_max": 120000,
-      "fonti": [
-        "autoscout24",
-        "subito",
-        "automobile",
-        "quattroruote",
-        "automoto",
-        "autohero",
-        "spoticar"
-      ]
-    },
-    {
-      "id": "es2",
-      "attiva": true,
-      "nome": "Panda in città",
-      "marca": "Fiat",
-      "modello": "Panda",
-      "carrozzeria": "utilitaria",
-      "cambio": "manuale",
-      "regione": "lombardia",
-      "venditore": "privato",
-      "tipo": "auto",
-      "prezzo_max": 8000,
-      "anno_min": 2016,
-      "km_max": 90000,
-      "fonti": [
-        "autoscout24",
-        "subito",
-        "automobile",
-        "quattroruote",
-        "automoto",
-        "autohero",
-        "spoticar"
-      ]
     }
   ]
 }
