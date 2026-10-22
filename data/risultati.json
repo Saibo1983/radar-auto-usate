@@ -1,10 +1,10 @@
 {
- "data": "2026-10-21T12:21+02:00",
+ "data": "2026-10-22T12:23+02:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
-   "letti": 20,
+   "letti": 19,
    "corrispondono": 5
   },
   {
@@ -53,7 +53,7 @@
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
    "letti": 41,
-   "corrispondono": 2
+   "corrispondono": 3
   },
   {
    "ricerca": "Volkswagen up!",
@@ -70,8 +70,8 @@
   {
    "ricerca": "Volkswagen up!",
    "sito": "Automoto",
-   "letti": 1,
-   "corrispondono": 0
+   "letti": null,
+   "corrispondono": null
   },
   {
    "ricerca": "Volkswagen up!",
@@ -86,7 +86,9 @@
    "corrispondono": 0
   }
  ],
- "problemi": [],
+ "problemi": [
+  "Automoto (Volkswagen up!): non raggiungibile, HTTP 404"
+ ],
  "ricerche": [
   {
    "id": "rmvh3fyry",
@@ -103,7 +105,7 @@
      "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-automatica-e-freno-sotto-sterzo-benzina-grigio-cat_ma28mo1746-e1741a1c-9ac4-44a1-809a-6ebe30e7d9e3",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/e1741a1c-9ac4-44a1-809a-6ebe30e7d9e3_122625d3-2476-4c34-9e31-60ca60f7aafe.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     },
     {
      "titolo": "Fiat Panda",
@@ -116,7 +118,7 @@
      "url": "https://www.autoscout24.it/annunci/fiat-panda-0-9-twinair-turbo-ss-lounge-dual-logic-benzina-argento-cat_ma28mo1746-8b65a1b9-9c18-46ce-aa8e-787b5c3bfe36",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/8b65a1b9-9c18-46ce-aa8e-787b5c3bfe36_36481b65-9937-400f-af2a-7f4afb337a09.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     },
     {
      "titolo": "Fiat Panda",
@@ -129,7 +131,7 @@
      "url": "https://www.autoscout24.it/annunci/fiat-panda-0-9-t-air-t-easy-s-benzina-rosso-cat_ma28mo1746-028ead0e-067f-41c7-86a4-7bf93b12db2c",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/028ead0e-067f-41c7-86a4-7bf93b12db2c_12e50dec-cfa9-4889-8a32-bee83988c4cb.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     },
     {
      "titolo": "Fiat Panda",
@@ -142,7 +144,7 @@
      "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-0-9-t-air-t-easy-dualogic-automatica-benzina-arancione-cat_ma28mo1746-f7653164-3cae-4e09-8d2f-a9a63e9c2ea7",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/f7653164-3cae-4e09-8d2f-a9a63e9c2ea7_3b62d155-79c0-4fbd-b201-6e7d87c0c595.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     },
     {
      "titolo": "Fiat Panda",
@@ -155,7 +157,7 @@
      "url": "https://www.autoscout24.it/annunci/fiat-panda-0-9-twinair-turbo-85cv-e6-ss-easy-dualogic-benzina-rosso-cat_ma28mo1746-d78f083b-1d41-4be1-afe8-d8202ff8c89f",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/d78f083b-1d41-4be1-afe8-d8202ff8c89f_a8650d0e-7eba-4b9e-8cb2-9562a42739be.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     }
    ]
   },
@@ -163,19 +165,6 @@
    "id": "rmvh389rf",
    "nome": "Volkswagen up!",
    "annunci": [
-    {
-     "titolo": "Volkswagen up! 1.0 75 CV 5p. high BlueMotion Techn",
-     "prezzo": 6800,
-     "anno": 2018,
-     "km": 118000,
-     "carburante": "Benzina",
-     "cambio": "Sequenziale",
-     "luogo": "Invorio",
-     "url": "https://www.subito.it/auto/volkswagen-up-1-0-75-cv-5p-high-bluemotion-techn-novara-665312840.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": true
-    },
     {
      "titolo": "Volkswagen up!",
      "prezzo": 7900,
@@ -187,7 +176,7 @@
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-1-0-move-up-60cv-asg-benzina-nero-cat_ma74mo19750-c57a953c-440b-4627-a7ed-302e14ed893c",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/c57a953c-440b-4627-a7ed-302e14ed893c_501a103a-f5fb-415b-94c5-50a6842fcea5.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     },
     {
      "titolo": "Volkswagen up!",
@@ -200,6 +189,19 @@
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-1-0-high-up-75cv-asg-5-porte-tagliandata-benzina-bianco-cat_ma74mo19750-4b0015ad-0c01-4a08-9513-6b2cab8e8048",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/4b0015ad-0c01-4a08-9513-6b2cab8e8048_2912a65b-b28c-414b-8421-6876224750bb.jpg/250x188.webp",
      "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
+     "titolo": "VOLKSWAGEN UP CAMBIO AUTO",
+     "prezzo": 9000,
+     "anno": 2019,
+     "km": 60000,
+     "carburante": "Benzina",
+     "cambio": "Sequenziale",
+     "luogo": "Roma",
+     "url": "https://www.subito.it/auto/volkswagen-up-cambio-auto-roma-665492354.htm",
+     "immagine": "",
+     "sito": "Subito",
      "nuovo": true
     },
     {
@@ -211,6 +213,19 @@
      "cambio": "Automatico",
      "luogo": "Brescia",
      "url": "https://www.subito.it/auto/volkswagen-up-adatta-a-neopatentati-cambio-automa-brescia-660415423.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": false
+    },
+    {
+     "titolo": "Volkswagen up! 1.0 3p. move asg Automatica",
+     "prezzo": 9490,
+     "anno": 2018,
+     "km": 107000,
+     "carburante": "Benzina",
+     "cambio": "Sequenziale",
+     "luogo": "Sassano",
+     "url": "https://www.subito.it/auto/volkswagen-up-1-0-3p-move-asg-automatica-salerno-652728390.htm",
      "immagine": "",
      "sito": "Subito",
      "nuovo": true
@@ -226,7 +241,7 @@
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-5p-1-0-move-60cv-asg-benzina-cat_ma74mo19750-645da7ae-4555-44c1-845b-4fd94b69f10c",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/645da7ae-4555-44c1-845b-4fd94b69f10c_2fdc96c6-5ab2-4ef4-b3cd-ad00616cb788.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     },
     {
      "titolo": "Volkswagen up!",
@@ -239,7 +254,7 @@
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-1-0-44kw-move-bmt-asg-gpl-+-800e-benzina-nero-cat_ma74mo19750-f23a877e-b844-4a41-b592-f2e981560519",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/f23a877e-b844-4a41-b592-f2e981560519_2cbcf8ca-9ab9-4c63-832d-a329801b6d49.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     },
     {
      "titolo": "Volkswagen up!",
@@ -252,7 +267,7 @@
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2018-5p-1-0-move-60cv-asg-benzina-bianco-cat_ma74mo19750-5ca7ad04-e0f1-4995-9c41-0b186638ba97",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/5ca7ad04-e0f1-4995-9c41-0b186638ba97_af5f805d-640d-4516-bce0-622f02539b07.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     },
     {
      "titolo": "Volkswagen up!",
@@ -265,7 +280,7 @@
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-1-0-high-75cv-automatica-benzina-nero-cat_ma74mo19750-61b89bcd-98c6-47fa-82cf-529c0b7b69aa",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/61b89bcd-98c6-47fa-82cf-529c0b7b69aa_cce78cc3-0b53-4432-8b90-1323bc8f0f57.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     }
    ]
   }
