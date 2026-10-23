@@ -1,17 +1,17 @@
 {
- "data": "2026-10-22T12:23+02:00",
+ "data": "2026-10-23T12:21+02:00",
  "siti": [
   {
    "ricerca": "Volkswagen up!",
    "sito": "AutoScout24",
    "letti": 20,
-   "corrispondono": 6
+   "corrispondono": 5
   },
   {
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
-   "letti": 41,
-   "corrispondono": 3
+   "letti": 42,
+   "corrispondono": 2
   },
   {
    "ricerca": "Volkswagen up!",
@@ -54,19 +54,6 @@
    "annunci": [
     {
      "titolo": "Volkswagen up!",
-     "prezzo": 7900,
-     "anno": 2018,
-     "km": 104182,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Massarosa - Lucca - LU",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-1-0-move-up-60cv-asg-benzina-nero-cat_ma74mo19750-c57a953c-440b-4627-a7ed-302e14ed893c",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/c57a953c-440b-4627-a7ed-302e14ed893c_501a103a-f5fb-415b-94c5-50a6842fcea5.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
      "prezzo": 8900,
      "anno": 2019,
      "km": 127800,
@@ -89,7 +76,7 @@
      "url": "https://www.subito.it/auto/volkswagen-up-cambio-auto-roma-665492354.htm",
      "immagine": "",
      "sito": "Subito",
-     "nuovo": true
+     "nuovo": false
     },
     {
      "titolo": "Volkswagen up! Adatta a neopatentati cambio automa",
@@ -103,19 +90,6 @@
      "immagine": "",
      "sito": "Subito",
      "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up! 1.0 3p. move asg Automatica",
-     "prezzo": 9490,
-     "anno": 2018,
-     "km": 107000,
-     "carburante": "Benzina",
-     "cambio": "Sequenziale",
-     "luogo": "Sassano",
-     "url": "https://www.subito.it/auto/volkswagen-up-1-0-3p-move-asg-automatica-salerno-652728390.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": true
     },
     {
      "titolo": "Volkswagen up!",
@@ -145,7 +119,7 @@
     },
     {
      "titolo": "Volkswagen up!",
-     "prezzo": 11500,
+     "prezzo": 10999,
      "anno": 2018,
      "km": 63381,
      "carburante": "Benzina",
