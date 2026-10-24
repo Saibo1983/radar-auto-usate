@@ -1,9 +1,9 @@
-# Prova del 23/10/2026 12:21
+# Prova del 24/10/2026 12:15
 
 | Ricerca | Sito | Annunci letti | Corrispondono |
 |---|---|---|---|
-| Fiat Panda | [AutoScout24](https://www.autoscout24.it/lst/fiat/panda?atype=C&cy=I&damaged_listing=exclude&sort=age&desc=1&ustate=N%2CU&fregfrom=2018&fuel=B&gear=A) | 20 | 6 |
-| Fiat Panda | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Fiat+Panda&ys=2018) | 41 | 0 |
+| Fiat Panda | [AutoScout24](https://www.autoscout24.it/lst/fiat/panda?atype=C&cy=I&damaged_listing=exclude&sort=age&desc=1&ustate=N%2CU&fregfrom=2018&fuel=B&gear=A) | 18 | 7 |
+| Fiat Panda | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Fiat+Panda&ys=2018) | 42 | 0 |
 | Fiat Panda | [Automobile.it](https://www.automobile.it/fiat-panda) | 20 | 0 |
 | Fiat Panda | [Quattroruote](https://www.quattroruote.it/auto-usate/annunci/marca-fiat/modello-panda/anno-dal-2018) | 15 | 0 |
 | Fiat Panda | [Automoto](https://www.automoto.it/auto-usate/fiat/panda) | 13 | 0 |
@@ -23,12 +23,13 @@
 
 ## Annunci trovati
 
-### Fiat Panda (6)
+### Fiat Panda (7)
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-panda-automatica-e-freno-sotto-sterzo-benzina-grigio-cat_ma28mo1746-e1741a1c-9ac4-44a1-809a-6ebe30e7d9e3) · 7800 € · 2018 · 170000 km · AutoScout24
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-0-9-twinair-turbo-ss-lounge-dual-logic-benzina-argento-cat_ma28mo1746-8b65a1b9-9c18-46ce-aa8e-787b5c3bfe36) · 8900 € · 2018 · 168027 km · AutoScout24
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-0-9-t-air-t-easy-s-benzina-rosso-cat_ma28mo1746-028ead0e-067f-41c7-86a4-7bf93b12db2c) · 9700 € · 2018 · 32322 km · AutoScout24
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-panda-0-9-t-air-t-easy-dualogic-automatica-benzina-arancione-cat_ma28mo1746-f7653164-3cae-4e09-8d2f-a9a63e9c2ea7) · 10000 € · 2018 · 33600 km · AutoScout24
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-0-9-twinair-turbo-85cv-e6-ss-easy-dualogic-benzina-rosso-cat_ma28mo1746-d78f083b-1d41-4be1-afe8-d8202ff8c89f) · 10450 € · 2018 · 112600 km · AutoScout24
+- [Fiat Grande Panda](https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-business-110cv-edct-elettrica-benzina-cat_ma28mo76901-b6a8394a-571e-4c7c-91e9-958b7a6609c8) · 19000 € · 2026 · 100 km · AutoScout24
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-benzina-cat_ma28mo1746-166f540e-fc24-41d0-bd3a-dc3decec41d8) · 19999 € · 2026 · 4900 km · AutoScout24
 
 ### Volkswagen up! (7)
