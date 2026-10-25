@@ -1,11 +1,11 @@
 {
- "data": "2026-10-24T12:15+02:00",
+ "data": "2026-10-25T12:15+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
-   "letti": 18,
-   "corrispondono": 7
+   "letti": 20,
+   "corrispondono": 6
   },
   {
    "ricerca": "Fiat Panda",
@@ -52,7 +52,7 @@
   {
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
-   "letti": 42,
+   "letti": 41,
    "corrispondono": 2
   },
   {
@@ -158,19 +158,6 @@
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/d78f083b-1d41-4be1-afe8-d8202ff8c89f_a8650d0e-7eba-4b9e-8cb2-9562a42739be.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
-    },
-    {
-     "titolo": "Fiat Grande Panda",
-     "prezzo": 19000,
-     "anno": 2026,
-     "km": 100,
-     "carburante": "Elettrica/Benzina",
-     "cambio": "Automatico",
-     "luogo": "Cerignola",
-     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-business-110cv-edct-elettrica-benzina-cat_ma28mo76901-b6a8394a-571e-4c7c-91e9-958b7a6609c8",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/b6a8394a-571e-4c7c-91e9-958b7a6609c8_5b8a3368-3cf8-4926-8852-a6302d36b51f.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": true
     },
     {
      "titolo": "Fiat Panda",
