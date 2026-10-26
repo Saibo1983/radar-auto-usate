@@ -1,11 +1,11 @@
 {
- "data": "2026-10-25T12:15+01:00",
+ "data": "2026-10-26T12:29+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
    "letti": 20,
-   "corrispondono": 6
+   "corrispondono": 7
   },
   {
    "ricerca": "Fiat Panda",
@@ -53,7 +53,7 @@
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
    "letti": 41,
-   "corrispondono": 2
+   "corrispondono": 1
   },
   {
    "ricerca": "Volkswagen up!",
@@ -171,6 +171,19 @@
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/166f540e-fc24-41d0-bd3a-dc3decec41d8_f8682c38-4e5b-4111-b00f-2292f2511768.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 21900,
+     "anno": 2025,
+     "km": 0,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Ortona - Chieti - CH",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-benzina-cat_ma28mo1746-33fa0085-b1fe-4522-b313-658fc4447f2c",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/33fa0085-b1fe-4522-b313-658fc4447f2c_2a284447-a653-4846-a7b6-ab3cebac9174.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
     }
    ]
   },
@@ -189,19 +202,6 @@
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-1-0-high-up-75cv-asg-5-porte-tagliandata-benzina-bianco-cat_ma74mo19750-4b0015ad-0c01-4a08-9513-6b2cab8e8048",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/4b0015ad-0c01-4a08-9513-6b2cab8e8048_2912a65b-b28c-414b-8421-6876224750bb.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "VOLKSWAGEN UP CAMBIO AUTO",
-     "prezzo": 9000,
-     "anno": 2019,
-     "km": 60000,
-     "carburante": "Benzina",
-     "cambio": "Sequenziale",
-     "luogo": "Roma",
-     "url": "https://www.subito.it/auto/volkswagen-up-cambio-auto-roma-665492354.htm",
-     "immagine": "",
-     "sito": "Subito",
      "nuovo": false
     },
     {

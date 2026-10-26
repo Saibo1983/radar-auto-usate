@@ -1,11 +1,11 @@
 {
- "data": "2026-10-25T12:15+01:00",
+ "data": "2026-10-26T12:29+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
    "letti": 20,
-   "corrispondono": 6
+   "corrispondono": 7
   },
   {
    "ricerca": "Fiat Panda",
@@ -129,6 +129,19 @@
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/166f540e-fc24-41d0-bd3a-dc3decec41d8_f8682c38-4e5b-4111-b00f-2292f2511768.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 21900,
+     "anno": 2025,
+     "km": 0,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Ortona - Chieti - CH",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-benzina-cat_ma28mo1746-33fa0085-b1fe-4522-b313-658fc4447f2c",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/33fa0085-b1fe-4522-b313-658fc4447f2c_2a284447-a653-4846-a7b6-ab3cebac9174.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
     }
    ]
   }
