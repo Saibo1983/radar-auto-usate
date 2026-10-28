@@ -1,5 +1,5 @@
 {
- "data": "2026-10-27T12:25+01:00",
+ "data": "2026-10-28T12:28+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
@@ -47,13 +47,13 @@
    "ricerca": "Volkswagen up!",
    "sito": "AutoScout24",
    "letti": 20,
-   "corrispondono": 6
+   "corrispondono": 7
   },
   {
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
    "letti": 42,
-   "corrispondono": 2
+   "corrispondono": 1
   },
   {
    "ricerca": "Volkswagen up!",
@@ -206,26 +206,13 @@
     },
     {
      "titolo": "Volkswagen up! Adatta a neopatentati cambio automa",
-     "prezzo": 9200,
+     "prezzo": 8990,
      "anno": 2018,
      "km": 93565,
      "carburante": "Benzina",
      "cambio": "Automatico",
      "luogo": "Brescia",
      "url": "https://www.subito.it/auto/volkswagen-up-adatta-a-neopatentati-cambio-automa-brescia-660415423.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up! 1.0 3p. move asg Automatica",
-     "prezzo": 9490,
-     "anno": 2018,
-     "km": 107000,
-     "carburante": "Benzina",
-     "cambio": "Sequenziale",
-     "luogo": "Sassano",
-     "url": "https://www.subito.it/auto/volkswagen-up-1-0-3p-move-asg-automatica-salerno-652728390.htm",
      "immagine": "",
      "sito": "Subito",
      "nuovo": false
@@ -245,6 +232,32 @@
     },
     {
      "titolo": "Volkswagen up!",
+     "prezzo": 9900,
+     "anno": 2019,
+     "km": 83736,
+     "carburante": "Benzina",
+     "cambio": "Semiautomatico",
+     "luogo": "Torino - To",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-up-5p-2017-5p-1-0-high-75cv-asg-benzina-cat_ma74mo19750-db513af2-9c17-420e-8b2b-f82eb2df17e2",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/db513af2-9c17-420e-8b2b-f82eb2df17e2_a9461821-6c97-4634-ae05-793a3c7097ed.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Volkswagen up!",
+     "prezzo": 10450,
+     "anno": 2018,
+     "km": 63381,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Sovizzo",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2018-5p-1-0-move-60cv-asg-benzina-bianco-cat_ma74mo19750-5ca7ad04-e0f1-4995-9c41-0b186638ba97",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/5ca7ad04-e0f1-4995-9c41-0b186638ba97_af5f805d-640d-4516-bce0-622f02539b07.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
+     "titolo": "Volkswagen up!",
      "prezzo": 10490,
      "anno": 2018,
      "km": 44800,
@@ -253,19 +266,6 @@
      "luogo": "Striano - Napoli - NA",
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-1-0-44kw-move-bmt-asg-gpl-+-800e-benzina-nero-cat_ma74mo19750-f23a877e-b844-4a41-b592-f2e981560519",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/f23a877e-b844-4a41-b592-f2e981560519_2cbcf8ca-9ab9-4c63-832d-a329801b6d49.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
-     "prezzo": 10999,
-     "anno": 2018,
-     "km": 63381,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Sovizzo",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2018-5p-1-0-move-60cv-asg-benzina-bianco-cat_ma74mo19750-5ca7ad04-e0f1-4995-9c41-0b186638ba97",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/5ca7ad04-e0f1-4995-9c41-0b186638ba97_af5f805d-640d-4516-bce0-622f02539b07.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
     },
@@ -280,7 +280,7 @@
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-1-0-high-up-75cv-asg-benzina-grigio-cat_ma74mo19750-09bdedd2-15c8-468a-b190-0dabbaec2616",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/09bdedd2-15c8-468a-b190-0dabbaec2616_989c109c-a0a7-40d0-81f8-552bdca29283.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     },
     {
      "titolo": "Volkswagen up!",
