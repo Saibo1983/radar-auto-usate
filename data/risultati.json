@@ -1,10 +1,10 @@
 {
- "data": "2026-10-28T12:28+01:00",
+ "data": "2026-10-29T12:28+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
-   "letti": 20,
+   "letti": 19,
    "corrispondono": 7
   },
   {
@@ -47,12 +47,12 @@
    "ricerca": "Volkswagen up!",
    "sito": "AutoScout24",
    "letti": 20,
-   "corrispondono": 7
+   "corrispondono": 6
   },
   {
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
-   "letti": 42,
+   "letti": 41,
    "corrispondono": 1
   },
   {
@@ -229,19 +229,6 @@
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/645da7ae-4555-44c1-845b-4fd94b69f10c_2fdc96c6-5ab2-4ef4-b3cd-ad00616cb788.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
-     "prezzo": 9900,
-     "anno": 2019,
-     "km": 83736,
-     "carburante": "Benzina",
-     "cambio": "Semiautomatico",
-     "luogo": "Torino - To",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-5p-2017-5p-1-0-high-75cv-asg-benzina-cat_ma74mo19750-db513af2-9c17-420e-8b2b-f82eb2df17e2",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/db513af2-9c17-420e-8b2b-f82eb2df17e2_a9461821-6c97-4634-ae05-793a3c7097ed.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": true
     },
     {
      "titolo": "Volkswagen up!",
