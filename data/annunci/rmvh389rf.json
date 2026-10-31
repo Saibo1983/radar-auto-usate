@@ -1,17 +1,17 @@
 {
- "data": "2026-10-30T12:24+01:00",
+ "data": "2026-10-31T12:21+01:00",
  "siti": [
   {
    "ricerca": "Volkswagen up!",
    "sito": "AutoScout24",
    "letti": 19,
-   "corrispondono": 6
+   "corrispondono": 7
   },
   {
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
-   "letti": 42,
-   "corrispondono": 1
+   "letti": 41,
+   "corrispondono": 0
   },
   {
    "ricerca": "Volkswagen up!",
@@ -66,17 +66,17 @@
      "nuovo": false
     },
     {
-     "titolo": "Volkswagen up! Adatta a neopatentati cambio automa",
-     "prezzo": 8990,
+     "titolo": "Volkswagen up!",
+     "prezzo": 9800,
      "anno": 2018,
-     "km": 93565,
+     "km": 52223,
      "carburante": "Benzina",
      "cambio": "Automatico",
-     "luogo": "Brescia",
-     "url": "https://www.subito.it/auto/volkswagen-up-adatta-a-neopatentati-cambio-automa-brescia-660415423.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
+     "luogo": "Roma",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-up-1-0-bz-5-porte-asg-benzina-nero-cat_ma74mo19750-6bf73f28-4a66-4905-8b54-4e60f973525d",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/6bf73f28-4a66-4905-8b54-4e60f973525d_e4e2ba8b-19a0-409d-94f8-8558d0c41b61.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
     },
     {
      "titolo": "Volkswagen up!",

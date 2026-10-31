@@ -1,10 +1,10 @@
 {
- "data": "2026-10-30T12:24+01:00",
+ "data": "2026-10-31T12:21+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
-   "letti": 20,
+   "letti": 19,
    "corrispondono": 7
   },
   {
@@ -93,6 +93,19 @@
     },
     {
      "titolo": "Fiat Panda",
+     "prezzo": 9900,
+     "anno": 2018,
+     "km": 112600,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Gallarate",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-0-9-twinair-turbo-85cv-e6-ss-easy-dualogic-benzina-rosso-cat_ma28mo1746-d78f083b-1d41-4be1-afe8-d8202ff8c89f",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/d78f083b-1d41-4be1-afe8-d8202ff8c89f_a8650d0e-7eba-4b9e-8cb2-9562a42739be.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda",
      "prezzo": 10000,
      "anno": 2018,
      "km": 33600,
@@ -101,19 +114,6 @@
      "luogo": "Parma",
      "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-0-9-t-air-t-easy-dualogic-automatica-benzina-arancione-cat_ma28mo1746-f7653164-3cae-4e09-8d2f-a9a63e9c2ea7",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/f7653164-3cae-4e09-8d2f-a9a63e9c2ea7_3b62d155-79c0-4fbd-b201-6e7d87c0c595.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Fiat Panda",
-     "prezzo": 10450,
-     "anno": 2018,
-     "km": 112600,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Gallarate",
-     "url": "https://www.autoscout24.it/annunci/fiat-panda-0-9-twinair-turbo-85cv-e6-ss-easy-dualogic-benzina-rosso-cat_ma28mo1746-d78f083b-1d41-4be1-afe8-d8202ff8c89f",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/d78f083b-1d41-4be1-afe8-d8202ff8c89f_a8650d0e-7eba-4b9e-8cb2-9562a42739be.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
     },
