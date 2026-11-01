@@ -1,17 +1,17 @@
 {
- "data": "2026-10-31T12:21+01:00",
+ "data": "2026-11-01T12:22+01:00",
  "siti": [
   {
    "ricerca": "Volkswagen up!",
    "sito": "AutoScout24",
-   "letti": 19,
-   "corrispondono": 7
+   "letti": 20,
+   "corrispondono": 6
   },
   {
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
-   "letti": 41,
-   "corrispondono": 0
+   "letti": 42,
+   "corrispondono": 1
   },
   {
    "ricerca": "Volkswagen up!",
@@ -53,6 +53,19 @@
    "nome": "Volkswagen up!",
    "annunci": [
     {
+     "titolo": "Volkswagen up! 1.0 3p. move BlueMotion Technology",
+     "prezzo": 8800,
+     "anno": 2018,
+     "km": 104000,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "La Spezia",
+     "url": "https://www.subito.it/auto/volkswagen-up-1-0-3p-move-bluemotion-technology-la-spezia-660832381.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": true
+    },
+    {
      "titolo": "Volkswagen up!",
      "prezzo": 8900,
      "anno": 2019,
@@ -76,7 +89,7 @@
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-1-0-bz-5-porte-asg-benzina-nero-cat_ma74mo19750-6bf73f28-4a66-4905-8b54-4e60f973525d",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/6bf73f28-4a66-4905-8b54-4e60f973525d_e4e2ba8b-19a0-409d-94f8-8558d0c41b61.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     },
     {
      "titolo": "Volkswagen up!",
@@ -101,19 +114,6 @@
      "luogo": "Sovizzo",
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2018-5p-1-0-move-60cv-asg-benzina-bianco-cat_ma74mo19750-5ca7ad04-e0f1-4995-9c41-0b186638ba97",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/5ca7ad04-e0f1-4995-9c41-0b186638ba97_af5f805d-640d-4516-bce0-622f02539b07.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
-     "prezzo": 10490,
-     "anno": 2018,
-     "km": 44800,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Striano - Napoli - NA",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-1-0-44kw-move-bmt-asg-gpl-+-800e-benzina-nero-cat_ma74mo19750-f23a877e-b844-4a41-b592-f2e981560519",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/f23a877e-b844-4a41-b592-f2e981560519_2cbcf8ca-9ab9-4c63-832d-a329801b6d49.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
     },
