@@ -1,16 +1,16 @@
 {
- "data": "2026-11-01T12:22+01:00",
+ "data": "2026-11-02T12:40+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
    "letti": 20,
-   "corrispondono": 7
+   "corrispondono": 8
   },
   {
    "ricerca": "Fiat Panda",
    "sito": "Subito",
-   "letti": 40,
+   "letti": 42,
    "corrispondono": 0
   },
   {
@@ -116,6 +116,19 @@
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/f7653164-3cae-4e09-8d2f-a9a63e9c2ea7_3b62d155-79c0-4fbd-b201-6e7d87c0c595.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
+    },
+    {
+     "titolo": "Fiat Grande Panda",
+     "prezzo": 19900,
+     "anno": 2026,
+     "km": 17984,
+     "carburante": "Elettrica/Benzina",
+     "cambio": "Automatico",
+     "luogo": "Cinisello Balsamo - Milano - Mi",
+     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110cv-ss-la-prima-promo-parisi-group-elettrica-benzina-rosso-cat_ma28mo76901-8927c752-857c-400d-9ddc-70bcfb82c10e",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/8927c752-857c-400d-9ddc-70bcfb82c10e_fd1be030-87d4-49be-823c-79d63db65184.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
     },
     {
      "titolo": "Fiat Panda",

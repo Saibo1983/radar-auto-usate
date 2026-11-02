@@ -1,5 +1,5 @@
 {
- "data": "2026-11-01T12:22+01:00",
+ "data": "2026-11-02T12:40+01:00",
  "siti": [
   {
    "ricerca": "Volkswagen up!",
@@ -11,7 +11,7 @@
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
    "letti": 42,
-   "corrispondono": 1
+   "corrispondono": 0
   },
   {
    "ricerca": "Volkswagen up!",
@@ -52,19 +52,6 @@
    "id": "rmvh389rf",
    "nome": "Volkswagen up!",
    "annunci": [
-    {
-     "titolo": "Volkswagen up! 1.0 3p. move BlueMotion Technology",
-     "prezzo": 8800,
-     "anno": 2018,
-     "km": 104000,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "La Spezia",
-     "url": "https://www.subito.it/auto/volkswagen-up-1-0-3p-move-bluemotion-technology-la-spezia-660832381.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": true
-    },
     {
      "titolo": "Volkswagen up!",
      "prezzo": 8900,
