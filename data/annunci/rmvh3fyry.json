@@ -1,5 +1,5 @@
 {
- "data": "2026-11-02T12:40+01:00",
+ "data": "2026-11-03T12:39+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
@@ -80,6 +80,19 @@
     },
     {
      "titolo": "Fiat Panda",
+     "prezzo": 9500,
+     "anno": 2018,
+     "km": 33600,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Parma",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-0-9-t-air-t-easy-dualogic-automatica-benzina-arancione-cat_ma28mo1746-f7653164-3cae-4e09-8d2f-a9a63e9c2ea7",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/f7653164-3cae-4e09-8d2f-a9a63e9c2ea7_3b62d155-79c0-4fbd-b201-6e7d87c0c595.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda",
      "prezzo": 9700,
      "anno": 2018,
      "km": 32322,
@@ -105,28 +118,15 @@
      "nuovo": false
     },
     {
-     "titolo": "Fiat Panda",
-     "prezzo": 10000,
-     "anno": 2018,
-     "km": 33600,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Parma",
-     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-0-9-t-air-t-easy-dualogic-automatica-benzina-arancione-cat_ma28mo1746-f7653164-3cae-4e09-8d2f-a9a63e9c2ea7",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/f7653164-3cae-4e09-8d2f-a9a63e9c2ea7_3b62d155-79c0-4fbd-b201-6e7d87c0c595.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
      "titolo": "Fiat Grande Panda",
-     "prezzo": 19900,
+     "prezzo": 16990,
      "anno": 2026,
-     "km": 17984,
+     "km": 10,
      "carburante": "Elettrica/Benzina",
      "cambio": "Automatico",
-     "luogo": "Cinisello Balsamo - Milano - Mi",
-     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110cv-ss-la-prima-promo-parisi-group-elettrica-benzina-rosso-cat_ma28mo76901-8927c752-857c-400d-9ddc-70bcfb82c10e",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/8927c752-857c-400d-9ddc-70bcfb82c10e_fd1be030-87d4-49be-823c-79d63db65184.jpg/250x188.webp",
+     "luogo": "Torino - To",
+     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110-cv-ss-icon-elettrica-benzina-bianco-cat_ma28mo76901-f206a2d3-e482-4ce1-b954-ecd659592bb9",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/f206a2d3-e482-4ce1-b954-ecd659592bb9_a2d44bca-c3ea-4de4-857d-cfe45040e883.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": true
     },

@@ -1,5 +1,5 @@
 {
- "data": "2026-11-02T12:40+01:00",
+ "data": "2026-11-03T12:39+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
@@ -52,8 +52,8 @@
   {
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
-   "letti": 42,
-   "corrispondono": 0
+   "letti": 41,
+   "corrispondono": 2
   },
   {
    "ricerca": "Volkswagen up!",
@@ -122,6 +122,19 @@
     },
     {
      "titolo": "Fiat Panda",
+     "prezzo": 9500,
+     "anno": 2018,
+     "km": 33600,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Parma",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-0-9-t-air-t-easy-dualogic-automatica-benzina-arancione-cat_ma28mo1746-f7653164-3cae-4e09-8d2f-a9a63e9c2ea7",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/f7653164-3cae-4e09-8d2f-a9a63e9c2ea7_3b62d155-79c0-4fbd-b201-6e7d87c0c595.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda",
      "prezzo": 9700,
      "anno": 2018,
      "km": 32322,
@@ -147,28 +160,15 @@
      "nuovo": false
     },
     {
-     "titolo": "Fiat Panda",
-     "prezzo": 10000,
-     "anno": 2018,
-     "km": 33600,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Parma",
-     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-0-9-t-air-t-easy-dualogic-automatica-benzina-arancione-cat_ma28mo1746-f7653164-3cae-4e09-8d2f-a9a63e9c2ea7",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/f7653164-3cae-4e09-8d2f-a9a63e9c2ea7_3b62d155-79c0-4fbd-b201-6e7d87c0c595.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
      "titolo": "Fiat Grande Panda",
-     "prezzo": 19900,
+     "prezzo": 16990,
      "anno": 2026,
-     "km": 17984,
+     "km": 10,
      "carburante": "Elettrica/Benzina",
      "cambio": "Automatico",
-     "luogo": "Cinisello Balsamo - Milano - Mi",
-     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110cv-ss-la-prima-promo-parisi-group-elettrica-benzina-rosso-cat_ma28mo76901-8927c752-857c-400d-9ddc-70bcfb82c10e",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/8927c752-857c-400d-9ddc-70bcfb82c10e_fd1be030-87d4-49be-823c-79d63db65184.jpg/250x188.webp",
+     "luogo": "Torino - To",
+     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110-cv-ss-icon-elettrica-benzina-bianco-cat_ma28mo76901-f206a2d3-e482-4ce1-b954-ecd659592bb9",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/f206a2d3-e482-4ce1-b954-ecd659592bb9_a2d44bca-c3ea-4de4-857d-cfe45040e883.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": true
     },
@@ -218,6 +218,45 @@
      "nuovo": false
     },
     {
+     "titolo": "Volkswagen up! Adatta a neopatentati cambio automa",
+     "prezzo": 8990,
+     "anno": 2018,
+     "km": 93565,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Brescia",
+     "url": "https://www.subito.it/auto/volkswagen-up-adatta-a-neopatentati-cambio-automa-brescia-660415423.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": false
+    },
+    {
+     "titolo": "Volkswagen up! 1.0 3p. move asg Automatica",
+     "prezzo": 9490,
+     "anno": 2018,
+     "km": 107000,
+     "carburante": "Benzina",
+     "cambio": "Sequenziale",
+     "luogo": "Sassano",
+     "url": "https://www.subito.it/auto/volkswagen-up-1-0-3p-move-asg-automatica-salerno-652728390.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": false
+    },
+    {
+     "titolo": "Volkswagen up!",
+     "prezzo": 9750,
+     "anno": 2018,
+     "km": 63381,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Sovizzo",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2018-5p-1-0-move-60cv-asg-benzina-bianco-cat_ma74mo19750-5ca7ad04-e0f1-4995-9c41-0b186638ba97",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/5ca7ad04-e0f1-4995-9c41-0b186638ba97_af5f805d-640d-4516-bce0-622f02539b07.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
      "titolo": "Volkswagen up!",
      "prezzo": 9800,
      "anno": 2018,
@@ -245,33 +284,20 @@
     },
     {
      "titolo": "Volkswagen up!",
-     "prezzo": 10450,
-     "anno": 2018,
-     "km": 63381,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Sovizzo",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2018-5p-1-0-move-60cv-asg-benzina-bianco-cat_ma74mo19750-5ca7ad04-e0f1-4995-9c41-0b186638ba97",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/5ca7ad04-e0f1-4995-9c41-0b186638ba97_af5f805d-640d-4516-bce0-622f02539b07.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
      "prezzo": 11800,
      "anno": 2019,
      "km": 46500,
      "carburante": "Benzina",
      "cambio": "Automatico",
      "luogo": "Roma - Rm",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-1-0-high-up-75cv-asg-benzina-grigio-cat_ma74mo19750-09bdedd2-15c8-468a-b190-0dabbaec2616",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/09bdedd2-15c8-468a-b190-0dabbaec2616_989c109c-a0a7-40d0-81f8-552bdca29283.jpg/250x188.webp",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-up-1-0-high-up-75cv-asg-benzina-grigio-cat_ma74mo19750-462eda9b-f5b0-42f2-9b51-a5e00f1645e7",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/462eda9b-f5b0-42f2-9b51-a5e00f1645e7_c6ff5d6d-581a-4447-a7ea-05b14d6b29da.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
     },
     {
      "titolo": "Volkswagen up!",
-     "prezzo": 13500,
+     "prezzo": 12990,
      "anno": 2019,
      "km": 53000,
      "carburante": "Benzina",

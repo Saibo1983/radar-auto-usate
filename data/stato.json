@@ -1,5 +1,5 @@
 {
- "ultima_esecuzione": "2026-11-02",
+ "ultima_esecuzione": "2026-11-03",
  "visti": {
   "rmvh389rf": {
    "auto": {
@@ -12,11 +12,13 @@
     "volkswagen up|2018|63|104": "2026-10-28",
     "volkswagen up|2018|63|110": "2026-10-23",
     "volkswagen up|2018|63|115": "2026-10-21",
+    "volkswagen up|2018|63|98": "2026-11-03",
     "volkswagen up|2018|69|99": "2026-10-21",
     "volkswagen up|2018|94|90": "2026-10-28",
     "volkswagen up|2018|94|92": "2026-10-21",
     "volkswagen up|2019|128|89": "2026-10-21",
     "volkswagen up|2019|46|118": "2026-10-27",
+    "volkswagen up|2019|53|130": "2026-11-03",
     "volkswagen up|2019|53|135": "2026-10-21",
     "volkswagen up|2019|60|90": "2026-10-22",
     "volkswagen up|2019|84|99": "2026-10-28"
@@ -25,6 +27,7 @@
     "https://www.autoscout24.it/annunci/volkswagen-up-1-0-44kw-move-bmt-asg-gpl-+-800e-benzina-nero-cat_ma74mo19750-f23a877e-b844-4a41-b592-f2e981560519": "2026-10-21",
     "https://www.autoscout24.it/annunci/volkswagen-up-1-0-bz-5-porte-asg-benzina-nero-cat_ma74mo19750-6bf73f28-4a66-4905-8b54-4e60f973525d": "2026-10-31",
     "https://www.autoscout24.it/annunci/volkswagen-up-1-0-high-up-75cv-asg-benzina-grigio-cat_ma74mo19750-09bdedd2-15c8-468a-b190-0dabbaec2616": "2026-10-27",
+    "https://www.autoscout24.it/annunci/volkswagen-up-1-0-high-up-75cv-asg-benzina-grigio-cat_ma74mo19750-462eda9b-f5b0-42f2-9b51-a5e00f1645e7": "2026-11-03",
     "https://www.autoscout24.it/annunci/volkswagen-up-1-0-move-up-60cv-asg-benzina-nero-cat_ma74mo19750-c57a953c-440b-4627-a7ed-302e14ed893c": "2026-10-21",
     "https://www.autoscout24.it/annunci/volkswagen-up-5p-1-0-move-60cv-asg-benzina-cat_ma74mo19750-645da7ae-4555-44c1-845b-4fd94b69f10c": "2026-10-21",
     "https://www.autoscout24.it/annunci/volkswagen-up-5p-2017-5p-1-0-high-75cv-asg-benzina-cat_ma74mo19750-db513af2-9c17-420e-8b2b-f82eb2df17e2": "2026-10-28",
@@ -40,6 +43,7 @@
   },
   "rmvh3fyry": {
    "auto": {
+    "fiat grande|2026|0|170": "2026-11-03",
     "fiat grande|2026|0|190": "2026-10-24",
     "fiat grande|2026|18|199": "2026-11-02",
     "fiat panda|2018|113|104": "2026-10-21",
@@ -48,10 +52,12 @@
     "fiat panda|2018|170|78": "2026-10-21",
     "fiat panda|2018|32|97": "2026-10-21",
     "fiat panda|2018|34|100": "2026-10-21",
+    "fiat panda|2018|34|95": "2026-11-03",
     "fiat panda|2025|0|219": "2026-10-26",
     "fiat panda|2026|5|200": "2026-10-23"
    },
    "url": {
+    "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110-cv-ss-icon-elettrica-benzina-bianco-cat_ma28mo76901-f206a2d3-e482-4ce1-b954-ecd659592bb9": "2026-11-03",
     "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110cv-ss-la-prima-promo-parisi-group-elettrica-benzina-rosso-cat_ma28mo76901-8927c752-857c-400d-9ddc-70bcfb82c10e": "2026-11-02",
     "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-business-110cv-edct-elettrica-benzina-cat_ma28mo76901-b6a8394a-571e-4c7c-91e9-958b7a6609c8": "2026-10-24",
     "https://www.autoscout24.it/annunci/fiat-panda-0-9-t-air-t-easy-s-benzina-rosso-cat_ma28mo1746-028ead0e-067f-41c7-86a4-7bf93b12db2c": "2026-10-21",
