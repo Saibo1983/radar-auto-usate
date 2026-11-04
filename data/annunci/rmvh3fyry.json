@@ -1,16 +1,16 @@
 {
- "data": "2026-11-03T12:39+01:00",
+ "data": "2026-11-04T11:57+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
-   "letti": 20,
-   "corrispondono": 8
+   "letti": 19,
+   "corrispondono": 7
   },
   {
    "ricerca": "Fiat Panda",
    "sito": "Subito",
-   "letti": 42,
+   "letti": 41,
    "corrispondono": 0
   },
   {
@@ -116,19 +116,6 @@
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/d78f083b-1d41-4be1-afe8-d8202ff8c89f_a8650d0e-7eba-4b9e-8cb2-9562a42739be.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
-    },
-    {
-     "titolo": "Fiat Grande Panda",
-     "prezzo": 16990,
-     "anno": 2026,
-     "km": 10,
-     "carburante": "Elettrica/Benzina",
-     "cambio": "Automatico",
-     "luogo": "Torino - To",
-     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110-cv-ss-icon-elettrica-benzina-bianco-cat_ma28mo76901-f206a2d3-e482-4ce1-b954-ecd659592bb9",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/f206a2d3-e482-4ce1-b954-ecd659592bb9_a2d44bca-c3ea-4de4-857d-cfe45040e883.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": true
     },
     {
      "titolo": "Fiat Panda",
