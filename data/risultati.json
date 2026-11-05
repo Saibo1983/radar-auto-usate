@@ -1,16 +1,16 @@
 {
- "data": "2026-11-04T11:57+01:00",
+ "data": "2026-11-05T12:43+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
-   "letti": 19,
+   "letti": 20,
    "corrispondono": 7
   },
   {
    "ricerca": "Fiat Panda",
    "sito": "Subito",
-   "letti": 41,
+   "letti": 42,
    "corrispondono": 0
   },
   {
@@ -53,7 +53,7 @@
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
    "letti": 41,
-   "corrispondono": 4
+   "corrispondono": 2
   },
   {
    "ricerca": "Volkswagen up!",
@@ -205,19 +205,6 @@
      "nuovo": false
     },
     {
-     "titolo": "Volkswagen up! 1.0 3p. move BlueMotion Technology",
-     "prezzo": 8800,
-     "anno": 2018,
-     "km": 104000,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "La Spezia",
-     "url": "https://www.subito.it/auto/volkswagen-up-1-0-3p-move-bluemotion-technology-la-spezia-660832381.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
      "titolo": "Volkswagen up! Adatta a neopatentati cambio automa",
      "prezzo": 8990,
      "anno": 2018,
@@ -228,32 +215,6 @@
      "url": "https://www.subito.it/auto/volkswagen-up-adatta-a-neopatentati-cambio-automa-brescia-660415423.htm",
      "immagine": "",
      "sito": "Subito",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up! 1.0 3p. move asg Automatica",
-     "prezzo": 9490,
-     "anno": 2018,
-     "km": 107000,
-     "carburante": "Benzina",
-     "cambio": "Sequenziale",
-     "luogo": "Sassano",
-     "url": "https://www.subito.it/auto/volkswagen-up-1-0-3p-move-asg-automatica-salerno-652728390.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
-     "prezzo": 9750,
-     "anno": 2018,
-     "km": 63381,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Sovizzo",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2018-5p-1-0-move-60cv-asg-benzina-bianco-cat_ma74mo19750-5ca7ad04-e0f1-4995-9c41-0b186638ba97",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/5ca7ad04-e0f1-4995-9c41-0b186638ba97_af5f805d-640d-4516-bce0-622f02539b07.jpg/250x188.webp",
-     "sito": "AutoScout24",
      "nuovo": false
     },
     {
@@ -293,7 +254,20 @@
      "url": "https://www.subito.it/auto/volkswagen-up-1-0-5p-eco-move-up-bluemotion-milano-667078846.htm",
      "immagine": "",
      "sito": "Subito",
-     "nuovo": true
+     "nuovo": false
+    },
+    {
+     "titolo": "Volkswagen up!",
+     "prezzo": 10250,
+     "anno": 2018,
+     "km": 63381,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Sovizzo",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2018-5p-1-0-move-60cv-asg-benzina-bianco-cat_ma74mo19750-5ca7ad04-e0f1-4995-9c41-0b186638ba97",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/5ca7ad04-e0f1-4995-9c41-0b186638ba97_af5f805d-640d-4516-bce0-622f02539b07.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": false
     },
     {
      "titolo": "Volkswagen up!",
