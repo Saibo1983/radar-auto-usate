@@ -1,16 +1,16 @@
 {
- "data": "2026-11-05T12:43+01:00",
+ "data": "2026-11-06T18:03+01:00",
  "siti": [
   {
    "ricerca": "Volkswagen up!",
    "sito": "AutoScout24",
    "letti": 20,
-   "corrispondono": 6
+   "corrispondono": 7
   },
   {
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
-   "letti": 41,
+   "letti": 42,
    "corrispondono": 2
   },
   {
@@ -80,6 +80,19 @@
     },
     {
      "titolo": "Volkswagen up!",
+     "prezzo": 9490,
+     "anno": 2018,
+     "km": 69000,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Roma - RM",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-up-5p-1-0-move-60cv-asg-benzina-cat_ma74mo19750-645da7ae-4555-44c1-845b-4fd94b69f10c",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/645da7ae-4555-44c1-845b-4fd94b69f10c_2fdc96c6-5ab2-4ef4-b3cd-ad00616cb788.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
+     "titolo": "Volkswagen up!",
      "prezzo": 9800,
      "anno": 2018,
      "km": 52223,
@@ -88,19 +101,6 @@
      "luogo": "Roma",
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-1-0-bz-5-porte-asg-benzina-nero-cat_ma74mo19750-6bf73f28-4a66-4905-8b54-4e60f973525d",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/6bf73f28-4a66-4905-8b54-4e60f973525d_e4e2ba8b-19a0-409d-94f8-8558d0c41b61.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
-     "prezzo": 9900,
-     "anno": 2018,
-     "km": 69000,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Roma - RM",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-5p-1-0-move-60cv-asg-benzina-cat_ma74mo19750-645da7ae-4555-44c1-845b-4fd94b69f10c",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/645da7ae-4555-44c1-845b-4fd94b69f10c_2fdc96c6-5ab2-4ef4-b3cd-ad00616cb788.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
     },
@@ -129,6 +129,19 @@
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/5ca7ad04-e0f1-4995-9c41-0b186638ba97_af5f805d-640d-4516-bce0-622f02539b07.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
+    },
+    {
+     "titolo": "Volkswagen up!",
+     "prezzo": 10900,
+     "anno": 2018,
+     "km": 130000,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Roma",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-1-0-move-up-60cv-asg-benzina-bianco-cat_ma74mo19750-da643c2b-cfae-40ad-a089-b805100d43cf",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/da643c2b-cfae-40ad-a089-b805100d43cf_d91f97a0-31b2-4160-9252-d87aaa4ec3e4.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
     },
     {
      "titolo": "Volkswagen up!",

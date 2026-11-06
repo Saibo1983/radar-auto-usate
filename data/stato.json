@@ -1,5 +1,5 @@
 {
- "ultima_esecuzione": "2026-11-05",
+ "ultima_esecuzione": "2026-11-06",
  "visti": {
   "rmvh389rf": {
    "auto": {
@@ -7,6 +7,7 @@
     "volkswagen up|2018|104|88": "2026-11-01",
     "volkswagen up|2018|107|95": "2026-10-22",
     "volkswagen up|2018|118|68": "2026-10-21",
+    "volkswagen up|2018|130|109": "2026-11-06",
     "volkswagen up|2018|45|105": "2026-10-21",
     "volkswagen up|2018|52|98": "2026-10-31",
     "volkswagen up|2018|63|102": "2026-11-05",
@@ -14,6 +15,7 @@
     "volkswagen up|2018|63|110": "2026-10-23",
     "volkswagen up|2018|63|115": "2026-10-21",
     "volkswagen up|2018|63|98": "2026-11-03",
+    "volkswagen up|2018|69|95": "2026-11-06",
     "volkswagen up|2018|69|99": "2026-10-21",
     "volkswagen up|2018|94|90": "2026-10-28",
     "volkswagen up|2018|94|92": "2026-10-21",
@@ -36,6 +38,7 @@
     "https://www.autoscout24.it/annunci/volkswagen-up-5p-2017-5p-1-0-high-75cv-asg-benzina-cat_ma74mo19750-db513af2-9c17-420e-8b2b-f82eb2df17e2": "2026-10-28",
     "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-1-0-high-75cv-automatica-benzina-nero-cat_ma74mo19750-61b89bcd-98c6-47fa-82cf-529c0b7b69aa": "2026-10-21",
     "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-1-0-high-up-75cv-asg-5-porte-tagliandata-benzina-bianco-cat_ma74mo19750-4b0015ad-0c01-4a08-9513-6b2cab8e8048": "2026-10-21",
+    "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-1-0-move-up-60cv-asg-benzina-bianco-cat_ma74mo19750-da643c2b-cfae-40ad-a089-b805100d43cf": "2026-11-06",
     "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2018-5p-1-0-move-60cv-asg-benzina-bianco-cat_ma74mo19750-5ca7ad04-e0f1-4995-9c41-0b186638ba97": "2026-10-21",
     "https://www.subito.it/auto/volkswagen-up-1-0-3p-move-asg-automatica-salerno-652728390.htm": "2026-10-22",
     "https://www.subito.it/auto/volkswagen-up-1-0-3p-move-bluemotion-technology-la-spezia-660832381.htm": "2026-11-01",
@@ -57,20 +60,24 @@
     "fiat panda|2018|32|97": "2026-10-21",
     "fiat panda|2018|34|100": "2026-10-21",
     "fiat panda|2018|34|95": "2026-11-03",
+    "fiat panda|2018|97|95": "2026-11-06",
     "fiat panda|2025|0|219": "2026-10-26",
-    "fiat panda|2026|5|200": "2026-10-23"
+    "fiat panda|2026|5|200": "2026-10-23",
+    "fiat panda|2026|96|95": "2026-11-06"
    },
    "url": {
     "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110-cv-ss-icon-elettrica-benzina-bianco-cat_ma28mo76901-f206a2d3-e482-4ce1-b954-ecd659592bb9": "2026-11-03",
     "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110cv-ss-la-prima-promo-parisi-group-elettrica-benzina-rosso-cat_ma28mo76901-8927c752-857c-400d-9ddc-70bcfb82c10e": "2026-11-02",
     "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-business-110cv-edct-elettrica-benzina-cat_ma28mo76901-b6a8394a-571e-4c7c-91e9-958b7a6609c8": "2026-10-24",
     "https://www.autoscout24.it/annunci/fiat-panda-0-9-t-air-t-easy-s-benzina-rosso-cat_ma28mo1746-028ead0e-067f-41c7-86a4-7bf93b12db2c": "2026-10-21",
+    "https://www.autoscout24.it/annunci/fiat-panda-0-9-twinair-gancio-di-traino-automatica-benzina-cat_ma28mo1746-290c4a0c-8989-4c0b-a3f6-5e8bded8da4e": "2026-11-06",
     "https://www.autoscout24.it/annunci/fiat-panda-0-9-twinair-turbo-85cv-e6-ss-easy-dualogic-benzina-rosso-cat_ma28mo1746-d78f083b-1d41-4be1-afe8-d8202ff8c89f": "2026-10-21",
     "https://www.autoscout24.it/annunci/fiat-panda-0-9-twinair-turbo-ss-lounge-dual-logic-benzina-argento-cat_ma28mo1746-8b65a1b9-9c18-46ce-aa8e-787b5c3bfe36": "2026-10-21",
     "https://www.autoscout24.it/annunci/fiat-panda-benzina-cat_ma28mo1746-166f540e-fc24-41d0-bd3a-dc3decec41d8": "2026-10-23",
     "https://www.autoscout24.it/annunci/fiat-panda-benzina-cat_ma28mo1746-33fa0085-b1fe-4522-b313-658fc4447f2c": "2026-10-26",
     "https://www.autoscout24.it/annunci/fiat-panda-panda-0-9-t-air-t-easy-dualogic-automatica-benzina-arancione-cat_ma28mo1746-f7653164-3cae-4e09-8d2f-a9a63e9c2ea7": "2026-10-21",
-    "https://www.autoscout24.it/annunci/fiat-panda-panda-automatica-e-freno-sotto-sterzo-benzina-grigio-cat_ma28mo1746-e1741a1c-9ac4-44a1-809a-6ebe30e7d9e3": "2026-10-21"
+    "https://www.autoscout24.it/annunci/fiat-panda-panda-automatica-e-freno-sotto-sterzo-benzina-grigio-cat_ma28mo1746-e1741a1c-9ac4-44a1-809a-6ebe30e7d9e3": "2026-10-21",
+    "https://www.subito.it/auto/fiat-panda-automatico-gancia-di-traino-macerata-667375876.htm": "2026-11-06"
    }
   }
  }
