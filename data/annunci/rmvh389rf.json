@@ -1,5 +1,5 @@
 {
- "data": "2026-11-06T18:03+01:00",
+ "data": "2026-11-07T16:58+01:00",
  "siti": [
   {
    "ricerca": "Volkswagen up!",
@@ -11,7 +11,7 @@
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
    "letti": 42,
-   "corrispondono": 2
+   "corrispondono": 1
   },
   {
    "ricerca": "Volkswagen up!",
@@ -105,19 +105,6 @@
      "nuovo": false
     },
     {
-     "titolo": "VOLKSWAGEN up! 1.0 5p. eco move up! BlueMotion",
-     "prezzo": 9900,
-     "anno": 2019,
-     "km": 45000,
-     "carburante": "Benzina",
-     "cambio": "Sequenziale",
-     "luogo": "Milano",
-     "url": "https://www.subito.it/auto/volkswagen-up-1-0-5p-eco-move-up-bluemotion-milano-667078846.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
      "titolo": "Volkswagen up!",
      "prezzo": 10250,
      "anno": 2018,
@@ -141,7 +128,7 @@
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-1-0-move-up-60cv-asg-benzina-bianco-cat_ma74mo19750-da643c2b-cfae-40ad-a089-b805100d43cf",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/da643c2b-cfae-40ad-a089-b805100d43cf_d91f97a0-31b2-4160-9252-d87aaa4ec3e4.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     },
     {
      "titolo": "Volkswagen up!",

@@ -1,17 +1,17 @@
 {
- "data": "2026-11-06T18:03+01:00",
+ "data": "2026-11-07T16:58+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
-   "letti": 20,
+   "letti": 19,
    "corrispondono": 8
   },
   {
    "ricerca": "Fiat Panda",
    "sito": "Subito",
    "letti": 42,
-   "corrispondono": 1
+   "corrispondono": 0
   },
   {
    "ricerca": "Fiat Panda",
@@ -80,16 +80,16 @@
     },
     {
      "titolo": "Fiat Panda",
-     "prezzo": 9500,
+     "prezzo": 8950,
      "anno": 2018,
      "km": 97185,
      "carburante": "Benzina",
      "cambio": "Automatico",
-     "luogo": "Poggio san Vicino",
+     "luogo": "Apiro",
      "url": "https://www.autoscout24.it/annunci/fiat-panda-0-9-twinair-gancio-di-traino-automatica-benzina-cat_ma28mo1746-290c4a0c-8989-4c0b-a3f6-5e8bded8da4e",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/290c4a0c-8989-4c0b-a3f6-5e8bded8da4e_11aef09f-2aee-4306-9309-14dc42e2ffd2.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     },
     {
      "titolo": "Fiat Panda",
@@ -103,19 +103,6 @@
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/f7653164-3cae-4e09-8d2f-a9a63e9c2ea7_3b62d155-79c0-4fbd-b201-6e7d87c0c595.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
-    },
-    {
-     "titolo": "Fiat Panda automatico, gancia di traino",
-     "prezzo": 9500,
-     "anno": 2026,
-     "km": 96175,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Poggio San Vicino",
-     "url": "https://www.subito.it/auto/fiat-panda-automatico-gancia-di-traino-macerata-667375876.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": true
     },
     {
      "titolo": "Fiat Panda",

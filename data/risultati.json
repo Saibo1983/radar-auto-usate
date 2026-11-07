@@ -1,17 +1,17 @@
 {
- "data": "2026-11-06T18:03+01:00",
+ "data": "2026-11-07T16:58+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
-   "letti": 20,
+   "letti": 19,
    "corrispondono": 8
   },
   {
    "ricerca": "Fiat Panda",
    "sito": "Subito",
    "letti": 42,
-   "corrispondono": 1
+   "corrispondono": 0
   },
   {
    "ricerca": "Fiat Panda",
@@ -53,7 +53,7 @@
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
    "letti": 42,
-   "corrispondono": 2
+   "corrispondono": 1
   },
   {
    "ricerca": "Volkswagen up!",
@@ -122,16 +122,16 @@
     },
     {
      "titolo": "Fiat Panda",
-     "prezzo": 9500,
+     "prezzo": 8950,
      "anno": 2018,
      "km": 97185,
      "carburante": "Benzina",
      "cambio": "Automatico",
-     "luogo": "Poggio san Vicino",
+     "luogo": "Apiro",
      "url": "https://www.autoscout24.it/annunci/fiat-panda-0-9-twinair-gancio-di-traino-automatica-benzina-cat_ma28mo1746-290c4a0c-8989-4c0b-a3f6-5e8bded8da4e",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/290c4a0c-8989-4c0b-a3f6-5e8bded8da4e_11aef09f-2aee-4306-9309-14dc42e2ffd2.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     },
     {
      "titolo": "Fiat Panda",
@@ -145,19 +145,6 @@
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/f7653164-3cae-4e09-8d2f-a9a63e9c2ea7_3b62d155-79c0-4fbd-b201-6e7d87c0c595.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
-    },
-    {
-     "titolo": "Fiat Panda automatico, gancia di traino",
-     "prezzo": 9500,
-     "anno": 2026,
-     "km": 96175,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Poggio San Vicino",
-     "url": "https://www.subito.it/auto/fiat-panda-automatico-gancia-di-traino-macerata-667375876.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": true
     },
     {
      "titolo": "Fiat Panda",
@@ -270,19 +257,6 @@
      "nuovo": false
     },
     {
-     "titolo": "VOLKSWAGEN up! 1.0 5p. eco move up! BlueMotion",
-     "prezzo": 9900,
-     "anno": 2019,
-     "km": 45000,
-     "carburante": "Benzina",
-     "cambio": "Sequenziale",
-     "luogo": "Milano",
-     "url": "https://www.subito.it/auto/volkswagen-up-1-0-5p-eco-move-up-bluemotion-milano-667078846.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
      "titolo": "Volkswagen up!",
      "prezzo": 10250,
      "anno": 2018,
@@ -306,7 +280,7 @@
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-1-0-move-up-60cv-asg-benzina-bianco-cat_ma74mo19750-da643c2b-cfae-40ad-a089-b805100d43cf",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/da643c2b-cfae-40ad-a089-b805100d43cf_d91f97a0-31b2-4160-9252-d87aaa4ec3e4.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     },
     {
      "titolo": "Volkswagen up!",
