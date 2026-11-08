@@ -1,16 +1,16 @@
-# Prova del 07/11/2026 16:58
+# Prova del 08/11/2026 17:27
 
 | Ricerca | Sito | Annunci letti | Corrispondono |
 |---|---|---|---|
-| Fiat Panda | [AutoScout24](https://www.autoscout24.it/lst/fiat/panda?atype=C&cy=I&damaged_listing=exclude&sort=age&desc=1&ustate=N%2CU&fregfrom=2018&fuel=B&gear=A) | 19 | 8 |
+| Fiat Panda | [AutoScout24](https://www.autoscout24.it/lst/fiat/panda?atype=C&cy=I&damaged_listing=exclude&sort=age&desc=1&ustate=N%2CU&fregfrom=2018&fuel=B&gear=A) | 20 | 8 |
 | Fiat Panda | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Fiat+Panda&ys=2018) | 42 | 0 |
 | Fiat Panda | [Automobile.it](https://www.automobile.it/fiat-panda) | 20 | 0 |
 | Fiat Panda | [Quattroruote](https://www.quattroruote.it/auto-usate/annunci/marca-fiat/modello-panda/anno-dal-2018) | 15 | 0 |
 | Fiat Panda | [Automoto](https://www.automoto.it/auto-usate/fiat/panda) | 13 | 0 |
 | Fiat Panda | [Autohero](https://www.autohero.com/it/search/?brand=fiat&model=panda) | 24 | 0 |
 | Fiat Panda | [Spoticar](https://www.spoticar.it/trova-veicoli-usati/fiat/panda) | 11 | 0 |
-| Volkswagen up! | [AutoScout24](https://www.autoscout24.it/lst/volkswagen/up?atype=C&cy=I&damaged_listing=exclude&sort=age&desc=1&ustate=N%2CU&fregfrom=2018&kmto=150000&fuel=B&gear=A) | 20 | 7 |
-| Volkswagen up! | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Volkswagen+up%21&ys=2018) | 42 | 1 |
+| Volkswagen up! | [AutoScout24](https://www.autoscout24.it/lst/volkswagen/up?atype=C&cy=I&damaged_listing=exclude&sort=age&desc=1&ustate=N%2CU&fregfrom=2018&kmto=150000&fuel=B&gear=A) | 18 | 7 |
+| Volkswagen up! | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Volkswagen+up%21&ys=2018) | 41 | 1 |
 | Volkswagen up! | [Automobile.it](https://www.automobile.it/vw-up) | 20 | 0 |
 | Volkswagen up! | [Quattroruote](https://www.quattroruote.it/auto-usate/annunci/marca-volkswagen/modello-up/anno-dal-2018) | 15 | 0 |
 | Volkswagen up! | [Automoto](https://www.automoto.it/auto-usate/volkswagen/up) | non raggiungibile |  |
