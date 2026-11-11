@@ -1,17 +1,17 @@
 {
- "data": "2026-11-10T18:23+01:00",
+ "data": "2026-11-11T18:35+01:00",
  "siti": [
   {
    "ricerca": "Volkswagen up!",
    "sito": "AutoScout24",
-   "letti": 18,
+   "letti": 20,
    "corrispondono": 7
   },
   {
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
    "letti": 42,
-   "corrispondono": 1
+   "corrispondono": 2
   },
   {
    "ricerca": "Volkswagen up!",
@@ -66,14 +66,14 @@
      "nuovo": false
     },
     {
-     "titolo": "Volkswagen up! Adatta a neopatentati cambio automa",
-     "prezzo": 8990,
+     "titolo": "Volkswagen up! 1.0 3p. move BlueMotion Technology",
+     "prezzo": 8800,
      "anno": 2018,
-     "km": 93565,
+     "km": 104000,
      "carburante": "Benzina",
      "cambio": "Automatico",
-     "luogo": "Brescia",
-     "url": "https://www.subito.it/auto/volkswagen-up-adatta-a-neopatentati-cambio-automa-brescia-660415423.htm",
+     "luogo": "La Spezia",
+     "url": "https://www.subito.it/auto/volkswagen-up-1-0-3p-move-bluemotion-technology-la-spezia-660832381.htm",
      "immagine": "",
      "sito": "Subito",
      "nuovo": false
@@ -89,6 +89,19 @@
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-5p-1-0-move-60cv-asg-benzina-cat_ma74mo19750-645da7ae-4555-44c1-845b-4fd94b69f10c",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/645da7ae-4555-44c1-845b-4fd94b69f10c_2fdc96c6-5ab2-4ef4-b3cd-ad00616cb788.jpg/250x188.webp",
      "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
+     "titolo": "Volkswagen up! 1.0 3p. move asg Automatica",
+     "prezzo": 9490,
+     "anno": 2018,
+     "km": 107000,
+     "carburante": "Benzina",
+     "cambio": "Sequenziale",
+     "luogo": "Sassano",
+     "url": "https://www.subito.it/auto/volkswagen-up-1-0-3p-move-asg-automatica-salerno-652728390.htm",
+     "immagine": "",
+     "sito": "Subito",
      "nuovo": false
     },
     {
