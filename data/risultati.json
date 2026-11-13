@@ -1,11 +1,11 @@
 {
- "data": "2026-11-12T18:48+01:00",
+ "data": "2026-11-13T18:26+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
-   "letti": 19,
-   "corrispondono": 10
+   "letti": 20,
+   "corrispondono": 8
   },
   {
    "ricerca": "Fiat Panda",
@@ -173,32 +173,6 @@
      "nuovo": false
     },
     {
-     "titolo": "Fiat Grande Panda",
-     "prezzo": 16990,
-     "anno": 2026,
-     "km": 100,
-     "carburante": "Elettrica/Benzina",
-     "cambio": "Automatico",
-     "luogo": "Torre Annunziata - Napoli - NA",
-     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-fiat-grande-panda-1-2-icon-100cv-tutti-i-colori-disponibili-p-elettrica-benzina-cat_ma28mo76901-451535b1-7deb-4673-a36e-781ede995d53",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/451535b1-7deb-4673-a36e-781ede995d53_2cfa6eb9-e3ef-4418-8cca-9a31bbaf7d29.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Fiat Grande Panda",
-     "prezzo": 19490,
-     "anno": 2026,
-     "km": 20773,
-     "carburante": "Elettrica/Benzina",
-     "cambio": "Automatico",
-     "luogo": "Casamarciano",
-     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-grande-panda-1-2-hybrid-la-prima-110cv-edct-elettrica-benzina-rosso-cat_ma28mo76901-62f77334-f8fb-4ff8-8dc8-3b408dc2479c",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/62f77334-f8fb-4ff8-8dc8-3b408dc2479c_7c6d7c7e-01b0-4794-8632-75bfbc5a7e5a.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": true
-    },
-    {
      "titolo": "Fiat Panda",
      "prezzo": 19999,
      "anno": 2026,
@@ -231,6 +205,19 @@
    "nome": "Volkswagen up!",
    "annunci": [
     {
+     "titolo": "Volkswagen up! 1.0 75 CV 5p. AUTOMATICA PREZZO REA",
+     "prezzo": 7800,
+     "anno": 2018,
+     "km": 136000,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Roma",
+     "url": "https://www.subito.it/auto/volkswagen-up-1-0-75-cv-5p-automatica-prezzo-rea-roma-668220751.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": true
+    },
+    {
      "titolo": "Volkswagen up!",
      "prezzo": 8500,
      "anno": 2019,
@@ -245,7 +232,7 @@
     },
     {
      "titolo": "Volkswagen up!",
-     "prezzo": 9490,
+     "prezzo": 8990,
      "anno": 2018,
      "km": 69000,
      "carburante": "Benzina",
@@ -254,19 +241,6 @@
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-5p-1-0-move-60cv-asg-benzina-cat_ma74mo19750-645da7ae-4555-44c1-845b-4fd94b69f10c",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/645da7ae-4555-44c1-845b-4fd94b69f10c_2fdc96c6-5ab2-4ef4-b3cd-ad00616cb788.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up! 1.0 3p. move asg Automatica",
-     "prezzo": 9490,
-     "anno": 2018,
-     "km": 107000,
-     "carburante": "Benzina",
-     "cambio": "Sequenziale",
-     "luogo": "Sassano",
-     "url": "https://www.subito.it/auto/volkswagen-up-1-0-3p-move-asg-automatica-salerno-652728390.htm",
-     "immagine": "",
-     "sito": "Subito",
      "nuovo": false
     },
     {
