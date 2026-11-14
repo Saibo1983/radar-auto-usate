@@ -1,11 +1,11 @@
 {
- "data": "2026-11-13T18:26+01:00",
+ "data": "2026-11-14T17:15+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
    "letti": 20,
-   "corrispondono": 8
+   "corrispondono": 9
   },
   {
    "ricerca": "Fiat Panda",
@@ -53,7 +53,7 @@
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
    "letti": 42,
-   "corrispondono": 1
+   "corrispondono": 0
   },
   {
    "ricerca": "Volkswagen up!",
@@ -173,6 +173,19 @@
      "nuovo": false
     },
     {
+     "titolo": "Fiat Grande Panda",
+     "prezzo": 16490,
+     "anno": 2026,
+     "km": 21188,
+     "carburante": "Elettrica/Benzina",
+     "cambio": "Automatico",
+     "luogo": "Bricherasio - Torino - TO",
+     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-hybrid-la-prima-elettrica-benzina-bianco-cat_ma28mo76901-e15a73f9-f4ec-4c04-bec5-353213969345",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/e15a73f9-f4ec-4c04-bec5-353213969345_5138e6aa-e5b8-448e-8d6b-ffcec1f0bcfe.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
      "titolo": "Fiat Panda",
      "prezzo": 19999,
      "anno": 2026,
@@ -204,19 +217,6 @@
    "id": "rmvh389rf",
    "nome": "Volkswagen up!",
    "annunci": [
-    {
-     "titolo": "Volkswagen up! 1.0 75 CV 5p. AUTOMATICA PREZZO REA",
-     "prezzo": 7800,
-     "anno": 2018,
-     "km": 136000,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Roma",
-     "url": "https://www.subito.it/auto/volkswagen-up-1-0-75-cv-5p-automatica-prezzo-rea-roma-668220751.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": true
-    },
     {
      "titolo": "Volkswagen up!",
      "prezzo": 8500,
