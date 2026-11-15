@@ -1,16 +1,16 @@
-# Prova del 14/11/2026 17:15
+# Prova del 15/11/2026 17:43
 
 | Ricerca | Sito | Annunci letti | Corrispondono |
 |---|---|---|---|
-| Fiat Panda | [AutoScout24](https://www.autoscout24.it/lst/fiat/panda?atype=C&cy=I&damaged_listing=exclude&sort=age&desc=1&ustate=N%2CU&fregfrom=2018&fuel=B&gear=A) | 20 | 9 |
-| Fiat Panda | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Fiat+Panda&ys=2018) | 42 | 0 |
+| Fiat Panda | [AutoScout24](https://www.autoscout24.it/lst/fiat/panda?atype=C&cy=I&damaged_listing=exclude&sort=age&desc=1&ustate=N%2CU&fregfrom=2018&fuel=B&gear=A) | 20 | 8 |
+| Fiat Panda | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Fiat+Panda&ys=2018) | 42 | 1 |
 | Fiat Panda | [Automobile.it](https://www.automobile.it/fiat-panda) | 20 | 0 |
 | Fiat Panda | [Quattroruote](https://www.quattroruote.it/auto-usate/annunci/marca-fiat/modello-panda/anno-dal-2018) | 15 | 0 |
 | Fiat Panda | [Automoto](https://www.automoto.it/auto-usate/fiat/panda) | 13 | 0 |
 | Fiat Panda | [Autohero](https://www.autohero.com/it/search/?brand=fiat&model=panda) | 24 | 0 |
 | Fiat Panda | [Spoticar](https://www.spoticar.it/trova-veicoli-usati/fiat/panda) | 11 | 0 |
 | Volkswagen up! | [AutoScout24](https://www.autoscout24.it/lst/volkswagen/up?atype=C&cy=I&damaged_listing=exclude&sort=age&desc=1&ustate=N%2CU&fregfrom=2018&kmto=150000&fuel=B&gear=A) | 20 | 7 |
-| Volkswagen up! | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Volkswagen+up%21&ys=2018) | 42 | 0 |
+| Volkswagen up! | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Volkswagen+up%21&ys=2018) | 41 | 0 |
 | Volkswagen up! | [Automobile.it](https://www.automobile.it/vw-up) | 20 | 0 |
 | Volkswagen up! | [Quattroruote](https://www.quattroruote.it/auto-usate/annunci/marca-volkswagen/modello-up/anno-dal-2018) | 15 | 0 |
 | Volkswagen up! | [Automoto](https://www.automoto.it/auto-usate/volkswagen/up) | non raggiungibile |  |
@@ -30,7 +30,7 @@
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-panda-0-9-t-air-t-easy-dualogic-automatica-benzina-arancione-cat_ma28mo1746-f7653164-3cae-4e09-8d2f-a9a63e9c2ea7) · 9500 € · 2018 · 33600 km · AutoScout24
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-0-9-t-air-t-easy-s-benzina-rosso-cat_ma28mo1746-028ead0e-067f-41c7-86a4-7bf93b12db2c) · 9700 € · 2018 · 32322 km · AutoScout24
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-0-9-twinair-turbo-85cv-e6-ss-easy-dualogic-benzina-rosso-cat_ma28mo1746-d78f083b-1d41-4be1-afe8-d8202ff8c89f) · 9900 € · 2018 · 112600 km · AutoScout24
-- [Fiat Grande Panda](https://www.autoscout24.it/annunci/fiat-grande-panda-hybrid-la-prima-elettrica-benzina-bianco-cat_ma28mo76901-e15a73f9-f4ec-4c04-bec5-353213969345) · 16490 € · 2026 · 21188 km · AutoScout24
+- [Fiat Panda Cross Hybrid 05/2024](https://www.subito.it/auto/fiat-panda-cross-hybrid-05-2024-roma-659333193.htm) · 11690 € · 2024 · 3000 km · Subito
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-benzina-cat_ma28mo1746-166f540e-fc24-41d0-bd3a-dc3decec41d8) · 19999 € · 2026 · 4900 km · AutoScout24
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-benzina-cat_ma28mo1746-33fa0085-b1fe-4522-b313-658fc4447f2c) · 21900 € · 2025 · 0 km · AutoScout24
 
