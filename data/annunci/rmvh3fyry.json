@@ -1,5 +1,5 @@
 {
- "data": "2026-11-15T17:43+01:00",
+ "data": "2026-11-16T20:56+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
@@ -11,7 +11,7 @@
    "ricerca": "Fiat Panda",
    "sito": "Subito",
    "letti": 42,
-   "corrispondono": 1
+   "corrispondono": 0
   },
   {
    "ricerca": "Fiat Panda",
@@ -129,19 +129,6 @@
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/d78f083b-1d41-4be1-afe8-d8202ff8c89f_a8650d0e-7eba-4b9e-8cb2-9562a42739be.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
-    },
-    {
-     "titolo": "Fiat Panda Cross Hybrid 05/2024",
-     "prezzo": 11690,
-     "anno": 2024,
-     "km": 3000,
-     "carburante": "Benzina/Gpl",
-     "cambio": "Automatico",
-     "luogo": "Roma",
-     "url": "https://www.subito.it/auto/fiat-panda-cross-hybrid-05-2024-roma-659333193.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": true
     },
     {
      "titolo": "Fiat Panda",
