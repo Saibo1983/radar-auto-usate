@@ -1,5 +1,5 @@
 {
- "data": "2026-11-16T20:56+01:00",
+ "data": "2026-11-17T19:52+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
@@ -10,7 +10,7 @@
   {
    "ricerca": "Fiat Panda",
    "sito": "Subito",
-   "letti": 42,
+   "letti": 41,
    "corrispondono": 0
   },
   {
@@ -52,8 +52,8 @@
   {
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
-   "letti": 41,
-   "corrispondono": 0
+   "letti": 42,
+   "corrispondono": 1
   },
   {
    "ricerca": "Volkswagen up!",
@@ -70,8 +70,8 @@
   {
    "ricerca": "Volkswagen up!",
    "sito": "Automoto",
-   "letti": null,
-   "corrispondono": null
+   "letti": 1,
+   "corrispondono": 0
   },
   {
    "ricerca": "Volkswagen up!",
@@ -86,9 +86,7 @@
    "corrispondono": 0
   }
  ],
- "problemi": [
-  "Automoto (Volkswagen up!): non raggiungibile, HTTP 404"
- ],
+ "problemi": [],
  "ricerche": [
   {
    "id": "rmvh3fyry",
@@ -228,6 +226,19 @@
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-5p-1-0-move-60cv-asg-benzina-cat_ma74mo19750-645da7ae-4555-44c1-845b-4fd94b69f10c",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/645da7ae-4555-44c1-845b-4fd94b69f10c_2fdc96c6-5ab2-4ef4-b3cd-ad00616cb788.jpg/250x188.webp",
      "sito": "AutoScout24",
+     "nuovo": false
+    },
+    {
+     "titolo": "Volkswagen up! Adatta a neopatentati cambio automa",
+     "prezzo": 8990,
+     "anno": 2018,
+     "km": 93565,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Brescia",
+     "url": "https://www.subito.it/auto/volkswagen-up-adatta-a-neopatentati-cambio-automa-brescia-660415423.htm",
+     "immagine": "",
+     "sito": "Subito",
      "nuovo": false
     },
     {

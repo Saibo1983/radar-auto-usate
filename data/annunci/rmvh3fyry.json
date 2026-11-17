@@ -1,5 +1,5 @@
 {
- "data": "2026-11-16T20:56+01:00",
+ "data": "2026-11-17T19:52+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
@@ -10,7 +10,7 @@
   {
    "ricerca": "Fiat Panda",
    "sito": "Subito",
-   "letti": 42,
+   "letti": 41,
    "corrispondono": 0
   },
   {
@@ -44,9 +44,7 @@
    "corrispondono": 0
   }
  ],
- "problemi": [
-  "Automoto (Volkswagen up!): non raggiungibile, HTTP 404"
- ],
+ "problemi": [],
  "ricerche": [
   {
    "id": "rmvh3fyry",
