@@ -1,11 +1,11 @@
 {
- "data": "2026-11-18T19:31+01:00",
+ "data": "2026-11-19T19:45+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
    "letti": 20,
-   "corrispondono": 8
+   "corrispondono": 9
   },
   {
    "ricerca": "Fiat Panda",
@@ -127,6 +127,19 @@
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/d78f083b-1d41-4be1-afe8-d8202ff8c89f_a8650d0e-7eba-4b9e-8cb2-9562a42739be.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
+    },
+    {
+     "titolo": "Fiat Grande Panda",
+     "prezzo": 17990,
+     "anno": 2026,
+     "km": 13022,
+     "carburante": "Elettrica/Benzina",
+     "cambio": "Automatico",
+     "luogo": "Voghera - Pavia - Pv",
+     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110cv-la-prima-elettrica-benzina-bianco-cat_ma28mo76901-657d3a7f-773f-4557-aeb3-2ce70a9b1af2",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/657d3a7f-773f-4557-aeb3-2ce70a9b1af2_24effbd8-661b-471f-befa-f450b6758db4.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
     },
     {
      "titolo": "Fiat Panda",
