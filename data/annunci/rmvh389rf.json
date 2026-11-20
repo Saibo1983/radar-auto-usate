@@ -1,11 +1,11 @@
 {
- "data": "2026-11-19T19:45+01:00",
+ "data": "2026-11-20T19:11+01:00",
  "siti": [
   {
    "ricerca": "Volkswagen up!",
    "sito": "AutoScout24",
    "letti": 20,
-   "corrispondono": 6
+   "corrispondono": 7
   },
   {
    "ricerca": "Volkswagen up!",
@@ -87,6 +87,19 @@
      "url": "https://www.subito.it/auto/volkswagen-up-adatta-a-neopatentati-cambio-automa-brescia-660415423.htm",
      "immagine": "",
      "sito": "Subito",
+     "nuovo": false
+    },
+    {
+     "titolo": "Volkswagen up!",
+     "prezzo": 9900,
+     "anno": 2018,
+     "km": 69000,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Monza - Monza  Brianza - Mb",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-up-5-porte-1-0-move-asg-automatica-prezzo-reale-nessuno-obbligo-di-finanziamento-benzina-bianco-cat_ma74mo19750-6801d6f1-200f-4372-98f5-bcc91fe9f619",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/6801d6f1-200f-4372-98f5-bcc91fe9f619_d4c80a0d-5a5b-4577-b93d-2e8610450b56.jpg/250x188.webp",
+     "sito": "AutoScout24",
      "nuovo": false
     },
     {
