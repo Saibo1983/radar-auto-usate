@@ -1,11 +1,11 @@
 {
- "data": "2026-11-20T19:11+01:00",
+ "data": "2026-11-21T18:01+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
-   "letti": 20,
-   "corrispondono": 8
+   "letti": 19,
+   "corrispondono": 10
   },
   {
    "ricerca": "Fiat Panda",
@@ -127,6 +127,32 @@
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/d78f083b-1d41-4be1-afe8-d8202ff8c89f_a8650d0e-7eba-4b9e-8cb2-9562a42739be.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
+    },
+    {
+     "titolo": "Fiat Grande Panda",
+     "prezzo": 18900,
+     "anno": 2026,
+     "km": 21943,
+     "carburante": "Elettrica/Benzina",
+     "cambio": "Automatico",
+     "luogo": "Gavirate - Varese - Va",
+     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-hybrid-la-prima-elettrica-benzina-blu-azzurro-cat_ma28mo76901-a1159d8e-ad45-4929-8600-6752affaec31",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/a1159d8e-ad45-4929-8600-6752affaec31_83b57dfb-c659-42b0-9a94-a39f9b3cf16b.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Grande Panda",
+     "prezzo": 19490,
+     "anno": 2026,
+     "km": 15000,
+     "carburante": "Elettrica/Benzina",
+     "cambio": "Automatico",
+     "luogo": "Casal di Principe - Caserta - CE",
+     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-la-prima-110cv-edct-elettrica-benzina-cat_ma28mo76901-052b89ad-4cbd-4afe-ba0f-600420ccfdb6",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/052b89ad-4cbd-4afe-ba0f-600420ccfdb6_aec051e1-5455-4cd8-8ad0-af7467271025.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
     },
     {
      "titolo": "Fiat Panda",
