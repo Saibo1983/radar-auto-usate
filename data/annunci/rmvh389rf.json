@@ -1,17 +1,17 @@
 {
- "data": "2026-11-21T18:01+01:00",
+ "data": "2026-11-22T18:31+01:00",
  "siti": [
   {
    "ricerca": "Volkswagen up!",
    "sito": "AutoScout24",
-   "letti": 19,
-   "corrispondono": 7
+   "letti": 18,
+   "corrispondono": 8
   },
   {
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
    "letti": 42,
-   "corrispondono": 1
+   "corrispondono": 0
   },
   {
    "ricerca": "Volkswagen up!",
@@ -77,19 +77,6 @@
      "nuovo": false
     },
     {
-     "titolo": "Volkswagen up! Adatta a neopatentati cambio automa",
-     "prezzo": 8990,
-     "anno": 2018,
-     "km": 93565,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Brescia",
-     "url": "https://www.subito.it/auto/volkswagen-up-adatta-a-neopatentati-cambio-automa-brescia-660415423.htm",
-     "immagine": "",
-     "sito": "Subito",
-     "nuovo": false
-    },
-    {
      "titolo": "Volkswagen up!",
      "prezzo": 9900,
      "anno": 2018,
@@ -127,6 +114,19 @@
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/da643c2b-cfae-40ad-a089-b805100d43cf_d91f97a0-31b2-4160-9252-d87aaa4ec3e4.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
+    },
+    {
+     "titolo": "Volkswagen up!",
+     "prezzo": 11000,
+     "anno": 2018,
+     "km": 45000,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Modena",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-up-3p-1-0-move-60cv-asg-benzina-cat_ma74mo19750-af75587f-d7ff-45af-b7b7-effc7697c3c1",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/af75587f-d7ff-45af-b7b7-effc7697c3c1_888b2b30-605c-4179-971a-aad8e2cb1c5f.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
     },
     {
      "titolo": "Volkswagen up!",
