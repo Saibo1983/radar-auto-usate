@@ -1,5 +1,5 @@
 {
- "data": "2026-11-22T18:31+01:00",
+ "data": "2026-11-23T22:49+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
@@ -46,13 +46,13 @@
   {
    "ricerca": "Volkswagen up!",
    "sito": "AutoScout24",
-   "letti": 18,
+   "letti": 20,
    "corrispondono": 8
   },
   {
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
-   "letti": 42,
+   "letti": 41,
    "corrispondono": 0
   },
   {
@@ -278,7 +278,7 @@
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-3p-1-0-move-60cv-asg-benzina-cat_ma74mo19750-af75587f-d7ff-45af-b7b7-effc7697c3c1",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/af75587f-d7ff-45af-b7b7-effc7697c3c1_888b2b30-605c-4179-971a-aad8e2cb1c5f.jpg/250x188.webp",
      "sito": "AutoScout24",
-     "nuovo": true
+     "nuovo": false
     },
     {
      "titolo": "Volkswagen up!",
