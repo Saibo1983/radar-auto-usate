@@ -1,5 +1,5 @@
 {
- "data": "2026-11-23T22:49+01:00",
+ "data": "2026-11-24T21:27+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
@@ -10,7 +10,7 @@
   {
    "ricerca": "Fiat Panda",
    "sito": "Subito",
-   "letti": 42,
+   "letti": 41,
    "corrispondono": 0
   },
   {
@@ -47,12 +47,12 @@
    "ricerca": "Volkswagen up!",
    "sito": "AutoScout24",
    "letti": 20,
-   "corrispondono": 8
+   "corrispondono": 7
   },
   {
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
-   "letti": 41,
+   "letti": 42,
    "corrispondono": 0
   },
   {
@@ -70,7 +70,7 @@
   {
    "ricerca": "Volkswagen up!",
    "sito": "Automoto",
-   "letti": 2,
+   "letti": 1,
    "corrispondono": 0
   },
   {
@@ -82,7 +82,7 @@
   {
    "ricerca": "Volkswagen up!",
    "sito": "Spoticar",
-   "letti": 11,
+   "letti": 10,
    "corrispondono": 0
   }
  ],
@@ -217,19 +217,6 @@
     },
     {
      "titolo": "Volkswagen up!",
-     "prezzo": 8990,
-     "anno": 2018,
-     "km": 69000,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Roma - RM",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-5p-1-0-move-60cv-asg-benzina-cat_ma74mo19750-645da7ae-4555-44c1-845b-4fd94b69f10c",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/645da7ae-4555-44c1-845b-4fd94b69f10c_2fdc96c6-5ab2-4ef4-b3cd-ad00616cb788.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
      "prezzo": 9900,
      "anno": 2018,
      "km": 69000,
@@ -243,7 +230,7 @@
     },
     {
      "titolo": "Volkswagen up!",
-     "prezzo": 10250,
+     "prezzo": 9999,
      "anno": 2018,
      "km": 63381,
      "carburante": "Benzina",
