@@ -1,21 +1,21 @@
-# Prova del 24/11/2026 21:27
+# Prova del 25/11/2026 20:40
 
 | Ricerca | Sito | Annunci letti | Corrispondono |
 |---|---|---|---|
 | Fiat Panda | [AutoScout24](https://www.autoscout24.it/lst/fiat/panda?atype=C&cy=I&damaged_listing=exclude&sort=age&desc=1&ustate=N%2CU&fregfrom=2018&fuel=B&gear=A) | 20 | 8 |
-| Fiat Panda | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Fiat+Panda&ys=2018) | 41 | 0 |
+| Fiat Panda | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Fiat+Panda&ys=2018) | 42 | 0 |
 | Fiat Panda | [Automobile.it](https://www.automobile.it/fiat-panda) | 20 | 0 |
 | Fiat Panda | [Quattroruote](https://www.quattroruote.it/auto-usate/annunci/marca-fiat/modello-panda/anno-dal-2018) | 15 | 0 |
 | Fiat Panda | [Automoto](https://www.automoto.it/auto-usate/fiat/panda) | 13 | 0 |
 | Fiat Panda | [Autohero](https://www.autohero.com/it/search/?brand=fiat&model=panda) | 24 | 0 |
 | Fiat Panda | [Spoticar](https://www.spoticar.it/trova-veicoli-usati/fiat/panda) | 11 | 0 |
 | Volkswagen up! | [AutoScout24](https://www.autoscout24.it/lst/volkswagen/up?atype=C&cy=I&damaged_listing=exclude&sort=age&desc=1&ustate=N%2CU&fregfrom=2018&kmto=150000&fuel=B&gear=A) | 20 | 7 |
-| Volkswagen up! | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Volkswagen+up%21&ys=2018) | 42 | 0 |
+| Volkswagen up! | [Subito](https://www.subito.it/annunci-italia/vendita/auto/?q=Volkswagen+up%21&ys=2018) | 41 | 1 |
 | Volkswagen up! | [Automobile.it](https://www.automobile.it/vw-up) | 20 | 0 |
 | Volkswagen up! | [Quattroruote](https://www.quattroruote.it/auto-usate/annunci/marca-volkswagen/modello-up/anno-dal-2018) | 15 | 0 |
 | Volkswagen up! | [Automoto](https://www.automoto.it/auto-usate/volkswagen/up) | 1 | 0 |
 | Volkswagen up! | [Autohero](https://www.autohero.com/it/search/?brand=volkswagen&model=up) | 0 | 0 |
-| Volkswagen up! | [Spoticar](https://www.spoticar.it/trova-veicoli-usati/volkswagen/up) | 10 | 0 |
+| Volkswagen up! | [Spoticar](https://www.spoticar.it/trova-veicoli-usati/volkswagen/up) | 11 | 0 |
 
 ## Annunci trovati
 
@@ -29,11 +29,12 @@
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-benzina-cat_ma28mo1746-166f540e-fc24-41d0-bd3a-dc3decec41d8) · 19999 € · 2026 · 4900 km · AutoScout24
 - [Fiat Panda](https://www.autoscout24.it/annunci/fiat-panda-benzina-cat_ma28mo1746-33fa0085-b1fe-4522-b313-658fc4447f2c) · 21900 € · 2025 · 0 km · AutoScout24
 
-### Volkswagen up! (7)
+### Volkswagen up! (8)
 - [Volkswagen up!](https://www.autoscout24.it/annunci/volkswagen-up-up-5p-1-0-high-up-75cv-asg-5-porte-tagliandata-benzina-bianco-cat_ma74mo19750-4b0015ad-0c01-4a08-9513-6b2cab8e8048) · 8500 € · 2019 · 127800 km · AutoScout24
+- [Volkswagen up! 1.0 3p. move asg Automatica](https://www.subito.it/auto/volkswagen-up-1-0-3p-move-asg-automatica-salerno-652728390.htm) · 8900 € · 2018 · 107000 km · Subito
 - [Volkswagen up!](https://www.autoscout24.it/annunci/volkswagen-up-5-porte-1-0-move-asg-automatica-prezzo-reale-nessuno-obbligo-di-finanziamento-benzina-bianco-cat_ma74mo19750-6801d6f1-200f-4372-98f5-bcc91fe9f619) · 9900 € · 2018 · 69000 km · AutoScout24
-- [Volkswagen up!](https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2018-5p-1-0-move-60cv-asg-benzina-bianco-cat_ma74mo19750-5ca7ad04-e0f1-4995-9c41-0b186638ba97) · 9999 € · 2018 · 63381 km · AutoScout24
 - [Volkswagen up!](https://www.autoscout24.it/annunci/volkswagen-up-up-5p-1-0-move-up-60cv-asg-benzina-bianco-cat_ma74mo19750-da643c2b-cfae-40ad-a089-b805100d43cf) · 10900 € · 2018 · 130000 km · AutoScout24
 - [Volkswagen up!](https://www.autoscout24.it/annunci/volkswagen-up-3p-1-0-move-60cv-asg-benzina-cat_ma74mo19750-af75587f-d7ff-45af-b7b7-effc7697c3c1) · 11000 € · 2018 · 45000 km · AutoScout24
+- [Volkswagen up!](https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2018-5p-1-0-move-60cv-asg-benzina-bianco-cat_ma74mo19750-cc82ae04-1fb4-4807-b3da-ff3af71e07e2) · 11300 € · 2018 · 63381 km · AutoScout24
 - [Volkswagen up!](https://www.autoscout24.it/annunci/volkswagen-up-1-0-high-up-75cv-asg-benzina-grigio-cat_ma74mo19750-462eda9b-f5b0-42f2-9b51-a5e00f1645e7) · 11800 € · 2019 · 46500 km · AutoScout24
 - [Volkswagen up!](https://www.autoscout24.it/annunci/volkswagen-up-up-5p-1-0-high-75cv-automatica-benzina-nero-cat_ma74mo19750-61b89bcd-98c6-47fa-82cf-529c0b7b69aa) · 12990 € · 2019 · 53000 km · AutoScout24

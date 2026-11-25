@@ -1,5 +1,5 @@
 {
- "data": "2026-11-24T21:27+01:00",
+ "data": "2026-11-25T20:40+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
@@ -10,7 +10,7 @@
   {
    "ricerca": "Fiat Panda",
    "sito": "Subito",
-   "letti": 41,
+   "letti": 42,
    "corrispondono": 0
   },
   {
@@ -52,8 +52,8 @@
   {
    "ricerca": "Volkswagen up!",
    "sito": "Subito",
-   "letti": 42,
-   "corrispondono": 0
+   "letti": 41,
+   "corrispondono": 1
   },
   {
    "ricerca": "Volkswagen up!",
@@ -82,7 +82,7 @@
   {
    "ricerca": "Volkswagen up!",
    "sito": "Spoticar",
-   "letti": 10,
+   "letti": 11,
    "corrispondono": 0
   }
  ],
@@ -216,6 +216,19 @@
      "nuovo": false
     },
     {
+     "titolo": "Volkswagen up! 1.0 3p. move asg Automatica",
+     "prezzo": 8900,
+     "anno": 2018,
+     "km": 107000,
+     "carburante": "Benzina",
+     "cambio": "Sequenziale",
+     "luogo": "Sassano",
+     "url": "https://www.subito.it/auto/volkswagen-up-1-0-3p-move-asg-automatica-salerno-652728390.htm",
+     "immagine": "",
+     "sito": "Subito",
+     "nuovo": false
+    },
+    {
      "titolo": "Volkswagen up!",
      "prezzo": 9900,
      "anno": 2018,
@@ -225,19 +238,6 @@
      "luogo": "Monza - Monza  Brianza - Mb",
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-5-porte-1-0-move-asg-automatica-prezzo-reale-nessuno-obbligo-di-finanziamento-benzina-bianco-cat_ma74mo19750-6801d6f1-200f-4372-98f5-bcc91fe9f619",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/6801d6f1-200f-4372-98f5-bcc91fe9f619_d4c80a0d-5a5b-4577-b93d-2e8610450b56.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
-     "prezzo": 9999,
-     "anno": 2018,
-     "km": 63381,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Sovizzo",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2018-5p-1-0-move-60cv-asg-benzina-bianco-cat_ma74mo19750-5ca7ad04-e0f1-4995-9c41-0b186638ba97",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/5ca7ad04-e0f1-4995-9c41-0b186638ba97_af5f805d-640d-4516-bce0-622f02539b07.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
     },
@@ -266,6 +266,19 @@
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/af75587f-d7ff-45af-b7b7-effc7697c3c1_888b2b30-605c-4179-971a-aad8e2cb1c5f.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
+    },
+    {
+     "titolo": "Volkswagen up!",
+     "prezzo": 11300,
+     "anno": 2018,
+     "km": 63381,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Sovizzo",
+     "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2018-5p-1-0-move-60cv-asg-benzina-bianco-cat_ma74mo19750-cc82ae04-1fb4-4807-b3da-ff3af71e07e2",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/cc82ae04-1fb4-4807-b3da-ff3af71e07e2_f4315b5a-c42b-4d44-af85-499274efa3c5.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
     },
     {
      "titolo": "Volkswagen up!",
