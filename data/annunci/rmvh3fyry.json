@@ -1,11 +1,11 @@
 {
- "data": "2026-11-25T20:40+01:00",
+ "data": "2026-11-26T20:21+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
    "letti": 20,
-   "corrispondono": 8
+   "corrispondono": 10
   },
   {
    "ricerca": "Fiat Panda",
@@ -130,6 +130,19 @@
     },
     {
      "titolo": "Fiat Panda",
+     "prezzo": 18500,
+     "anno": 2025,
+     "km": 0,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Sesta Godano - La Spezia - SP",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-benzina-cat_ma28mo1746-3daf8034-47f8-4045-aacf-fe454ce956bf",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/3daf8034-47f8-4045-aacf-fe454ce956bf_7da24195-213e-4558-a2f9-8c625c2637cf.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Panda",
      "prezzo": 19999,
      "anno": 2026,
      "km": 4900,
@@ -153,6 +166,19 @@
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/33fa0085-b1fe-4522-b313-658fc4447f2c_2a284447-a653-4846-a7b6-ab3cebac9174.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
+    },
+    {
+     "titolo": "Fiat Panda",
+     "prezzo": 25000,
+     "anno": 2026,
+     "km": 0,
+     "carburante": "Benzina",
+     "cambio": "Automatico",
+     "luogo": "Sesta Godano - La Spezia - SP",
+     "url": "https://www.autoscout24.it/annunci/fiat-panda-benzina-cat_ma28mo1746-8dcd5d41-1c7c-4735-9153-dccab92cc7d1",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/8dcd5d41-1c7c-4735-9153-dccab92cc7d1_f0a319be-79c5-45c2-9e20-bd00c734f6bb.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
     }
    ]
   }
