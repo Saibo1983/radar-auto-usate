@@ -1,11 +1,11 @@
 {
- "data": "2026-11-26T20:21+01:00",
+ "data": "2026-11-27T20:16+01:00",
  "siti": [
   {
    "ricerca": "Volkswagen up!",
    "sito": "AutoScout24",
-   "letti": 20,
-   "corrispondono": 7
+   "letti": 15,
+   "corrispondono": 6
   },
   {
    "ricerca": "Volkswagen up!",
@@ -112,19 +112,6 @@
      "luogo": "Sovizzo",
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2018-5p-1-0-move-60cv-asg-benzina-bianco-cat_ma74mo19750-cc82ae04-1fb4-4807-b3da-ff3af71e07e2",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/cc82ae04-1fb4-4807-b3da-ff3af71e07e2_f4315b5a-c42b-4d44-af85-499274efa3c5.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
-     "prezzo": 11800,
-     "anno": 2019,
-     "km": 46500,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Roma - Rm",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-1-0-high-up-75cv-asg-benzina-grigio-cat_ma74mo19750-462eda9b-f5b0-42f2-9b51-a5e00f1645e7",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/462eda9b-f5b0-42f2-9b51-a5e00f1645e7_c6ff5d6d-581a-4447-a7ea-05b14d6b29da.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
     },

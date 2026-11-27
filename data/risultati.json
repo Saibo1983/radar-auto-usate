@@ -1,10 +1,10 @@
 {
- "data": "2026-11-26T20:21+01:00",
+ "data": "2026-11-27T20:16+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
-   "letti": 20,
+   "letti": 16,
    "corrispondono": 10
   },
   {
@@ -46,8 +46,8 @@
   {
    "ricerca": "Volkswagen up!",
    "sito": "AutoScout24",
-   "letti": 20,
-   "corrispondono": 7
+   "letti": 15,
+   "corrispondono": 6
   },
   {
    "ricerca": "Volkswagen up!",
@@ -133,19 +133,6 @@
     },
     {
      "titolo": "Fiat Panda",
-     "prezzo": 9500,
-     "anno": 2018,
-     "km": 33600,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Parma",
-     "url": "https://www.autoscout24.it/annunci/fiat-panda-panda-0-9-t-air-t-easy-dualogic-automatica-benzina-arancione-cat_ma28mo1746-f7653164-3cae-4e09-8d2f-a9a63e9c2ea7",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/f7653164-3cae-4e09-8d2f-a9a63e9c2ea7_3b62d155-79c0-4fbd-b201-6e7d87c0c595.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Fiat Panda",
      "prezzo": 9700,
      "anno": 2018,
      "km": 32322,
@@ -171,15 +158,28 @@
      "nuovo": false
     },
     {
-     "titolo": "Fiat Panda",
-     "prezzo": 18500,
-     "anno": 2025,
-     "km": 0,
-     "carburante": "Benzina",
+     "titolo": "Fiat Grande Panda",
+     "prezzo": 15998,
+     "anno": 2026,
+     "km": 18600,
+     "carburante": "Elettrica/Benzina",
      "cambio": "Automatico",
-     "luogo": "Sesta Godano - La Spezia - SP",
-     "url": "https://www.autoscout24.it/annunci/fiat-panda-benzina-cat_ma28mo1746-3daf8034-47f8-4045-aacf-fe454ce956bf",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/3daf8034-47f8-4045-aacf-fe454ce956bf_7da24195-213e-4558-a2f9-8c625c2637cf.jpg/250x188.webp",
+     "luogo": "San Giorgio in bosco -  Padova",
+     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110cv-la-prima-edct-elettrica-benzina-nero-cat_ma28mo76901-e94837cc-da96-4e00-9a61-7879f2d4055e",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/e94837cc-da96-4e00-9a61-7879f2d4055e_c57850fd-3726-443b-9419-ff5e77fff44c.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
+     "titolo": "Fiat Grande Panda",
+     "prezzo": 18993,
+     "anno": 2026,
+     "km": 17944,
+     "carburante": "Elettrica/Benzina",
+     "cambio": "Automatico",
+     "luogo": "San Giorgio in bosco -  Padova",
+     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110cv-la-prima-edct-elettrica-benzina-nero-cat_ma28mo76901-c10b7fc0-1f3e-4f55-b28a-445ad5b42eaa",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/c10b7fc0-1f3e-4f55-b28a-445ad5b42eaa_219c2ab1-3a6b-4477-93f9-955f06fbc57c.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": true
     },
@@ -197,6 +197,19 @@
      "nuovo": false
     },
     {
+     "titolo": "Fiat Grande Panda",
+     "prezzo": 21281,
+     "anno": 2026,
+     "km": 24,
+     "carburante": "Elettrica/Benzina",
+     "cambio": "Automatico",
+     "luogo": "San Giorgio in bosco -  Padova",
+     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110cv-la-prima-edct-elettrica-benzina-rosso-cat_ma28mo76901-30d104c9-f40a-49cb-90eb-69f035ac2c10",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/30d104c9-f40a-49cb-90eb-69f035ac2c10_307ab21c-1ce2-43d3-b0c3-64ebd3734b7b.jpg/250x188.webp",
+     "sito": "AutoScout24",
+     "nuovo": true
+    },
+    {
      "titolo": "Fiat Panda",
      "prezzo": 21900,
      "anno": 2025,
@@ -208,19 +221,6 @@
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/33fa0085-b1fe-4522-b313-658fc4447f2c_2a284447-a653-4846-a7b6-ab3cebac9174.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
-    },
-    {
-     "titolo": "Fiat Panda",
-     "prezzo": 25000,
-     "anno": 2026,
-     "km": 0,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Sesta Godano - La Spezia - SP",
-     "url": "https://www.autoscout24.it/annunci/fiat-panda-benzina-cat_ma28mo1746-8dcd5d41-1c7c-4735-9153-dccab92cc7d1",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/8dcd5d41-1c7c-4735-9153-dccab92cc7d1_f0a319be-79c5-45c2-9e20-bd00c734f6bb.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": true
     }
    ]
   },
@@ -290,19 +290,6 @@
      "luogo": "Sovizzo",
      "url": "https://www.autoscout24.it/annunci/volkswagen-up-up-5p-2018-5p-1-0-move-60cv-asg-benzina-bianco-cat_ma74mo19750-cc82ae04-1fb4-4807-b3da-ff3af71e07e2",
      "immagine": "https://prod.pictures.autoscout24.net/listing-images/cc82ae04-1fb4-4807-b3da-ff3af71e07e2_f4315b5a-c42b-4d44-af85-499274efa3c5.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": false
-    },
-    {
-     "titolo": "Volkswagen up!",
-     "prezzo": 11800,
-     "anno": 2019,
-     "km": 46500,
-     "carburante": "Benzina",
-     "cambio": "Automatico",
-     "luogo": "Roma - Rm",
-     "url": "https://www.autoscout24.it/annunci/volkswagen-up-1-0-high-up-75cv-asg-benzina-grigio-cat_ma74mo19750-462eda9b-f5b0-42f2-9b51-a5e00f1645e7",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/462eda9b-f5b0-42f2-9b51-a5e00f1645e7_c6ff5d6d-581a-4447-a7ea-05b14d6b29da.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": false
     },
