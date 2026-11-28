@@ -1,11 +1,11 @@
 {
- "data": "2026-11-27T20:16+01:00",
+ "data": "2026-11-28T18:52+01:00",
  "siti": [
   {
    "ricerca": "Fiat Panda",
    "sito": "AutoScout24",
-   "letti": 16,
-   "corrispondono": 10
+   "letti": 20,
+   "corrispondono": 8
   },
   {
    "ricerca": "Fiat Panda",
@@ -44,7 +44,9 @@
    "corrispondono": 0
   }
  ],
- "problemi": [],
+ "problemi": [
+  "Automoto (Volkswagen up!): non raggiungibile, HTTP 404"
+ ],
  "ricerche": [
   {
    "id": "rmvh3fyry",
@@ -116,32 +118,6 @@
      "nuovo": false
     },
     {
-     "titolo": "Fiat Grande Panda",
-     "prezzo": 15998,
-     "anno": 2026,
-     "km": 18600,
-     "carburante": "Elettrica/Benzina",
-     "cambio": "Automatico",
-     "luogo": "San Giorgio in bosco -  Padova",
-     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110cv-la-prima-edct-elettrica-benzina-nero-cat_ma28mo76901-e94837cc-da96-4e00-9a61-7879f2d4055e",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/e94837cc-da96-4e00-9a61-7879f2d4055e_c57850fd-3726-443b-9419-ff5e77fff44c.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": true
-    },
-    {
-     "titolo": "Fiat Grande Panda",
-     "prezzo": 18993,
-     "anno": 2026,
-     "km": 17944,
-     "carburante": "Elettrica/Benzina",
-     "cambio": "Automatico",
-     "luogo": "San Giorgio in bosco -  Padova",
-     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110cv-la-prima-edct-elettrica-benzina-nero-cat_ma28mo76901-c10b7fc0-1f3e-4f55-b28a-445ad5b42eaa",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/c10b7fc0-1f3e-4f55-b28a-445ad5b42eaa_219c2ab1-3a6b-4477-93f9-955f06fbc57c.jpg/250x188.webp",
-     "sito": "AutoScout24",
-     "nuovo": true
-    },
-    {
      "titolo": "Fiat Panda",
      "prezzo": 19999,
      "anno": 2026,
@@ -156,14 +132,14 @@
     },
     {
      "titolo": "Fiat Grande Panda",
-     "prezzo": 21281,
+     "prezzo": 20800,
      "anno": 2026,
-     "km": 24,
+     "km": 23870,
      "carburante": "Elettrica/Benzina",
      "cambio": "Automatico",
-     "luogo": "San Giorgio in bosco -  Padova",
-     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-1-2-hybrid-110cv-la-prima-edct-elettrica-benzina-rosso-cat_ma28mo76901-30d104c9-f40a-49cb-90eb-69f035ac2c10",
-     "immagine": "https://prod.pictures.autoscout24.net/listing-images/30d104c9-f40a-49cb-90eb-69f035ac2c10_307ab21c-1ce2-43d3-b0c3-64ebd3734b7b.jpg/250x188.webp",
+     "luogo": "Desenzano Del Garda - Brescia - BS",
+     "url": "https://www.autoscout24.it/annunci/fiat-grande-panda-hybrid-icon-elettrica-benzina-rosso-cat_ma28mo76901-082de9df-6800-47d6-8f2a-772ee1981ee7",
+     "immagine": "https://prod.pictures.autoscout24.net/listing-images/082de9df-6800-47d6-8f2a-772ee1981ee7_5e676593-e6e7-4074-9518-13d474dbf9ac.jpg/250x188.webp",
      "sito": "AutoScout24",
      "nuovo": true
     },
